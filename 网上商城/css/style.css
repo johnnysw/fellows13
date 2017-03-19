@@ -1,0 +1,43 @@
+/*样式重置*/
+*{
+	margin: 0;
+	padding: 0;
+}
+ul, ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: 0;
+}
+
+/*通用样式 开始*/
+.wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+/*通用样式 结束*/
+
+/*header 开始*/
+#header{
+	height: 88px;
+	background: #ccc;
+}
+#top-nav{
+	height: 30px;
+	background: #f4f4f4;
+	
+}
+/*header 结束*/
+
+
+
+
+
+
+
+
+
+
