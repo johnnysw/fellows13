@@ -14,6 +14,9 @@ img{
 }
 
 /*通用样式 开始*/
+body{
+	font-size: 13px;
+}
 .wrapper{
 	width: 960px;
 	margin: 0 auto;
@@ -23,12 +26,115 @@ img{
 /*header 开始*/
 #header{
 	height: 88px;
-	background: #ccc;
 }
 #top-nav{
 	height: 30px;
+	line-height: 30px;
 	background: #f4f4f4;
-	
+	border-bottom: 1px solid #dbdbdb;
+}
+#top-nav .glyphicon-search{
+	text-indent: 15px;
+	color: #dbdbdb;
+	font-size: 15px;
+}
+#top-nav .glyphicon-search:hover{
+	color: #f00;
+	cursor: pointer;/*鼠标变手形*/
+}
+#search-box{
+	width: 48px;
+	border-right: 1px solid #bdbdbd;
+	float: left; 
+}
+#top-menu{
+	height: 30px;
+	float: right;
+}
+#top-menu li{
+	float: left;
+	margin-right: 5px;
+}
+#top-menu .follow-us{
+	color: #dbdbdb;
+}
+#top-menu .follow-us:hover{
+	color: #040404;
+}
+#top-menu .share a{
+	font-size: 17px;
+	color: #dbdbdb;
+}
+#top-menu .share a:hover{
+	color: #f00;
+}
+#top-menu .btn{
+	width: 82px;
+	height: 30px;
+	text-align: center;
+	margin-right: 1px;
+}
+#top-menu .btn:hover{
+	background: #f4f4f4;
+}
+#top-menu .btn:hover a{
+	color: #040404;
+}
+#top-menu .btn:hover .glyphicon{
+	color: #f00;
+}
+#top-menu .btn a{
+	color: #fff;
+}
+#top-menu .login{
+	background: #424242;
+}
+#top-menu .register{
+	background: #e5412d;
+}
+#nav{
+	height: 56px;
+	line-height: 56px;
+	border-bottom: 1px solid #bdbdbd;
+}
+#nav .logo{
+	color: #e5412d;
+	font-size: 36px;
+	float: left;
+}
+#nav .nav-menu{
+	float: right;
+}
+#nav .nav-menu > li{
+	float: left;
+	padding: 0 10px;
+	position: relative;
+}
+#nav .nav-menu > li:hover .sub-menu{
+	display: block;
+}
+#nav .nav-menu a{
+	font-size: 14px;
+	color: #040404;
+	font-weight: bold;
+}
+#nav .nav-menu .selected a{
+	color: #e5412d;
+}
+#nav .sub-menu{
+	width: 150px;
+	position: absolute;
+	top: 57px;
+	border: 1px solid #bdbdbd;
+	border-top: 0;
+	display: none;
+}
+#nav .sub-menu li{
+	line-height: 30px;
+	padding: 0 10px;
+}
+#nav .sub-menu a{
+	color: #bdbdbd;
 }
 /*header 结束*/
 
