@@ -1,0 +1,49 @@
+/*banner 开始*/
+#banner{
+	height: 356px;
+	background: #1f2123;
+	/*margin-top: 88px;*/
+	/*border-top: 88px solid transparent;*/
+	padding-top: 88px;
+}
+#banner .banner-content{
+	width: 420px;
+	height: 280px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -140px;
+	text-align: center;
+}
+#banner .banner-content h1{
+	color: #fff;
+	height: 46px;
+	line-height: 46px;
+	font-size: 48px;
+}
+#banner .banner-content p{
+	color: #fff;
+	line-height: 25px;
+	text-align: right;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#banner .banner-content a{
+	display: inline-block;
+	color: #fff;
+	padding: 10px;
+	margin-right: 50px;
+}
+#banner .banner-content .check-out{
+	background: #e5412d;
+}
+#banner .banner-content .buy-now{
+	background: #e7e7e7;
+	color: #333333;
+	margin-right: 0;
+}
+/*#banner-bg{
+	height: 356px;
+	background: url(../img/front-home-banner.jpg) no-repeat;
+}*/
+/*banner 结束*/
