@@ -150,6 +150,73 @@ body{
 }
 /*header 结束*/
 
+/*footer 开始*/
+#footer{
+	background: #1f2123;
+	padding: 15px 0;
+	overflow: hidden;
+}
+#footer .wrapper > div{
+	float: left;
+	text-align: center;
+	margin-right: 10px;
+}
+#footer .quick-links{
+	width: 148px;
+}
+#footer h3{
+	font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px;
+}
+#footer .quick-links li, #footer .blog li{
+	background: #191a1c;
+    margin: 0 0 1px;
+    line-height: 30px;
+    height: 30px;
+}
+#footer .quick-links a, #footer .blog a{
+	color: #e5412d;
+	font-weight: bold;
+}
+#footer .about{
+	width: 310px;
+}
+#footer .about p{
+	background: #191a1c;
+	color: #fff;
+	line-height: 20px;
+	padding: 15px;
+}
+#footer .blog{
+	width: 230px;
+}
+#footer .contact{
+	width: 230px;
+}
+#footer .contact li{
+	color: #fff;
+	text-align: left;
+	height: 30px;
+	line-height: 30px;
+}
+#footer .social{
+	overflow: hidden;
+}
+#footer .social li{
+	display: inline-block;
+	margin-right: 5px;
+}
+#footer .social .glyphicon{
+	font-size: 24px;
+	color: #797979;
+}
+#footer .social .selected .glyphicon{
+	color: #e5412d;
+}
+/*footer 结束*/
+
 
 
 

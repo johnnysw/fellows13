@@ -61,7 +61,7 @@
 	font-weight: bold;
 	font-family: 'Roboto Slab', sans-serif;
 }
-#features{
+#text-features{
 	color: #4d4d4d;
 	font-size: 26px;
 }
@@ -70,15 +70,122 @@
 	font-style: italic;
 }
 /*Awesome 结束*/
-
-#lorem{
+/*content 开始*/
+#slogan{
 	background: #f4f4f4;
 	border:1px solid #efefef;
 	margin: 15px auto;
 	padding: 15px;
-	width: 930px;
 	color: #7c7c7c;
 }
+#features{
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+#features li{
+	width: 197px;
+	height: 225px;
+	padding: 15px;
+	margin-right: 15px;
+	border: 1px solid #efefef;
+	float: left;
+	text-align: center;
+}
+#features li:last-child{
+	margin-right: 0;
+	width: 196px;
+	float: right;
+}
+#features .glyphicon{
+	font-size: 70px;
+	color: #e2e2e2;
+}
+#features h3{
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 17.5px;
+    margin: 10px 0 10px;
+    font-weight: 400;
+    color: #4d4d4d;
+}
+#features p{
+	color: #7c7c7c;
+	line-height: normal;
+	margin-bottom: 10px;
+}
+#features a{
+	color: #e5412d;
+}
+#follow-us{
+	height: 137px;
+	border: 1px solid #efefef; 
+	padding: 15px;
+	background: #f4f4f4;
+	text-align: center;
+}
+#follow-us h3{
+	font-size: 21px;
+    font-weight: 200;
+    line-height: 30px;
+    color: #7c7c7c;
+    margin-bottom: 20px;
+}
+#follow-list{
+	/*overflow: hidden;*/
+}
+#follow-list li{
+	display: inline-block;
+	margin-right: 20px;
+	line-height: 20px;
+}
+#follow-list .glyphicon{
+	font-size: 50px;
+}
+#follow-list a{
+	font-size: 12px;
+	color: #444444;
+}
+#follow-list .selected a{
+	color: #e5412d;
+}
+#follow-list .selected .glyphicon{
+	color: #e5412d;
+}
+#testimonials{
+	font-size: 24px;
+	color: #7c7c7c;
+	margin: 15px 0;
+}
+#testimonials .glyphicon{
+	font-size: 27px;
+}
+#chat-list{
+	overflow: hidden;
+}
+#chat-list .chat-item{
+	border: 1px solid #efefef;
+	padding: 15px;
+	width: 440px;
+	height: 73px;
+	margin-bottom: 15px;
+}
+#chat-list .chat-item:nth-child(2n+1){
+	float: left;
+}
+#chat-list .chat-item:nth-child(2n){
+	float: right;
+}
+#chat-list .glyphicon{
+	font-size: 32px;
+	float: left;
+}
+#chat-list p{
+	margin-left: 70px;
+	margin-bottom: 15px;
+}
+#chat-list a{
+	color: #e5412d;
+}
+/*content 结束*/
 
 
 
