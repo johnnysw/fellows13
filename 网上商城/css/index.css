@@ -47,3 +47,43 @@
 	background: url(../img/front-home-banner.jpg) no-repeat;
 }*/
 /*banner 结束*/
+/*Awesome 开始*/
+#awesome{
+	height: 100px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #efefef;
+	text-align: center;
+	line-height: 100px;
+}
+#text-primary{
+	font-size: 26px;
+	color:#e5412d;
+	font-weight: bold;
+	font-family: 'Roboto Slab', sans-serif;
+}
+#features{
+	color: #4d4d4d;
+	font-size: 26px;
+}
+#hidden-phone{
+	color:#ccc;
+	font-style: italic;
+}
+/*Awesome 结束*/
+
+#lorem{
+	background: #f4f4f4;
+	border:1px solid #efefef;
+	margin: 15px auto;
+	padding: 15px;
+	width: 930px;
+	color: #7c7c7c;
+}
+
+
+
+
+
+
+
+
