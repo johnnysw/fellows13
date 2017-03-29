@@ -1,0 +1,158 @@
+#content{
+	padding-top: 88px;
+}
+#title{
+	font-size: 24.5px;
+	color: #7c7c7c;
+	line-height: 30px;
+	margin: 15px 0;
+	font-weight: 400;
+}
+.carousel{
+	width: 960px;
+}
+.carousel-imgs{
+	width: 2880px;
+}
+.carousel-item{
+	width: 960px;
+	/*height: 200px;*/
+	background: #f00;
+}
+.carousel-txt{
+	float: left;
+	width: 361px;
+	height: 194px;
+	padding: 15px;
+	text-align: center;
+	background: #f4f4f4;
+
+}
+.carousel-txt h3{
+	font-size: 26px;
+	color:#4d4d4d;
+	font-weight: 400;
+}
+.carousel-txt p{
+	color: #7c7c7c;
+	line-height: 20px;
+}
+.carousel-txt h5{
+	font-weight: bold;
+	color: #7c7c7c;
+	height: 48px;
+}
+.carousel-txt a{
+	display: block;
+	background: #424242;
+	color: #ffffff;
+	font-size:17.5px;
+	height: 44px;
+	line-height: 44px;
+}
+
+.carousel-imgs img.carousel-img{
+	float: right;
+	width: 554px;
+}
+
+/*左侧侧边栏开始*/
+#widget{
+	overflow: hidden;
+}
+.sidebar-box{
+	width: 230px;
+	float: left;
+}
+.list{
+	border: 1px solid #efefef;
+	background: #f4f4f4;
+	margin-bottom: 15px;
+}
+.list li{
+	height: 39px;
+	line-height: 39px;
+	border-bottom:1px solid #efefef;
+	padding: 0 10px;
+}
+.list li a{
+	color: #000;
+	font-weight: bold;
+}
+.list li span{
+	float: right;
+	background: #999;
+	line-height: 18px;
+	margin-top: 10px;
+	padding: 0 10px;
+	color: #fff;
+	border-radius: 10px;
+}
+
+#question{
+	background: #424242;
+	text-align: center;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+#question .glyphicon-question-sign{
+	font-size: 70px;
+	color: #fff;
+	margin-bottom:15px;
+}
+#question h3{
+	font-size: 17px;
+	font-weight: 400;
+	color:#fff;
+}
+#question p{
+	line-height: normal;
+	color: #fff;
+	margin-bottom: 10px;
+}
+#question a{
+	display: block;
+	background: #e5412d;
+	color: #fff;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#labels{
+	background: #f4f4f4;
+	border:1px solid #efefef;
+	padding: 15px;
+	overflow: hidden;
+	text-align: center;
+}
+#labels span{
+	padding: 2px 4px;
+	background: #999;
+	color: #fff;
+	border-radius: 2px;
+	display: inline-block;
+	margin-top:2px;
+	/*float: left;*/
+}
+/*左侧侧边栏结束*/
+
+
+
+
+
+
+.list-box{
+	width: 716px;
+	height: 230px;
+	background: #00f;
+	float: right;
+}
+
+
+
+
+
+
+
+
