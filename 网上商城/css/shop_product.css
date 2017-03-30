@@ -23,6 +23,7 @@
 	text-align: center;
 	position: relative;
 	margin: 15px 0;
+	clear: both;
 }
 .line::before{
 	content: '';
@@ -64,6 +65,7 @@
 #info-box{
 	width: 635px;
 	float: right;
+	overflow: hidden;
 }
 .product{
 	width: 365px;
@@ -103,6 +105,9 @@
 	font-weight: bold;
 	margin-bottom: 10px;
 }
+.select-box{
+	position: relative;
+}
 .sel-btn{
 	height: 30px;
 	line-height: 30px;
@@ -127,12 +132,18 @@
 	border:1px solid rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	padding: 5px 0;
+	position: absolute;
+	left:0;
+	top:35px;
+	z-index:1;
+
 	display: none;
 }
 .sel-menu li{
 	line-height: 26px;
 	padding: 0 20px;
 	color: #333333;
+	width: 187px;
 }
 .sel-menu li:hover{
 	background:#0081c2;
@@ -145,7 +156,7 @@
 	color:#A7A7A7;
 	outline: none;
 }
-.share{
+.shop-share{
 	text-align: right;
 	line-height: 28px;
 	height: 28px;
@@ -153,13 +164,45 @@
 	color:#7c7c7c
 
 }
-.share .glyphicon{
+.shop-share .glyphicon{
 	font-size: 24px;
 }
-.share span{
+.shop-share span{
 	vertical-align: middle;
 
 }
+
+
+.tab-box{
+	border: 1px solid #efefef;
+}
+.tab-box ul{
+	border-bottom: 1px solid #efefef;
+	overflow: hidden;
+	height: 35px;
+}
+.tab-box ul li{
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 15px;
+	color: #7c7c7c;
+	background: #fff;
+	border-right: 1px solid #efefef;
+}
+.tab-box ul .active{
+	color: #000;
+	height: 38px;
+	border-bottom: 1px solid #fff;
+	/*position: relative;*/
+}
+.content-box div{
+	display: none;
+}
+.content-box .active{
+	display: block;
+}
+
 
 
 
