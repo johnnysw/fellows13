@@ -1,0 +1,174 @@
+#content{
+	padding-top: 88px;
+	overflow: hidden;
+}
+#title{
+	font-size: 24px;
+	color: #7c7c7c;
+	margin: 15px 0;
+}
+#img-box{
+	width: 310px;
+	float: left;
+}
+#big-img{
+	padding: 3px;
+	border:1px solid #efefef;
+}
+#big-img img{
+	width: 100%;
+	display: block;
+}
+.line{
+	text-align: center;
+	position: relative;
+	margin: 15px 0;
+}
+.line::before{
+	content: '';
+	height: 2px;
+	background: #f4f4f4;
+	/*background: #f00;*/
+	width: 100%;
+	display: block;
+	position: absolute;
+	left:0;
+	top:50%;
+	margin-top: -1px;
+
+}
+.line span{
+	color: #7c7c7c;
+	font-size: 37px;
+	background: #fff;
+}
+.small-img{
+
+}
+.small-img li{
+	width: 60px;
+	border: 1px solid #7c7c7c;
+	padding: 5px;
+	float: left;
+	margin-right: 7px;
+}
+.small-img li:last-child{
+	margin-right: 0px;
+
+}
+.small-img li img{
+	width: 60px;
+	display: block;
+}
+
+#info-box{
+	width: 635px;
+	float: right;
+}
+.product{
+	width: 365px;
+	float: left;
+}
+.p-title{
+	color: #7c7c7c;
+	font-size: 14px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.p-description{
+	border:1px solid #efefef;
+	background: #f4f4f4;
+	padding: 15px;
+	color:#7c7c7c;
+	margin-bottom: 20px;
+}
+
+.price{
+	width: 228px;
+	float: right;
+	border:1px solid #efefef;
+	padding: 15px;
+}
+.price h1{
+	font-size: 35px;
+	line-height: 40px;
+	color:#7c7c7c;
+}
+.price .incl{
+	color: #d7d7d7;
+	margin-bottom: 20px;
+}
+.price .select{
+	color:#7c7c7c;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.sel-btn{
+	height: 30px;
+	line-height: 30px;
+	background: #e8e8e8;
+	padding: 0 10px;
+	position: relative;
+}
+.sel-btn p{
+	overflow: hidden;
+	width: 186px;
+}
+.sel-btn span{
+	border:4px solid transparent;
+	border-top:4px solid #747474;
+	position: absolute;
+	right: 10px;
+	top:50%;
+	margin-top:-2px;
+}
+.sel-menu{
+	background: #fff;
+	border:1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 5px 0;
+	display: none;
+}
+.sel-menu li{
+	line-height: 26px;
+	padding: 0 20px;
+	color: #333333;
+}
+.sel-menu li:hover{
+	background:#0081c2;
+	color: #fff;
+}
+.price input{
+	width: 218px;
+	height: 30px;
+	padding: 0 5px;
+	color:#A7A7A7;
+	outline: none;
+}
+.share{
+	text-align: right;
+	line-height: 28px;
+	height: 28px;
+	margin: 15px 0;
+	color:#7c7c7c
+
+}
+.share .glyphicon{
+	font-size: 24px;
+}
+.share span{
+	vertical-align: middle;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
