@@ -178,7 +178,7 @@
 }
 .tab-box ul{
 	border-bottom: 1px solid #efefef;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	height: 35px;
 }
 .tab-box ul li{
@@ -192,8 +192,8 @@
 }
 .tab-box ul .active{
 	color: #000;
-	height: 38px;
-	border-bottom: 1px solid #fff;
+	height: 36px;
+	/*border-bottom: 1px solid #fff;*/
 	/*position: relative;*/
 }
 .content-box div{
@@ -201,6 +201,15 @@
 }
 .content-box .active{
 	display: block;
+	position: relative;
+}
+
+.content-box .active span{
+	font-size: 80px;
+	float: right;
+	/*position: absolute;
+	right: 0;
+	top:0;*/
 }
 
 
