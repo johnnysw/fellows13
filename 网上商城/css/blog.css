@@ -1,0 +1,42 @@
+.blog{
+	width: 716px;
+	float: right;
+
+}
+.blog-item{
+	border:1px solid #efefef;
+	padding: 15px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.blog-img{
+	width: 213px;
+	padding: 3px;
+	border:1px solid #efefef;
+	float: left;
+}
+.blog-img img{
+	width: 100%;
+	display: block;
+}
+.blog-info{
+	float: right;
+	width: 440px;
+}
+.item-right .blog-img{
+	float: right;
+}
+.item-right .blog-info{
+	float: left;
+}
+.item-width .blog-img{
+	width: 329px;
+}
+.item-width .blog-info{
+	width: 337px;
+}
+
+
+
+
+
