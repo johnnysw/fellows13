@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+	var num = prompt("请输入XXX的成绩!","");  //'dhegh'
+	// '12'  'abc' '12ab' '' '  ' '0'
+
+	// Number('12');
+	/*Number('12');
+	12
+	Number('abc');
+	NaN
+	Number('12ac');
+	NaN
+	Number('');
+	0
+	Number('   ');
+	0
+	Number('0');
+	0*/
+
+	// parseInt('')  
+	/*parseInt('12')
+	12
+	parseInt('abc')
+	NaN
+	parseInt('12abc')   有问题
+	12
+	parseInt('')
+	NaN
+	parseInt('   ')
+	NaN
+	parseInt('0')
+	0*/
+	var num1;
+
+	num1 = Number(num);
+
+	if(num1 == 0){
+		num1 = parseInt(num);
+	}
+
+	if (isNaN(num1)) {//不能将其它值转换成数字时将返回NaN,可以用内置的isNaN判断值是否是NaN
+		alert("您输入的不是一个数字!");
+	} else {
+		if (num<=100 && num>=90) {
+			alert("Excellent!");
+		} else {
+			if (num <90 && num>=80) {
+				alert("Good!");
+			} else {
+				if (num < 80 && num >= 70) {
+					alert("So so!");
+				} else {
+					if (num < 70 && num >=60) {
+						alert("Be careful !!!");
+					} else {
+						if (num < 60 && num >= 0) {
+							alert("Oh, NO!");
+						} else {
+							alert("USB!");
+						}
+					}
+				}
+			}
+		}	
+	}
+	</script>
+</body>
+</html>
