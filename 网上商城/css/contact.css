@@ -1,0 +1,38 @@
+#content{
+	padding-top:88px;
+	overflow: hidden;
+}
+.contact-ipt{
+	width: 554px;
+	float: left;
+}
+.contact-info{
+	width: 391px;
+	float: right;
+	background:#424242;
+	color:#fff;
+}
+.contact-ipt input{
+	width: 260px;
+	height: 30px;
+	border:1px solid #efefef;
+	outline: none;
+	padding: 0 6px;
+}
+
+.contact-ipt textarea{
+	width: 554px;
+	height: 110px;
+	border:1px solid #efefef;
+	margin-top:10px;
+	outline: none;
+
+}
+.into-title{
+	cursor: help;
+}
+
+
+
+
+
