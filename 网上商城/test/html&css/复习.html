@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Document</title>
+	<style>
+	*{
+		margin:0;
+		padding: 0;
+	}
+	li:nth-child(2n) .aa{
+		background: #f00;
+	}
+	.content{
+		border:1px solid #eee;
+		background: #0f0;
+	}
+	#div1{
+		width: 100px;
+		height: 100px;
+		background: #f00;
+		float: left;
+		/*margin: 20px;*/
+		/*border: 1px solid transparent;*/
+	}
+	#div2{
+		width: 100px;
+		height: 100px;
+		background: #00f;
+		float: left;
+		/*margin: 10px;*/
+		/*border-top: 10px solid red;*/
+
+	}
+	.div3{
+		clear:both;
+	}
+	.clearfix::after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	</style>
+</head>
+<body>
+	<!-- 块级元素  自己占一整行 可以设置宽高
+	h1 - h6、p、ul、li、div、
+
+	行级元素  横着分布的，多个占一行，不可以设置宽高
+	span a strong br
+	
+	多个占一行，可以设置宽高
+	img input 
+	
+	css选择器
+
+	id class 标签 .a,.b  .a .b  .a>.b  :hover  ::after ::before ul li:nth-child(n)
+
+	定位 
+
+	position:  static  relative  absolute fixed
+
+	relative 空间不释放  相对于自己原来的位置
+	absolute 空间释放 相对于最近已定位的祖先元素 没有相对于body
+
+	fixed 固定定位
+
+	浮动
+
+	塌陷问题
+	1.父元素 overflow:hidden;
+	2.如果高度固定 设置固定高
+	3.div  clear:both
+ -->
+<!-- 
+	<ul>
+		<li><span class="aa">ddddddd</span></li>
+		<li><span class="aa">dwwwwwwwe</span></li>
+		<li><span class="aa">dwwwwwwwe</span></li>
+		<li><span class="aa">dwwwwwwwe</span></li>
+		<li><span class="aa">dwwwwwwwe</span></li>
+		<li><span class="aa">dwwwwwwwe</span></li>
+	</ul>
+
+	<div id="div1">
+		<div id="div2">
+			
+		</div>
+	</div> -->
+
+	<div class="content clearfix">
+		<div id="div1">
+		</div>
+		<div id="div2">
+		</div>
+	</div>
+
+	<form action="">
+		<label for="user">用户名：</label>
+		<input type="text" name="username" id="user">
+		<label for="pwd">密码：</label>
+		<input type="password" name="password" id="pwd"> 
+		<input type="submit">
+		
+	</form>
+
+
+
+
+
+
+
+	
+</body>
+</html>
