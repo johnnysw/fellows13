@@ -6,23 +6,26 @@
 </head>
 <body>
 	<script>
+
+
 	/*var a = 10;
 
 	var height;*/
 
 
 	// var name = 'zhangsan'
-		function say(name,age){
-			var height = 100;   //局部变量
+		// function say(name,age){
+		// 	var height = 100;   //局部变量
 
-			weight = 50;
+		// 	weight = 50;
 
-			// return height;
-		}
+		// 	//return height;
+		// }
+		// say();
 
-		var i = say();
+		// var i = say();
 
-		console.log(i);
+		// console.log(i);
 
 		/*console.log(height);
 
@@ -36,6 +39,20 @@
 
 
 		// say();
+		function a(name){  //函数声明    会得到提升
+			name = 'zhangsan';
+			console.log(arguments[0]);
+			// alert(name);
+		}
+
+		// var a = function(){  //函数表达式
+		// 	alert('aaa');
+		// }
+		a('lisi',10,'haha');
+
+
+
+
 
 
 	</script>
