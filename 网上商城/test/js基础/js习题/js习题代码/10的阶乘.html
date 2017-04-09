@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//1.	编写程序，计算10!(即 1*2*3＊·…10）的结果(10的阶乘)。
+
+		/*function aa(n){
+			if(n == 1){
+				result = 1;
+			}else{
+				result = n*aa(n-1);   
+			}
+			return result;
+
+			if(n == 1){
+				return 1;
+			}else{
+				return  n*aa(n-1);
+			}
+		}
+
+		console.log(aa(3));*/
+		/*1!   1
+		2!   1*2
+		3!   1*2*3
+		4!   1*2*3*4
+			 n! = n*(n-1)!*/
+
+		// var c ;
+		/*function add(a,b){
+
+			var c = a+b;
+			return c;
+			
+		}
+
+		var x = add(2,3);
+
+		console.log(x);
+
+
+		console.log(c);*/
+
+
+
+		/*function fac(n){
+			var sum = 1;
+			for(var i = 1; i<n+1;i++){
+				sum*=i;
+			}
+			return sum;
+		}
+
+		console.log(fac(10));
+*/
+		//10! = 10*9*8*7*6*5*4*3,,,1
+
+		//1.	在页面上输出如下数字图案。
+
+		/*for(var i=0;i<5;i++){
+			for(var j=0; j<5;j++){
+				document.write('a&nbsp;');
+			}
+			document.write('<br>');
+		}*/
+
+		/*for(var i=0;i<5;i++){
+
+			for(var j=0;j<=i;j++){
+				document.write(j+1+'&nbsp;');
+			}
+			document.write('<br>');
+		}*/
+
+		for(var i=1000; i<=9999; i++){
+
+			// ABCD  1234 12.34  12 
+				1234   34 3.4  3
+
+			var four = Math.floor(i/1000);
+			var three = Math.floor(i/100)%10;
+			var two = Math.floor(i%100/10);
+
+			if(i%13 ==0 && (three + two) == four){
+				document.write(i+",");
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

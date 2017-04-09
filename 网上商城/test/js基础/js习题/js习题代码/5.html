@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+//1.	编写一个函数 f(x) = 4x2+3x+2，使用户通过提示对话框瑜入x的值，能得到相应的计算结果。
+/*
+		function f(x){
+			return 4*Math.pow(x,2)+3*x+2;
+		}
+
+		alert(f(5));*/
+
+//1.	编写一个判断某个非负整数是否能够同时被3,5,7整除的函数，然后在页面上输出1~1000之间所有能同时被3,5,7整除的整数，并要求每行显示6个这样的数。
+
+		
+		/*var num = 0;
+		for(var i=1; i<=1000;i++){
+			if(i%3 == 0 && i%5 == 0 && i%7 == 0){
+				document.write(i+",");
+				num++;
+				if(num % 6 == 0){
+					document.write("<br>");
+				}
+
+			}
+		}*/
+
+
+		//1.	在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。
+
+
+		/*function pr(n){
+			if(n == 2){
+				return true;
+			}
+			for(var i = 2; i<n; i++){
+				if(n%i == 0){
+					return false;
+				}
+			}
+			return true;
+		}
+
+		var num = 0;
+		for(var i=100; i<=1000; i++){
+			//pr(10)  //true    false
+			if(pr(i)){
+				//是素数
+				num++;
+				document.write(i+",");
+				if(num % 6 == 0){
+					document.write('<br>');
+				}
+			}
+		}*/
+
+		//1.	编写一个带一个参数（指定显示多少层星号“*”的函数，它在页面止输出的一个5层星号“*”图案类似。
+		/*function star(n){
+			for(var i=0; i<n;i++){
+
+				for(var j=0; j<n-i;j++){
+					document.write('&nbsp;');
+				}
+				for(var x=0; x<=i;x++){
+					document.write('*&nbsp;');
+				}
+				document.write('<br>');
+			}
+		}
+
+		star(6);*/
+		//7.	斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值。
+
+		// 1  1  2  3  5  8
+		// n = n-1 + n-2
+/*
+		function fib(n){
+			if(n == 1 || n ==2){
+				return 1;
+			}
+			return fib(n-1)+fib(n-2);
+		}
+
+		function fib1(n){
+			if(n == 1 || n ==2){
+				return 1;
+			}
+			var f1 = 1,f2 = 1;
+			var x;
+
+			for(var i = 3; i<=n; i++ ){
+				x = f1+f2;
+				f1 = f2;
+				f2 = x;
+			}
+			return f2;
+		}*/
+
+
+/*
+		function pi(m){
+			return Math.pow(-1,m-1)/(2*m-1);
+		}
+
+		function pai(n){
+			var sum = 0;
+			for(var i=1; i<=n;i++){
+				sum += pi(i);
+			}
+
+			return sum*4;
+		}
+
+		document.write(pai(100000));*/
+
+		//9.	利用全局变量和函数，设计模拟幸运数字机游戏。设幸运数字为8，每次由计算机随机产生3个1-9之间(包括1和9）的随机数，当这3个随机数中有一个数字为8时，就算赢了一次，要求利用函数计算获胜率。
+
+			// (y-x+1)   x
+			// Math.floor(Math.random()*3)+3;
+			function play(){
+				var x = Math.floor(Math.random()*9)+1;
+				var y = Math.floor(Math.random()*9)+1;
+				var z = Math.floor(Math.random()*9)+1;
+				var win;
+				var str;
+
+				if(x ==8 ||y ==8|| z ==8){
+					win = '你赢了';
+				}else{
+					win = '你输了';
+				}
+				 return x +","+y+","+z+',\n'+win;
+			}
+			var result = confirm(play());
+			while(result){
+				result = confirm(play())
+			}
+			// alert();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
