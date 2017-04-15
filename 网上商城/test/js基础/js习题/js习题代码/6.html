@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*var obj = {
+			name:'lisi',
+			age:19
+		}
+
+		var attr = 'name';
+
+		console.log(obj[attr]);
+
+		Math.random() // 0-1
+
+		Math.floor(Math.random()*8);
+		var str = 'sdfsjytfdyst';
+		str.substr(0,4);
+
+		console.log(str.substring(0,4)) //sdfsj*/
+
+		//2.63547634   2
+		//0-100
+		//Math.floor(Math.random()*101);
+		//1-100
+		// Math.floor(Math.random()*100)+1  
+
+
+		// 3、设计一个页面，在页面上显示信息“现在是XXXX年XX月XX日Xx点XX分XX秒（星期X)，欢迎您的到访！“。
+/*
+		var date = new Date();
+
+		var year = date.getFullYear(),
+			month = date.getMonth(),
+			day = date.getDate(),
+			weekday = date.getDay();
+
+			document.write("现在是"+year+"年"+(month+1)+"月"+day+"日Xx点XX分XX秒（星期"+weekday+")，欢迎您的到访！");*/
+
+		//4、CollectDigits("1abc23def4"）
+
+			/*function CollectDigits(str){
+				var result = '';
+				for(var i=0;i<str.length; i++){
+					//console.log(str[i]); charAt(i);
+					//console.log(typeof str[i]);  //'1' 'a'
+					if(0<=str[i] && str[i]<=9){  //'1' > 0
+						result+=str[i]; // undefined+'1'  ==>'undefined1'
+					}
+				}
+				return result;
+			}
+
+			console.log(CollectDigits("1abc23def4"));   //1234
+*/
+		//5、Merge("123456",''abc''）的
+
+		/*function merge(s1,s2){
+
+			var maxLength = s1.length>s2.length?s1.length:s2.length;
+			var sum = '';
+			for(var i=0; i<maxLength;i++){
+
+				 if(i<s1.length){
+					sum+=s1[i]; // s1.charAt(i);
+				 }
+				 if(i<s2.length){
+					sum+=s2[i];
+				 }
+				 sum += s1.charAt(i);
+				 sum += s2.charAt(i);
+			}
+			return sum;
+		}
+
+		console.log(merge('12fd','egefhggjh'));*/
+/*
+6.	设计一个程序，它（使用一个数组）接收用户输入的7门课程的成绩，然后在页面上显示其总成绩和平均分，并列出小于60的成绩。*/
+		/*
+		var sum = 0;
+		var str = '';
+		for(var i=0; i<7;i++){
+			var num = parseInt(prompt('请输入'));
+			sum += num;
+			if(num < 60){
+				str += num+",";
+			}
+		}
+
+		console.log(sum);
+		console.log(sum/7);
+		console.log(str);*/
+
+
+
+
+		/*function fib(n){
+			if(n == 1 || n ==2){
+				return 1;
+			}
+			return fib(n-1)+fib(n-2);
+		}*/
+		//正序
+		/*for(var i=1; i<=40; i++){
+			fib(i)
+		}*/
+		//逆序
+		/*var num = 0;
+		for(var i=40; i>=1; i--){
+			num++;
+			document.write(fib(i)+",");
+
+			if(num%6 == 0){
+				document.write("<br>");
+			}
+
+		}*/
+
+
+		//"abcdefg"  ==>"gfedcba";
+		//var str = "abcdefg";
+		// sum = '';
+		// for(var i=str.length-1; i>=0;i--){
+		// 	sum += str.charAt(i);
+		// }
+
+		/*var arr = str.split(''); //['a','b','c','d'...];
+		arr.reverse();		//['g','f','e'....]
+		var str = arr.join('');	//'gfedcba'
+
+		console.log(str);*/
+
+
+
+
+
+
+
+
+		//arr.reverse()
+/*8、	设计一个函数DayOfYear(d)，它接必一个日期参数d，返回一个该日期是所在年份的第几天，如DayOfYear(2000,2,8)的返回值是39.
+（提示：①定义一个数组months=new Array（31,28,31,30,31,30,31,31,30,31，30,31）记录每个月少天：②定义一个辅助函数IsLeapYear(y)判定某个年份是否闰年，以确定2月份的天数是28还是29。）*/
+
+		//2017-10-2
+		var months=new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+		
+		function dayOfYear(d){
+			var year = d.getFullYear();
+			var month = d.getMonth(); //0-11
+			var day = d.getDate();
+			var sum = 0;
+			if(isLeapYear(year)){
+				months[1] = 29;
+			}
+
+			for(i=0;i<month;i++){
+				sum += months[i];
+			}
+
+			sum += day;
+			return sum;
+
+		}
+		function isLeapYear(year){
+			if(year%4 ==0 && year%100 != 0 || year%400 ==0){
+				return true;
+			}
+			return false;
+		}
+
+		var date = new Date();
+
+		console.log(dayOfYear(date));
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
