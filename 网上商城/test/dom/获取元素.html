@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<ul id="ul1">
+			<li class="aa bb">014</li>
+			<li>024</li>
+			<li class="aa">034</li>
+			<li class="aa1">044</li>
+		</ul>
+		<ul>
+			<li class="aa">014</li>
+			<li>024</li>
+			<li class="aa">034</li>
+			<li>044</li>
+		</ul>
+
+
+	</div>
+	<script>
+		//dom  documnet object model
+		/*var oDiv1 = document.getElementById('div1');
+
+		console.log(oDiv1.style.background);
+
+		oDiv1.onclick = function(){
+			alert('haha');
+		}*/
+
+		/*var oDiv1 = document.getElementById('div1');
+
+		oDiv1.style.background = 'yellow';
+		var aLi = document.getElementsByTagName('li');*/
+
+		//aLi[0].style.background = 'green';
+
+		/*for(var i=0; i<aLi.length;i++){
+			aLi[i].style.background = 'green';
+		}*/
+		/*var oUl1 = document.getElementById('ul1');
+		var aA = oUl1.getElementsByClassName('aa');
+
+		for(var i=0; i<aA.length; i++){
+			aA[i].style.background = 'red';
+		}*/
+
+
+
+
+
+
+
+
+		function getClass(clsName,context){
+			var result = [];
+			context = context || document;
+			var arr = context.getElementsByTagName('*');
+			for(var i=0; i<arr.length; i++){
+				//class  保留字 .className
+				//'aa bb' == 'aa'   'aacc'
+				if(arr[i].className.indexOf(clsName) != -1){
+					result.push(arr[i]);
+				}
+			}
+			return result;
+		}
+
+		var oUl1 = document.getElementById('ul1');
+		var arr = getClass('aa',oUl1);
+
+		for(var i=0; i<arr.length; i++){
+			arr[i].style.background = 'blue';
+		}
+
+
+
+		// console.log(arr);
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
