@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		#menu-box{
+			width: 200px;
+			border:1px solid #000;
+		}
+		#menu-box h3{
+			background: #000;
+			color:#fff;
+
+		}
+		#menu-box ul{
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<ul id="menu-box">
+		<li class="main-menu">
+			<h3>管理区</h3>
+			<ul>
+				<li>014</li>
+				<li>024</li>
+				<li>034</li>
+			</ul>
+		</li>
+		<li class="main-menu">
+			<h3>交流区</h3>
+			<ul>
+				<li>014</li>
+				<li>024</li>
+				<li>034</li>
+			</ul>
+		</li>
+	</ul>
+	<script>
+	function getClass(clsName,context){
+		var result = [];
+		context = context || document;
+		var arr = context.getElementsByTagName('*');
+		for(var i=0; i<arr.length; i++){
+			//class  保留字 .className
+			//'aa bb' == 'aa'   'aacc'
+			if(arr[i].className.indexOf(clsName) != -1){
+				result.push(arr[i]);
+			}
+		}
+		return result;
+	}
+
+	var aH3 = document.getElementsByTagName('h3'),
+		oMenuBox = document.getElementById('menu-box'),
+		aUl = oMenuBox.getElementsByTagName('ul');
+
+		// aUl[0]
+
+	for(var i=0; i<aH3.length; i++){
+		aH3[i].index = i; // aH3[0].index = 0; aH3[1].index = 1;
+		aH3[i].onclick = function(){
+			//var idx = this.index;
+			var oUl = aUl[this.index];
+			if(oUl.style.display == 'none' || oUl.style.display == ''){
+				oUl.style.display = 'block';
+			}else{
+				oUl.style.display = 'none';
+			}
+		}
+	}
+
+	//console.log(i);
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

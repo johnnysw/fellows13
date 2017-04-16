@@ -64,7 +64,7 @@
 			var arr = context.getElementsByTagName('*');
 			for(var i=0; i<arr.length; i++){
 				//class  保留字 .className
-				//'aa bb' == 'aa'   'aacc'
+				//'aa bb' == 'aa'   'aacc'  ''
 				if(arr[i].className.indexOf(clsName) != -1){
 					result.push(arr[i]);
 				}
@@ -73,7 +73,7 @@
 		}
 
 		var oUl1 = document.getElementById('ul1');
-		var arr = getClass('aa',oUl1);
+		var arr = getClass('aa');
 
 		for(var i=0; i<arr.length; i++){
 			arr[i].style.background = 'blue';

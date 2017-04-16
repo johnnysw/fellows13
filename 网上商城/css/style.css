@@ -121,9 +121,12 @@ body{
 	padding: 0 10px;
 	position: relative;
 }
-#nav .nav-menu > li:hover .sub-menu{
-	display: block;
+#nav .nav-menu .sub-menu{
+	background: #fff;
 }
+/*#nav .nav-menu > li:hover .sub-menu{
+	display: block;
+}*/
 #nav .nav-menu a{
 	font-size: 14px;
 	color: #040404;
