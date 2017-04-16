@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	/*.selected{
+		background: #f00;
+	}*/
+	</style>
+</head>
+<body>
+	<div id="div1">
+		hgfg
+		<a class="sel" href="#">djfhgdhjf</a>
+		<a href="#">djfhgdhjf</a>
+		<a class="sel" href="#">djfhgdhjf</a>
+	</div>
+	<a href="#">djfhgdhjf</a>
+	<p id="aa">jdhgfjhsdg</p>
+	<p id="bb">fdff</p>
+	<p id="cc">11111</p>
+	<a href="#">djfhgdhjf</a>
+	<input type="radio" name="sex" value="男">男
+	<input type="radio" name="sex" value="女">女
+	<script>
+		var oDiv1 = document.getElementById('div1');//null
+
+		oDiv1.className = 'selected';
+		//console.log(oDiv1.id);
+
+		oDiv1.onclick = function(){
+
+			//alert(oDiv1.id);
+			alert(this.id); //this对当前对象的引用
+		}
+
+		var aP = document.getElementsByTagName('ul');  //[]
+
+		for(var i=0; i<aP.length; i++){
+			aP[i].onclick = function(){
+				alert(this.id);
+			}
+		}
+
+		var aLink = oDiv1.getElementsByTagName('a');  //[]
+
+		console.log(aLink);
+
+		var aSel = document.getElementsByClassName('sel');
+
+		for(var i=0; i<aSel.length; i++){
+			aSel[i].style.background = 'red';
+		}
+
+
+		var aRadio = document.getElementsByName('sex');
+
+		for(var i=0; i<aRadio.length; i++){
+			aRadio[i].onclick = function(){
+				alert(this.value);
+			}
+		}
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
