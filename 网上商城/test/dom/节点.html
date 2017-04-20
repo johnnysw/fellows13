@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- jhdghj -->
+	<div id="div1">aaaa</div>
+	<!-- dhjgfs -->
+	<a href="#">vvvv</a>
+	<ul id="ul1">
+		<!-- hsjdgsh -->
+
+		<li>111101</li>
+		<li>111102</li>
+		<li id="li3">111103</li>
+	</ul>
+
+	<script>
+		/*console.log(document.documentElement) ;
+
+		console.log(document.body);
+		console.log(document.head);*/
+
+		//var oDiv = document.getElementById('div1');
+
+		// console.log(oDiv.nodeType);
+		// console.log(oDiv.innerHTML);
+		// console.log(oDiv.firstChild.nodeType);
+
+		// var oUl1 = document.getElementById('ul1');
+
+		// console.log(oUl1.firstChild);
+		// console.log(oUl1.firstElementChild);
+
+		var oDiv = document.getElementById('div1');
+		var oLi = document.getElementById('li3');
+
+		/*console.log(oDiv.nextSibling);
+		console.log(oDiv.nextElementSibling);*/
+
+		/*function next(elem){
+			if(oDiv.nextElementSibling){
+				return oDiv.nextElementSibling;
+			}else{
+				return oDiv.nextSibling;
+			}
+		}*/
+
+		function next(elem){
+			do{
+				elem = elem.nextSibling;
+				// console.log(elem);
+			}while(elem && elem.nodeType != 1);
+			return elem;
+		}
+
+		console.log(next(oLi));
+
+		function previous(elem){
+
+		}
+
+		function first(elem){
+			elem = elem.firstChild;
+			if(elem && elem.nodeType != 1){
+				elem = next(elem);
+			}
+			return elem;
+		}
+		function last(){
+			
+		}
+
+		var oUl1 = document.getElementById('ul1');
+
+
+		// oUl1.appendChild(first(oUl1).cloneNode(true));
+		oUl1.removeChild(first(oUl1));
+
+
+		// console.log(oUl1.childNodes);
+
+		// console.log(oUl1.firstChild.nodeName);
+
+		/*var aDiv = document.getElementsByTagName('div');
+
+		aDiv.pop();
+
+		console.log(aDiv);
+
+*/
+	// <p>uydgfkuywegfkd</p>
+
+		var oP = document.createElement('p');
+		oP.innerHTML = 'hahah';
+
+		document.body.appendChild(oP);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// document.getElementsByTagName('head')[0];
+
+	</script>
+
+
+
+
+	
+</body>
+</html>

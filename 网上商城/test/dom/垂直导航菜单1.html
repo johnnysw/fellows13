@@ -61,12 +61,17 @@
 	}
 
 	var oMenuBox = document.getElementById('menu-box');
-	var aLi = getClass('main-menu',oMenuBox);
+	var aLi = oMenuBox.children;
+
+	// var aLi = getClass('main-menu',oMenuBox);
 
 	for(i=0; i<aLi.length; i++){
 		aLi[i].onclick = function(){
-			var oUl = this.getElementsByTagName('ul')[0];
-			console.log(oUl.style.display); //.style  只能取到内联样式
+
+			/*var oUl = this.getElementsByTagName('ul')[0];
+			console.log(oUl.style.display); //.style  只能取到内联样式*/
+
+			var oUl = this.children[1];
 			if(oUl.style.display == 'none' || oUl.style.display==""){
 				oUl.style.display = 'block';
 			}else{
