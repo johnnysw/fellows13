@@ -3,10 +3,12 @@
 	width: 472px;
 	height: 254px;
 	overflow: hidden;
+	position: relative;
 }
 .carousel-imgs{
 	width: 1416px;
 	height: 224px;
+	position: absolute;
 }
 .carousel-imgs img{
 	width: 472px;
@@ -17,6 +19,7 @@
 	height: 30px;
 	line-height: 30px;
 	float: right;
+	margin-top:230px;
 }
 .carousel-btns li{
 	width: 10px;

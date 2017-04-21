@@ -78,66 +78,71 @@
 	</div>
 
 	<script>
+		var oContent = document.getElementById('content'),
+			aLi = oContent.getElementsByTagName('li'),
+			aImg = oContent.getElementsByTagName('img'),
+			oNext = document.getElementById('next'),
+			oPrev = document.getElementById('prev'),
+			iNow = 0,
+			timer;
 
-		var oContent = document.getElementById('content');
-		var aLi = oContent.getElementsByTagName('li');
-		var aImg = oContent.getElementsByTagName('img');
-		var oNext = document.getElementById('next');
-		var oPrev = document.getElementById('prev');
-		var timer;
-		var iNow = 0;
 
+			for(var i=0; i<aLi.length; i++){
+				aLi[i].index = i;
+				aLi[i].onmouseover = function(){
 
-		for(var i=0; i<aLi.length; i++){
-			aLi[i].index = i;
-			aLi[i].onmouseover = function(){
-				changeImg(this.index);
-				iNow = this.index;
+					changeImg(this.index);
+					iNow = this.index;
+				}
 			}
-		}
+
 		oNext.onclick = function(){
 			iNow++;
-			/*if(iNow == aImg.length){
+			if(iNow == 4){
 				iNow = 0;
-			}*/
-			iNow = iNow%aImg.length;
+			}
+
+			//iNow = iNow%4;
 			changeImg(iNow);
 		}
 		oPrev.onclick = function(){
 			iNow--;
-			if(iNow == -1){
-				iNow = aImg.length-1;
+			if(iNow ==-1){
+				iNow = aLi.length-1;
 			}
+
 			changeImg(iNow);
 		}
-
 		function changeImg(idx){
 			for(var j=0; j<aLi.length; j++){
 				aLi[j].className = '';
 				aImg[j].className = '';
 			}
-			aImg[idx].className = 'selected';
+			// console.log(this);
 			aLi[idx].className = 'selected';
+			aImg[idx].className = 'selected';
 		}
 
-		
+		/*var timer = setInterval(function(){
+			oNext.onclick();
+		},1000);*/
+		run();
+
 		oContent.onmouseover = function(){
 			clearInterval(timer);
 		}
 		oContent.onmouseout = function(){
 			run();
 		}
+
 		function run(){
 			timer = setInterval(function(){
 				oNext.onclick();
-			},2000);
+			},1000);
 		}
 
-		run();
 
-	
-		// clearInterval(timer);
-		// console.log(timer);
+
 
 
 

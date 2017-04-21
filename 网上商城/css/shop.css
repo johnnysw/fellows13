@@ -18,6 +18,7 @@
 	width: 960px;
 	/*height: 200px;*/
 	background: #f00;
+	float: left;
 }
 .carousel-txt{
 	float: left;
