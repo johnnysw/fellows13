@@ -107,11 +107,15 @@
 }
 .select-box{
 	position: relative;
+	background: #e8e8ee;
+}
+.select-box.selected{
+	color: #fff;
+	box-shadow:1px 1px 5px 3px rgba(0,0,0,0.15) inset;
 }
 .sel-btn{
 	height: 30px;
 	line-height: 30px;
-	background: #e8e8e8;
 	padding: 0 10px;
 	position: relative;
 }
