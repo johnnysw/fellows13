@@ -11,7 +11,8 @@ function getClass(clsName,context){
 	}
 	return result;
 }
-var oMenuBox = document.getElementById('menu-box');
+//水平导航菜单 
+/*var oMenuBox = document.getElementById('menu-box');
 var aLi = getClass('menu-btn',oMenuBox);
 
 for(var i=0; i<aLi.length; i++){
@@ -19,14 +20,21 @@ for(var i=0; i<aLi.length; i++){
 		// alert("hahah");
 		// console.log(aLi[i]); //i = 2;
 		//this  //对当前对象的引用
-		var aUl = this.getElementsByTagName('ul'); 
-		aUl[0].style.display = 'block';
+		var oUl = this.getElementsByTagName('ul')[0]; 
+		// aUl[0].style.display = 'block';
+		oUl.style.opacity = 100;
+		oUl.style.filter = 'alpha(opacity = 1)';
+		oUl.style.top = '56px';
 	}
 	aLi[i].onmouseout = function(){
 		var oUl = this.getElementsByTagName('ul')[0];
-		oUl.style.display = 'none';
+		// oUl.style.display = 'none';
+		oUl.style.opacity = 0;
+		oUl.style.filter = 'alpha(opacity = 0)';
+		oUl.style.top = '120px';
+
 	}
-}
+}*/
 
 //console.log(i);
 

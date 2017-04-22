@@ -17,10 +17,10 @@ function change(idx){
 	for(var j=0; j<aBtns.length;j++){
 		aBtns[j].className = '';
 	}
-	animate(oImgBox,{
-		left:-aItem[0].offsetWidth * idx
-	});
-		//oImgBox.style.left = -aItem[0].offsetWidth * this.index +"px";
+	// animate(oImgBox,{
+	// 	left:-aItem[0].offsetWidth * idx
+	// });
+    oImgBox.style.left = -aItem[0].offsetWidth * idx +"px";
 	aBtns[idx].className = 'selected';
 }
 oCarousel.onmouseover = function(){

@@ -121,11 +121,18 @@ body{
 	padding: 0 10px;
 	position: relative;
 }
+#nav .nav-menu > li.menu-btn:hover .sub-menu{
+	opacity: 100;
+	filter:alpha(opacity = 1);
+	top:56px;
+}
 #nav .nav-menu .sub-menu{
 	background: #fff;
 }
 /*#nav .nav-menu > li:hover .sub-menu{
-	display: block;
+	opacity: 100;
+	filter:alpha(opacity = 1);
+	top:56px;
 }*/
 #nav .nav-menu a{
 	font-size: 14px;
@@ -138,10 +145,13 @@ body{
 #nav .sub-menu{
 	width: 150px;
 	position: absolute;
-	top: 56px;
+	top: 120px;
 	border: 1px solid #bdbdbd;
 	border-top: 0;
+	opacity: 0;
+	filter:alpha(opacity=0);
 	display: none;
+	transition:top 1s ease;
 }
 #nav .sub-menu li{
 	line-height: 30px;
