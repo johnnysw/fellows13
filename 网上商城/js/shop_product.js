@@ -42,8 +42,9 @@ for(var i=0; i<aOption.length;i++){
 	}
 }
 
-document.onclick = function(e){
-	if(e.target != oSelBox){
+document.body.onclick = function(e){
+	console.log(e.target);
+	if(e.target != oBtn){
 		oUl.style.display = 'none';
 	}
 
