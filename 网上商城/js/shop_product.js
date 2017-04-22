@@ -20,6 +20,7 @@ var oBtn = getClass('sel-btn',oSelBox)[0];
 var oUl = getClass('sel-menu',oSelBox)[0];
 var aOption = oUl.getElementsByTagName('li');
 var oP = oBtn.getElementsByTagName('p')[0];
+var oSpan = oBtn.getElementsByTagName('span')[0];
 
 oBtn.onmousedown = function(){
 	oSelBox.className = 'select-box selected';
@@ -41,14 +42,24 @@ for(var i=0; i<aOption.length;i++){
 		// console.log(this.innerHTML);
 	}
 }
+	// console.log('aaa');
+	/*事件源 
+	事件处理函数
+	事件*/
 
+	// 事件冒泡
 document.body.onclick = function(e){
-	console.log(e.target);
-	if(e.target != oBtn){
+
+	// console.log(e.target);
+	var target = e.target || event.srcElement;
+
+	if(target != oBtn && target != oP && target != oSpan){
 		oUl.style.display = 'none';
 	}
-
+	
 }
+
+
 
 
 
