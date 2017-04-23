@@ -15,6 +15,7 @@ var oTabBox = document.getElementById('tab-box'),
 		}
 	}
 // 下拉
+/*
 var oSelBox = document.getElementById('select-box');
 var oBtn = getClass('sel-btn',oSelBox)[0];
 var oUl = getClass('sel-menu',oSelBox)[0];
@@ -43,9 +44,9 @@ for(var i=0; i<aOption.length;i++){
 	}
 }
 	// console.log('aaa');
-	/*事件源 
-	事件处理函数
-	事件*/
+	// 事件源 
+	// 事件处理函数
+	// 事件
 
 	// 事件冒泡
 document.body.onclick = function(e){
@@ -58,6 +59,41 @@ document.body.onclick = function(e){
 	}
 	
 }
+*/
+
+
+
+var selBox = document.getElementById('select-box');
+
+var selBtn = getClass('sel-btn')[0];
+var selMenu = getClass('sel-menu')[0];
+var aOptions = selMenu.getElementsByTagName('li');
+var oP = selBtn.getElementsByTagName('p')[0];
+var oSpan = selBtn.getElementsByTagName('span')[0];
+selBtn.onmousedown = function(){
+	selBox.className = 'select-box selected';
+}
+selBtn.onmouseup = function(){
+	selBox.className = 'select-box';
+	if(selMenu.style.display == 'none' || selMenu.style.display == ''){
+		selMenu.style.display = 'block';
+	}else{
+		selMenu.style.display = 'none';
+	}
+}
+for(var i=0; i<aOptions.length; i++){
+	aOptions[i].onclick = function(){
+		oP.innerHTML = this.innerHTML;
+		selMenu.style.display = 'none';
+	}
+}
+document.body.onclick = function(e){
+	var target = e.target || event.srcElement;
+	if(target != oP && target != selBtn && target != oSpan){
+		selMenu.style.display = 'none';
+	}
+}
+
 
 
 

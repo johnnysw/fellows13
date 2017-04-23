@@ -16,7 +16,7 @@ table{
 	border-right: 1px solid #efefef;
 
 }
-table tbody tr:hover{
+table tbody tr:hover,table tbody tr.selected{
 	background: #7c7c7c;
 }
 table td{
