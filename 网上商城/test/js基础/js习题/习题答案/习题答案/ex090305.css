@@ -1,0 +1,8 @@
+#image1     { filter: alpha(Opacity=80,Style=2) }
+#image2     { filter: chroma(color=black) }
+#image3     { filter: flipH }
+#image4     { filter: flipV }
+#image5     { filter: gray }
+#image6     { filter: invert }
+#image7     { filter: wave(freq=3,lightStrength=20,phase=25,strength=5) }
+#image8     { filter: xray }

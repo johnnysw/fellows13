@@ -1,0 +1,40 @@
+<HTML>
+
+<HEAD>
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+</HEAD>
+
+<BODY>
+
+<PRE><SCRIPT language="javascript">
+<!--
+	var nb=0,i,j,n,sum;
+	for(n=1;n<=1000;n++)
+	{
+		sum = 0;
+		i = n;
+		while(sum<1000 && i<=1000)
+		{
+			sum += i;
+			if (sum==1000)
+			{
+				nb++;
+				document.write("µÚ" + nb + "´®:");
+				for(j=n;j<=i;j++)
+				{
+					if (j>n) document.write(",");
+					document.write(j);
+				}
+				document.write("\n");
+			}
+			i++;
+		}
+	}
+//-->
+</SCRIPT>
+</PRE>
+
+</BODY>
+
+</HTML>

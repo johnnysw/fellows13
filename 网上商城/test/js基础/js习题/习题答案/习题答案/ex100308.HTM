@@ -1,0 +1,112 @@
+<HTML>
+
+<HEAD>
+<META http-equiv="Content-Language" content="zh-cn">
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<STYLE>
+<!--
+.menu {position:absolute;width:120px;border:2px outset buttonhighlight;font-size: 10pt;cursor:default;background-color:menu;visibility:hidden;}
+.menuitem{padding-left:15px;padding-right:10px;}
+-->
+
+</STYLE>
+</HEAD>
+
+<BODY onclick="hideMenu();">
+
+<P oncontextmenu="showMenu(menu1);return false;">鼠标右击本段会弹出菜单。 </P>
+<SCRIPT LANGUAGE="JavaScript">
+var display_url = 0;
+var current_menu=null; 
+function showMenu(menu)
+{//显示菜单,调整菜单位置
+	hideMenu();
+	current_menu = menu;
+	var rightedge = document.body.clientWidth-event.clientX;
+	var bottomedge = document.body.clientHeight-event.clientY;
+	if (rightedge < menu.offsetWidth)
+		menu.style.left = document.body.scrollLeft + event.clientX - menu.offsetWidth;
+	else
+		menu.style.left = document.body.scrollLeft + event.clientX;
+	if (bottomedge < menu.offsetHeight)
+		menu.style.top = document.body.scrollTop + event.clientY - menu.offsetHeight;
+	else
+		menu.style.top = document.body.scrollTop + event.clientY;
+	menu.style.visibility = "visible";
+}
+function hideMenu()
+{//隐藏菜单
+	if(current_menu!=null)
+	{
+		current_menu.style.visibility = "hidden";
+		current_menu=null;
+	}
+}
+
+function highLightMenuItem()
+{//高亮显示当前菜单项
+	if (event.srcElement.className != "menuitem") return;
+	event.srcElement.style.backgroundColor = "highlight";
+	event.srcElement.style.color = "white";
+	display_url	=	event.srcElement.url;
+	window.status = display_url;
+}
+
+function lowlightMenuItem()
+{//非当前菜单项显示为普通格式
+	if (event.srcElement.className != "menuitem") return;
+	event.srcElement.style.backgroundColor = "menu";
+	event.srcElement.style.color = "black";
+	window.status = "";
+}
+
+function jumpTo()
+{//当选中某个菜单项时,则打开对应的页面
+	if (event.srcElement.className != "menuitem") return;
+	if (event.srcElement.getAttribute("target") != null)
+		window.open(event.srcElement.url, event.srcElement.getAttribute("target"));
+	else
+		window.location = event.srcElement.url;
+}
+
+</SCRIPT>
+<!----------定义弹出菜单开始---------->
+<DIV id="menu1" class="menu" onMouseover="highLightMenuItem()" onMouseout="lowlightMenuItem()" onClick="jumpTo();">
+  <DIV class="menuitem" url="javascript:history.back();">
+    返回</DIV>
+  <DIV class="menuitem" url="about:blank">
+    空白页</DIV>
+  <HR>
+  <DIV class="menuitem" url="http://www.rising.com.cn/">
+    瑞星</DIV>
+  <DIV class="menuitem" url="http://www.sohu.com">
+    搜狐</DIV>
+  <HR>
+  <DIV class="menuitem" url="http://www.zsu.edu.cn">
+    中山大学</DIV>
+</DIV>
+<!----------定义弹出菜单结束---------->
+<P>　</P>
+<P>　</P>
+<P>　</P>
+<P>　</P>
+<P>
+<IMG border="0" src="fouxiang.gif" width="146" height="137" oncontextmenu="showMenu(menu2);return false;">鼠标右击本图片弹出菜单。 
+</P>
+<!----------定义弹出菜单开始---------->
+<DIV id="menu2" class="menu" onMouseover="highLightMenuItem()" onMouseout="lowlightMenuItem()" onClick="jumpTo();">
+  <DIV class="menuitem" url="javascript:history.back();">
+    返回</DIV>
+  <DIV class="menuitem" url="about:blank">
+    空白页</DIV>
+  <HR>
+  <DIV class="menuitem" url="http://www.pconline.com.cn/">
+    太平洋电脑城</DIV>
+</DIV>
+<!----------定义弹出菜单结束---------->
+
+</BODY>
+
+</HTML>

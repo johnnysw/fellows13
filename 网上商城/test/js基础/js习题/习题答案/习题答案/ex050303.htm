@@ -1,0 +1,35 @@
+<html>
+<head>
+<script language=javascript>
+<!--
+function IsThatNumber(x)
+{
+	return x%3==0 && x%5==0 && x%7==0;
+}
+//-->
+</script>
+
+</head>
+<body>
+<pre><script language=javascript>
+<!--
+var n,nb=0;
+for(n=1;n<1000;n++)
+{
+	if (IsThatNumber(n))
+	{
+		if (nb%6 > 0) document.write(",");
+		nb++;
+		document.write(n);
+		if (nb%6 == 0) document.write("\n");
+	}
+}
+
+document.write("\n\n");
+document.write("共有"+nb+"个数");
+//-->
+</script>
+</pre>
+</body>
+
+</html>

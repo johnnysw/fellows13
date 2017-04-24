@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+
+<HEAD>
+<META name="vs_targetSchema" content="HTML 4.0">
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+</HEAD>
+
+<BODY onload="PulseTo(10);">
+
+<SCRIPT language="JavaScript">
+<!--
+
+var direction = "right"; //确定移动方向
+
+function PulseTo(left)
+{//跳至位置left
+	pulse_text.style.left = left;
+
+	if(left>document.body.offsetWidth-80) direction = "left";//向上
+	if(left<10) direction = "right";//向下
+	if(direction =="right") 
+		step = 2;
+	else
+	    step = -2;
+	setTimeout('PulseTo('+(left+step)+')', 10);
+}
+//-->
+</SCRIPT>
+<P id="pulse_text" style="position: absolute; top: 19; width: 92; height: 29; left: 3">
+<B>JavaScript</B></P>
+
+</BODY>
+
+</HTML>

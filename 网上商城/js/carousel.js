@@ -6,6 +6,18 @@ var oCarousel = getClass('carousel')[0];
 var iNow = 0;
 var timer;
 
+for(var i=0; i<aBtns.length; i++){
+	aBtns[i].index = i;
+	aBtns[i].onclick = function(){
+		for(var i=0; i<aBtns.length; i++){
+			aBtns[i].className = '';
+		}
+		this.className = 'selected';
+		oImgBox.style.left = -this.index*aItem[0].offsetWidth+"px";
+	}
+}
+
+/*
 for(var i =0; i<aBtns.length; i++){
 	aBtns[i].index = i;
 	aBtns[i].onclick = function(){
@@ -40,3 +52,4 @@ function run(){
 }
 run();
 
+*/

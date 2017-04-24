@@ -1,0 +1,30 @@
+<HTML>
+
+<HEAD>
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+</HEAD>
+
+<BODY>
+
+<SCRIPT language="javascript">
+<!--
+	var x,y,z,nb=0;
+	for(x=0;x<=10;x++)
+		for(y=0;y<=10-x;y++)
+		{
+			z = 10-(x+y);
+			if ((x + 2*y + 5*z)==18)
+			{
+				nb += 1;
+				document.write(x+"张1元 " + y + "张2元 " + z + "张5元" + "<br>");
+			}
+		}
+	document.write("<br>");
+	document.write("共有" + nb + "种付法");
+//-->
+</SCRIPT>
+
+</BODY>
+
+</HTML>

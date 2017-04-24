@@ -1,0 +1,53 @@
+<HTML>
+
+<HEAD>
+<META http-equiv="Content-Language" content="zh-cn">
+<META name="vs_defaultClientScript" content="JavaScript">
+<META name="vs_targetSchema" content="HTML 4.0">
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<SCRIPT id="clientEventHandlersJS" language="javascript">
+<!--
+var image_top=-100000;//图片显示的顶端位置
+var scrollAmount=4;　//每次滚动的pixel数　
+
+function VScrollImage()
+{//垂直滚动显示图片
+	if(image_top+parseInt(image_marquee.style.height)<0)
+	{//若超出显示范围
+		panel.style.height = parseInt(document.body.clientHeight) - 10;　//设置显示范围
+		image_top = parseInt(panel.style.height);
+		
+//鼠标进入,则停止滚动;鼠标出去,则继续滚动
+		image_marquee.onmouseover = new Function("scrollAmount=0");
+		image_marquee.onmouseout = new Function("scrollAmount=4;");
+	}
+	image_top -= scrollAmount;
+	image_marquee.style.top = image_top;
+	window.setTimeout("VScrollImage()",50);
+	
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY onload="VScrollImage()">
+
+<P></P>
+<DIV id="panel" style="position: absolute; left: 10; top: 0; width: 124; height: 200;overflow:hidden">
+  <DIV id="image_marquee" style="position: absolute; left: 10; top: 0; width: 124; height:810; ">
+    <A href="http://www.pconline.com.cn/"><IMG src="pic001.gif" border="0" width="90" height="90"></A><BR>
+    <A href="http://www.pconline.com.cn/"><IMG src="pic002.gif" border="0" width="90" height="90"></A><BR>
+    <A href="http://www.pconline.com.cn/"><IMG src="pic003.gif" border="0" width="90" height="90"></A><BR>
+    <A href="http://www.pconline.com.cn/"><IMG src="pic004.gif" border="0" width="90" height="90"></A><BR>
+    <A href="http://www.pconline.com.cn/"><IMG src="pic005.gif" border="0" width="90" height="90"></A><BR>
+    <A href="http://www.pconline.com.cn/"><IMG src="pic006.gif" border="0" width="90" height="90"></A><BR>
+    <A href="http://www.pconline.com.cn/"><IMG src="pic007.gif" border="0" width="90" height="90"></A><BR>
+    <A href="http://www.pconline.com.cn/"><IMG src="pic008.gif" border="0" width="90" height="90"></A><BR>
+    <A href="http://www.pconline.com.cn/"><IMG src="pic009.gif" border="0" width="90" height="90"></A><BR>
+  </DIV>
+</DIV>
+
+</BODY>
+
+</HTML>

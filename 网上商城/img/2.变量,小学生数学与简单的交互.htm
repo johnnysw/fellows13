@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0267)file:///Users/apple/wc_%E5%89%8D%E7%AB%AF/%E5%A4%A7%E4%B8%89/dom/JavaScript%E5%A4%87%E8%AF%BE/1.JavaScript%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/2.%E5%8F%98%E9%87%8F,%E5%B0%8F%E5%AD%A6%E7%94%9F%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%A4%E4%BA%92.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>2.变量,小学生数学与简单的交互</title>
+<style type="text/css">
+	@import url("../style/global.css");
+</style>
+</head>
+<body>
+	<h1>变量,小学生数学与简单的交互</h1>
+	<h2>变量</h2>
+	<p>对于变量的理解：变量是数据的代号。如同人的名字一样。</p>
+	<pre>	var num;//在JavaScript中使用关键字var声明一个变量</pre>
+	<p>在JavaScript中,使用上面的语法,就可以声明一个变量,以便在之后给其指定值.</p>
+	<pre>	var num;
+	num=128;//这样，就将num做为值128的一个名字，有了名字，就可以在之后引用！
+	document.write(num);//输出128</pre>
+	<p>貌似下面的代码和上面的具有一样的输出</p>
+	<pre>	document.write(128);//这样当然也输出了128</pre>
+	<p>不过再试试下面的代码</p>
+	<pre>	document.write(3.14159265358979);//我们要多次输出这个值
+	document.write(3.14159265358979);
+	document.write(3.14159265358978);
+	document.write(3.14159265358979);
+	document.write(3.14159265358979);</pre>
+	<p>于是可以用变量的概念来偷懒</p>
+	<pre>	var num;
+	num=3.14159265358979;
+	document.write(num);
+	document.write(num);
+	document.write(num);
+	document.write(num);
+	document.write(num);</pre>
+	<p>虽然看上去没节约多少笔墨，但有一个概念即是：我们使用document.write多次输出的是同一个值！而前面一块则不同，它在每次输出时产生了一个新的值，显而易见，使用变量可以清楚的表达我们想要做的，而且简短的变量名引用可以使代码更清晰且不容易出错！
+	当然，名字不是乱取的，变量的命名有一些限制：只能包含字母，数字，和下划线，还有个特殊的$字符，并且变量名只能以字母，下划线，还有$开头;另外，还不能使用JavaScript关键字和保留字;所以说，下面的变量声明全是错误的
+	</p>
+	<pre>	var 34bad;//不能以数字开头
+	var per人;//不能包含中文
+	var bad-var;//非法的-
+	var var;//var就是一个关键字，所以很明显不能用来做变量名</pre>
+	<strong>另外要注意的一点是,变量的名称是区分大小写的!</strong>
+	<h2>值，类型</h2>
+	<pre>	var dog;
+	dog="小虎子";//字符串，它们总被包含在双引号(或单号)中
+	var num;
+	num=1;//数字，它们裸露的出现了
+	var strNum;
+	strNum="1";//但是现在strNum所引用的是一个字符串,因为它被包含在引号中了
+	var badNum;
+	badNum=3.345;//一个小数，因为它带有一个小数点
+	badNum=.2;//仍然是一个小数，这句代码与badNum=0.2是一样的!
+	badNum = 0.4.5;//当然，这句代码是错的，一个非法数字</pre>
+	<p>上面那样的写法（为了演示），我已经不想再忍受了，完全可以这样声明变量</p>
+	<pre>	var dog,num,strNum,badNum;//可以一次声明多个变量，它们用逗号分隔,然后再赋值
+	dog="小虎子";
+	num=1;
+	..........................</pre>
+	<p>当然还有另一种声明变量的方法,事实上这种风格才是最常见的</p><p>
+	</p><pre>	var dog="小虎子";
+	var num=1;
+	var str="some string",strNum="123";
+	......</pre>
+	<p>数字（只能有整数或小数），字符串可能最常用的了，还有另一种类型：布尔值(Boolean).不像数字或字符串，有无限种可能的值，Boolean值只有两种可能：真，假</p>
+	<pre>	var bool=true;//用true表示真值
+	bool=false;//用false表示假值</pre>
+	<p>JavaScript是动态类型语言，在声明变量时无需指明其类型，在运行时刻变量的值可以有不同的类型。</p>
+	<pre>	var s="Hello,World!!!";//无需指明为字符串类型
+	s=1.61803;//在运行时将变量值指定为另一个类型</pre>
+	<p>JavaScript的变量类型不止字符串，数字，布尔值这三种，然而这三种确是最常用的了。其它数据类型（参考）：</p>
+	<dl>
+		<dt>复合（引用）数据类型是：</dt>
+		<dd> * 对象</dd>
+		<dd> * 数组</dd>
+   	</dl>
+   	<dl>
+		<dt>特殊数据类型是：</dt>
+		<dd> * Undefined</dd>
+   	</dl>
+   	<pre>   	//事实上,我们接触的第一个数据类型是Undefined,它的含义是"未定义值"
+   	var a;//声明一个变量,但没有对其赋值
+   	alert(a);//但它仍然有值的,它的值为undefined
+   	alert(b);//但注意,输出一个未定义的变量将出现错误,而不是输出undefined</pre>
+	<h2>字符串</h2>
+	<p>字符串相连</p>
+	<pre>	var s1="Hello,";
+	s1=s1+"World!";
+	alert(s1);
+	s1+="!!!!";
+	alert(s1);</pre>
+	<h2>数学运算与比较</h2>
+	<p>首先是小学生都会的加减乘除:+,-,*,/ </p>
+	<pre>	//加法 + 
+	//减法 -
+	//乘法 *
+	//除法 / 
+	//自增 ++
+	//自减 --
+	var a = 12;
+	var b = 30;
+	var c = a+b;
+	alert(c);//输出42
+	c=b-a;
+	alert(c);//输出18
+	c=c*2;
+	alert(c);//输出36
+	c=c/2;
+	alert(c);//输出18
+	c = 12;
+	c++;//这与c=c+1;效果是一样的
+	alert(c);//输出13
+	c--;//这与c=c-1;效果是一样的
+	alert(c);//输出11
+	//自增与自减运算符出现的地方也有讲究
+	c=20;
+	alert(c++);//输出20,因为++写在变量后面,这表示变量c完成运算之后,再将其值增1
+	alert(c);//现在将输出21,自减运算符也与些相似
+	//如果只是类似这样的计算
+	c = c+12;
+	//可以这样写
+	c+= 12;//这与写c= c+12;效果是一样的
+	//类似其它的运算也有简便的方法
+	c-=3;//c=c-3
+	c*=4;//c=c*3;
+	c/=2;//c=c/2;</pre>
+	<p></p>
+	<p>要注意的是，在JavaScritp中，连接字符串时也使用“＋”号。当字符串与数字相遇时？——JavaScript是弱类型语言</p>
+	<pre>	var num=23+45;
+	alert("23+45等于"+num);//表达式从左往右计算，字符串之后的数字都会当成字符串然连接
+	alert("23+45="+(23+45));//使用括号分隔</pre>
+	<p>比较操作符:&lt;,&gt;,&lt;=,&gt;=,==,!=,!;比较操作符返回布尔值</p>
+	<pre>	//小于 &lt;
+	//大于 &gt;
+	//小于或等于 &lt;=
+	//大于或等于 &gt;=
+	//相等 ==
+	//不相等 !=
+	alert(2&lt;4);//返回true
+	alert(2&gt;4);//返回false
+	alert(2&lt;=4);//返回true
+	alert(2&gt;=2);//返回true
+	alert(2==2);//返回true
+	alert(2!=2);//返回true
+	</pre>
+	<p>表达式的组合</p>
+	<pre>	alert( (2&lt;4)==(5&gt;3)==(3&lt;=3)==(2&gt;=2)==(2!=2)==(2==2)==true );</pre>
+	<h2>逻辑运算符</h2>
+	<p>逻辑运算符用于对布尔值进行比较</p>
+	<pre>	// &amp;&amp;逻辑与,当两边的值都为true时返回true,否则返回false
+	// || 逻辑或,当两边值都为false时返回false,否则返回true
+	// ! 逻辑非
+	alert(true &amp;&amp; false);//输出false
+	alert(true &amp;&amp; true);//输出true
+	alert(true || false);//输出true
+	alert(false || false);//输出false
+	alert(!true);//输出false</pre>
+	<h2>类型转换入门</h2>
+	<p>由于JavaScript是弱类型语言,所以我们完全可以将字符串和数字(两个不同类型的变量)进行相加,这个我们在前面已经演示过了.当然,不仅仅可以将字符串和数字相加,还可以将字符串与数字相乘而不会出现脚本错误!</p>
+	<pre>	var str ="some string here!";
+	var num = 123;
+	alert(str*num);//将输出NaN,因为乘法运算符只能针对数字,所以进行运算时计算机会将字段串转换成数字
+	//而这里的字符串转换成数字将会是NaN
+	//NaN是一个特殊的值,含义是"Not A Number"-不是一个数字,当将其它值转换成数字失败时会得到这个值
+	str ="2";
+	alert(str*num);//将输出246,因为str可以解析成数字2</pre>
+	<p>其它类型转换</p>
+	<pre>	var bool = true;
+	alert(bool*1);//输出1 ,布尔值true转换成数字为1,事实上将其它值转换在数字最简单的方法就是将其乘以1
+	bool = false;
+	alert(bool*1);//输出0
+	alert(bool+"");//输出"flase",将其它类型转换成字符串的最简单的方法就是将其写一个空字符串相连
+	alert(123+"");//数字总能转换成字符串
+	var str = "some string";
+	alert(!!str);//true,因为非运算符是针对布尔值进行运算的,所以将其它类型转换成布尔值只须将其连续非两次
+	str ="";
+	alert(!!str);//输出false,只有空字符串转换成布尔值时会是false,非空字符串转换成布尔值都会返回true
+	var num =0;
+	alert(!!num);//false
+	num=-123.345;
+	alert(!!num);//true,除0以外的任何数字转换成布尔值都会是true
+	//还有一个非常重要的是,空字符串转换成数字将会是0
+	alert(""*1);//输出0</pre>
+	<p>获取变量类型 typeof 运算符</p>
+	<pre>	var bool = true;
+	alert(typeof bool);//输出boolean
+	var num =123;
+	alert(typeof num);//输出number
+	var str = "some string here";
+	alert(typeof str);//输出string
+	var strNum = "123";
+	alert(typeof strNum);//输出string
+	strNum *= 1;
+	alert(typeof strNum);//输出number</pre>
+	<h2>根据用户的输入进行计算</h2>
+	<p>使用window.prompt可以弹出包含输入框的窗口，用户输入的内容将是此函数的返回值</p>
+	<pre>	var msg = window.prompt("请输入一个数字","默认值");//prompt方法包含一个必须参数和一个可选参数。
+	//第一个参数是必须的，将在窗口中显示的文字，第二个参数是可选的，为文本框的预设值
+	alert(msg);//将输出我们输入进去的东西</pre>
+	<p>请用户输入年龄，我们计算出他活了多少秒（貌似无聊的很啊）</p>
+	<pre>	var age=window.prompt("请输入您的年龄！","18");
+	var liveSeconds=age*365*24*3600;
+	alert("您已经度过了"＋liveSeconds＋"秒!");</pre>
+
+
+
+
+		
+</body></html>

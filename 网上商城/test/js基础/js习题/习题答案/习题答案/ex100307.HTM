@@ -1,0 +1,32 @@
+<HTML>
+
+<HEAD>
+<META http-equiv="Content-Language" content="zh-cn">
+<META name="vs_defaultClientScript" content="JavaScript">
+<META name="vs_targetSchema" content="HTML 4.0">
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<SCRIPT language="JavaScript">
+function cancelDefaultAction()
+{//取消事件的默认处理动作
+	window.event.returnValue = false;
+}
+
+function setActionforLink()
+{//为所有链接的单击事件设置自己的处理过程
+	for(var i=0;i<document.links.length;i++)
+		document.links[i].onclick = cancelDefaultAction;
+}
+</SCRIPT>
+</HEAD>
+
+<BODY OnLoad="setActionforLink()">
+
+<P><A href="http://www.zsu.edu.cn"><IMG src="ZSU.GIF" width="283" height="84"></A>
+</P>
+<P><A href="http://www.zsu.edu.cn">http://www.zsu.edu.cn</A></P>
+<P>　</P>
+
+</BODY>
+
+</HTML>

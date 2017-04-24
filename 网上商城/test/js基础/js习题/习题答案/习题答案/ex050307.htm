@@ -1,0 +1,47 @@
+<HTML>
+
+<HEAD>
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<SCRIPT language="javascript">
+<!--
+function Fab1(n)
+{//µÝ¹éº¯Êý
+	if (n<=2)
+		return 1;
+	else
+		return Fab1(n-1)+Fab1(n-2);
+}
+
+
+function Fab2(n)
+{//·ÇµÝ¹éº¯Êý
+	if (n<=2) return 1;
+	var f1=1,f2=1,i,temp;
+	for(i=3;i<=n;i++)
+	{
+		temp = f1+f2;
+		f1 = f2;
+		f2 = temp;
+	}
+	return f2;
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<PRE><SCRIPT language="javascript">
+<!--
+var n;
+n = parseInt(prompt("N=","0"));
+document.write("µÝ¹éº¯ÊýFab1(" + n + ")=" + Fab1(n) + "<br>");
+document.write("·ÇµÝ¹éº¯ÊýFab2(" + n + ")=" + Fab2(n) + "<br>");
+//-->
+</SCRIPT>
+</PRE>
+
+</BODY>
+
+</HTML>

@@ -62,38 +62,39 @@ document.body.onclick = function(e){
 */
 
 
-
-var selBox = document.getElementById('select-box');
-
-var selBtn = getClass('sel-btn')[0];
-var selMenu = getClass('sel-menu')[0];
-var aOptions = selMenu.getElementsByTagName('li');
-var oP = selBtn.getElementsByTagName('p')[0];
-var oSpan = selBtn.getElementsByTagName('span')[0];
-selBtn.onmousedown = function(){
-	selBox.className = 'select-box selected';
+var oSelBox = document.getElementById('select-box');
+var oSelBtn = getClass('sel-btn',oSelBox)[0];
+var oSelMenu = getClass('sel-menu',oSelBox)[0];
+var aOptions = oSelMenu.getElementsByTagName('li');
+var oP = oSelBtn.getElementsByTagName('p')[0];
+var oSpan = oSelBtn.getElementsByTagName('span')[0];
+oSelBtn.onmousedown = function(){
+	oSelBox.className = 'select-box selected';
 }
-selBtn.onmouseup = function(){
-	selBox.className = 'select-box';
-	if(selMenu.style.display == 'none' || selMenu.style.display == ''){
-		selMenu.style.display = 'block';
+oSelBtn.onmouseup = function(){
+	oSelBox.className = 'select-box';
+	if(oSelMenu.style.display == 'none' || oSelMenu.style.display == ''){
+		oSelMenu.style.display = 'block';
 	}else{
-		selMenu.style.display = 'none';
+		oSelMenu.style.display = 'none';
 	}
 }
+
 for(var i=0; i<aOptions.length; i++){
 	aOptions[i].onclick = function(){
 		oP.innerHTML = this.innerHTML;
-		selMenu.style.display = 'none';
-	}
-}
-document.body.onclick = function(e){
-	var target = e.target || event.srcElement;
-	if(target != oP && target != selBtn && target != oSpan){
-		selMenu.style.display = 'none';
+		oSelMenu.style.display = 'none';
+		//console.log();
 	}
 }
 
+document.onclick = function(e){
+	//console.log(e.target);
+	var target = e.target || event.srcElement;
+	if(target!= oP && target != oSpan && target != oSelBtn ){
+		oSelMenu.style.display = 'none';
+	}
+}
 
 
 

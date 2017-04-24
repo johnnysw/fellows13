@@ -86,64 +86,52 @@
 			iNow = 0,
 			timer;
 
-
-			for(var i=0; i<aLi.length; i++){
-				aLi[i].index = i;
-				aLi[i].onmouseover = function(){
-
-					changeImg(this.index);
-					iNow = this.index;
-				}
+		for(var i=0;i<aLi.length;i++ ){
+			aLi[i].index = i;
+			aLi[i].onmouseover = function(){
+				changeImg(this.index);
+				iNow = this.index;
 			}
-
+		}
 		oNext.onclick = function(){
 			iNow++;
-			if(iNow == 4){
+			if(iNow == aLi.length){
 				iNow = 0;
 			}
 
-			//iNow = iNow%4;
 			changeImg(iNow);
+
 		}
 		oPrev.onclick = function(){
 			iNow--;
-			if(iNow ==-1){
+			if(iNow == -1){
 				iNow = aLi.length-1;
 			}
 
 			changeImg(iNow);
+
 		}
 		function changeImg(idx){
 			for(var j=0; j<aLi.length; j++){
 				aLi[j].className = '';
-				aImg[j].className = '';
+				aImg[j].style.display = 'none';
 			}
-			// console.log(this);
 			aLi[idx].className = 'selected';
-			aImg[idx].className = 'selected';
+			aImg[idx].style.display = 'block';
 		}
 
-		/*var timer = setInterval(function(){
+		var timer = setInterval(function(){
 			oNext.onclick();
-		},1000);*/
-		run();
+		},1000);
 
 		oContent.onmouseover = function(){
 			clearInterval(timer);
 		}
 		oContent.onmouseout = function(){
-			run();
-		}
-
-		function run(){
 			timer = setInterval(function(){
 				oNext.onclick();
 			},1000);
 		}
-
-
-
-
 
 
 

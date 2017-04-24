@@ -1,0 +1,39 @@
+<HTML>
+
+<HEAD>
+<META name="vs_targetSchema" content="HTML 4.0">
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+</HEAD>
+
+<BODY>
+
+<P id="pLine">请把鼠标移到相应的位置观看效果。</P>
+<DIV id="cursor_block">
+  <SPAN id="spanCursor">手的形状</SPAN><BR>
+  <SPAN id="spanCursor">移动</SPAN><BR>
+  <SPAN id="spanCursor">反方向</SPAN><BR>
+  <SPAN id="spanCursor">等待</SPAN><BR>
+  <SPAN id="spanCursor">求助</SPAN><BR>
+</DIV>
+<SCRIPT language="javascript">
+<!--
+	pLine.style.fontSize = "14pt";
+	pLine.style.color = "red";
+
+	cursor_block.style.fontFamily = "行书体";
+	cursor_block.style.fontSize = "20pt";
+	cursor_block.style.color = "green";
+
+	var i=0;
+	spanCursor[i++].style.cursor = "hand";
+	spanCursor[i++].style.cursor = "move";
+	spanCursor[i++].style.cursor = "ne-resize";
+	spanCursor[i++].style.cursor = "wait";
+	spanCursor[i++].style.cursor = "help";
+-->
+</SCRIPT>
+
+</BODY>
+
+</HTML>

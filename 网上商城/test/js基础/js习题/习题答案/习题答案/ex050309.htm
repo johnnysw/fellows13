@@ -1,0 +1,47 @@
+<HTML>
+
+<HEAD>
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<SCRIPT language="javascript">
+var win_rate=0;		//赢率 
+var play_times=0;	//总次数
+var wins=0;			//赢的次数
+var last_digits;	//上次数字串
+var last_win;	//上次是否赢?
+<!--
+function PlayOnce()
+{//模拟玩一次数字机游戏
+	var i,digit;
+	play_times++;
+	last_digits="";
+	last_win=false;	
+	for(i=0;i<3;i++)
+	{
+		digit = Math.floor(Math.random()*9)+1;
+		last_digits += digit;
+		if (digit==8) last_win=true;
+	}
+	if (last_win) wins++;
+	win_rate = Math.floor(100*(wins/play_times));
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<PRE><SCRIPT language="javascript">
+<!--
+while(true)
+{
+	PlayOnce();
+	if (!confirm(last_digits +"\n" + (last_win?"赢":"输") + "\n胜率"+win_rate+"%,继续吗?")) break;
+}
+//-->
+</SCRIPT>
+</PRE>
+
+</BODY>
+
+</HTML>

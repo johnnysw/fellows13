@@ -1,0 +1,33 @@
+<HTML>
+
+<HEAD>
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<SCRIPT language="javascript">
+<!--
+function Merge(str1,str2)
+{//交叉合并两个字符串
+	var s1 = new String(str1),s2=new String(str2),result="",max_len,i
+	max_len = Math.max(s1.length,s2.length)
+	for(i=0;i<max_len;i++)
+	{
+		if (i<s1.length) result += s1.charAt(i)
+		if (i<s2.length) result += s2.charAt(i)
+	}
+	return result;
+}
+
+var s1,s2;
+s1 = prompt("请输入第一个字符串:","");
+s2 = prompt("请输入第二个字符串:","");
+alert("合并后的字符串:\n"+Merge(s1,s2));
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+</BODY>
+
+</HTML>

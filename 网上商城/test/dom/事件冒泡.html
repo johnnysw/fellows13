@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		#div1{
+			width: 400px;
+			height: 400px;
+			background: #f00;
+		}
+		#div2{
+			width: 200px;
+			height: 200px;
+			background: #0f0;
+		}
+		#div3{
+			width: 100px;
+			height: 100px;
+			background: #00f;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		aaadiv1
+		<div id="div2">
+			bbbdiv2
+			<div id="div3">
+				cccdiv3
+			</div>
+		</div>	
+	</div>
+
+	<script>
+		var oDiv1 = document.getElementById('div1');
+		var oDiv2 = document.getElementById('div2');
+		var oDiv3 = document.getElementById('div3');
+
+		oDiv1.onclick = function(e){
+			console.log('div1');
+		}
+		oDiv2.onclick = function(e){
+			console.log('div2');
+		}
+		oDiv3.onclick = function(e){
+			console.log('div3');
+			e.stopPropagation();//标准浏览器
+			e.cancelBubble = true;//ie浏览器
+		}
+
+
+	</script>
+	
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

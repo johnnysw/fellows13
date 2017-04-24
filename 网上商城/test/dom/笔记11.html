@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1" class="aa" style="width:200px;"></div>
+	<script>
+		document.getElemntById('div1'); //dom对象 null
+		document.getElementsByTagName('p'); //返回数组  []
+		document.getElementsByClassName('');
+		document.getElementsByName('');
+		function getClass(clsName,context){
+			var result = [];
+			context = context || document;
+			var arr = context.getElementsByTagName('*');
+			for(var i=0; i<arr.length; i++){
+				//class  保留字 .className
+				//'aa bb' == 'aa'   'aacc'
+				if(arr[i].className.indexOf(clsName) != -1){
+					result.push(arr[i]);
+				}
+			}
+			return result;
+		}
+
+		elem.id   elem.className
+		elem.style.width //只能取到内联样式 ''
+		elem.offsetWidth  elem.offsetHeight//border以内的 （包含border）
+
+		elem.currentStyle.padding   //ie
+		getComputedStyle(elem,null).padding  
+
+		elem.innerHTML  //即可赋值 又可以取值
+
+		function getStyle(elem,attr){
+			if(elem.currentStyle){  //ie
+				return elem.currentStyle[attr];
+			}else{
+				return getComputedStyle(elem,null)[attr];
+			}
+		}
+
+		undefined  
+		定义变量 没有赋值 
+		数组 索引越界 
+		对象 访问对象下没有的属性 
+		函数没有返回值 默认返回undefined
+
+		elem.onclick = function(e){
+			// console.log("fhjdgsjhf");
+			e.target || event.srcElement  //点击谁 
+			this//对当前对象的引用，谁的事件this就是谁
+
+		}
+
+		elem.onmouseover 
+		onmouseout
+		onmouseup
+		onmousedown
+		事件冒泡 由里到外 
+
+		elem.onclick = function(e){			
+			
+			e.stopPropagation();
+			e.cancelBubble = ture;
+		}
+
+
+		transition:width 2s linear 2s; //有属性值发生改变
+
+		animation:run 2s ease 2s 2 forwards;
+
+		@keyframes run(){
+			50%{
+				width:300px;
+			}
+			100%{
+				width:500px;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+	
+</body>
+</html>

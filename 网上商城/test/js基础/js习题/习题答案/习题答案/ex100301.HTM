@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+
+<HEAD>
+<META name="vs_targetSchema" content="HTML 4.0">
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+</HEAD>
+
+<BODY onLoad="LoopShow()">
+
+<SCRIPT LANGUAGE="JavaScript">
+//显示的文字。
+var loop_text="本章介绍JavaScript动态网页编程实例";
+
+function LoopShow()
+{//循环显示文本
+	var show_html="";
+	for(i=0;i<loop_text.length;i++)
+	{//将每个文字放入单独一行中
+		show_html += loop_text.charAt(i)+"<br>";
+	}
+	panel.innerHTML = show_html;
+	loop_text = loop_text.substring(1,loop_text.length)+loop_text.substring(0,1);
+	setTimeout("LoopShow()",100);
+}
+</SCRIPT>
+<P></P>
+<DIV id="panel" style="position: absolute; left: 10; top: 15; width: 32; height: 600" align="center">
+  test</DIV>
+
+</BODY>
+
+</HTML>

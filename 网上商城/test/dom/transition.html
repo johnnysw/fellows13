@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#div1{
+			
+		}
+		#div1:hover div{
+			width: 400px;
+		}
+		#div1 div{
+			width: 200px;
+			height: 50px;
+			background: #f00;
+			margin-bottom: 20px;
+		}
+		#div2{
+			transition:width 2s linear;
+		}
+		#div3{
+			transition:width 2s ease;
+		}
+		#div4{
+			transition:width 2s ease-in;
+		}
+		#div5{
+			transition:width 2s ease-out;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<div id="div2">aa</div>
+		<div id="div3">bb</div>
+		<div id="div4">cc</div>
+		<div id="div5">dd</div>
+		
+	</div>
+
+
+
+
+
+
+
+	
+</body>
+</html>

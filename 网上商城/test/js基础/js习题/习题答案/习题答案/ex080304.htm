@@ -1,0 +1,40 @@
+<HTML>
+
+<HEAD>
+<META name="vs_targetSchema" content="HTML 4.0">
+<META name="vs_defaultClientScript" content="JavaScript">
+<META http-equiv="Content-Language" content="zh-cn">
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<SCRIPT id="clientEventHandlersJS" language="javascript">
+<!--
+function validate()
+{//验证表单
+	var age;
+	age = parseInt(my_form.my_age.value);
+	if(age<16 || age>40)
+	{
+		window.alert("年龄必须在[16,40]之间,请重新输入");
+		my_form.my_age.focus();
+		my_form.my_age.select();
+		return false;  //不提交有错误的表单
+	}
+	return true;//向服务器提交表单数据
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<FORM name="my_form" onsubmit="return validate()" action="ex080304A.htm">
+  <P>姓名：<INPUT type="text" name="my_name" size="20"></P>
+  <P>年龄：<INPUT type="text" name="my_age" size="4" value="0"></P>
+  <P>职业：<INPUT type="text" name="my_job" size="20"></P>
+  <P><INPUT type="submit" value="提交" name="B1"></P>
+</FORM>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,102 @@
+<HTML>
+
+<HEAD>
+<META name="vs_targetSchema" content="HTML 4.0">
+<META name="vs_defaultClientScript" content="JavaScript">
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<SCRIPT LANGUAGE="javascript">
+var own_current_message=0;
+function randomNumber(range)
+{//生成一个0~range之间的随机整数		
+	return Math.floor(range*Math.random())
+}
+
+function showPromptBar()
+{//显示一条公告
+	promptBar.filters[own_current_message].apply();
+	promptContent.innerText = promptBar.own_messages[own_current_message];
+	promptContent.style.fontFamily = promptBar.own_TextFonts[randomNumber(promptBar.own_TextFonts.length)];
+	promptContent.style.color = promptBar.own_ForeColors[randomNumber(promptBar.own_ForeColors.length)];
+	promptContent.style.backgroundColor = promptBar.own_bgColors[randomNumber(promptBar.own_bgColors.length)];
+	promptBar.filters[own_current_message].play();
+	if (own_current_message >= promptBar.own_messages.length-1)
+		own_current_message = 0;
+    else
+		own_current_message++;
+    setTimeout("showPromptBar()",3000);   //3秒后显示下1条公告
+}
+
+function setPromptBar()
+{//设置公告栏
+	var i,filter;
+//步1: 设置多种转换效果滤镜
+	filter = "filter:";
+	for(i=0;i<24;i++)
+	{
+		filter += " revealTrans(Transition=" + i + ", Duration=" + (1+randomNumber(2)) + ")";
+	}
+	promptBar.style.filter = filter;
+
+//步2: 设置一些公告栏内容
+	promptBar.own_messages = new Array();
+	for(i=0;i<30;i++) 
+	{
+		promptBar.own_messages[i] = "公告栏内容" + (i+1);
+	}
+//步3: 设置一些显示公告的字体
+	promptBar.own_TextFonts = new Array();
+	promptBar.own_TextFonts[0] = "Verdana";
+	promptBar.own_TextFonts[1] = "Times";
+	promptBar.own_TextFonts[2] = "Arial";
+//步4: 设置一些公告栏前景色
+	promptBar.own_ForeColors = new Array();
+	promptBar.own_ForeColors[0] = "000000";
+	promptBar.own_ForeColors[1] = "FF0000";
+	promptBar.own_ForeColors[2] = "226622";
+	promptBar.own_ForeColors[3] = "0000FF";
+	promptBar.own_ForeColors[4] = "FFFF00";
+//步5: 设置一些公告栏背景色
+	promptBar.own_bgColors = new Array();
+	promptBar.own_bgColors[0] = "CCCCCC";
+	promptBar.own_bgColors[1] = "Yellow";
+	promptBar.own_bgColors[2] = "CCFFFF";
+	promptBar.own_bgColors[3] = "AAEEFF";
+	promptBar.own_bgColors[4] = "CCFF88";
+	promptBar.own_bgColors[5] = "orange";
+	promptBar.own_bgColors[6] = "99AAFF";
+
+//步6: 从第1条公告开始
+	own_current_message = 0;
+	showPromptBar();
+	window.setInterval("ShowInTop()",10);//通过定时器方式将页面元素显示在窗口可视区的特定位置
+}
+
+function ShowInTop()
+{//显示在窗口可视区的顶端位置
+	promptBar.style.left = 0;
+	promptBar.style.top = document.body.scrollTop;
+	promptBar.style.width = document.body.scrollWidth;
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY onload="setPromptBar()">
+
+<DIV id="promptBar" style="position: absolute; top: 0; left: 0; width: 610; height: 116; text-align: center">
+  <TABLE border="2" width="100%" height="100%">
+    <TR>
+      <TD id="promptContent" width="100%" height="100%" style="font-size:30px" align="center" valign="middle">　</TD>
+    </TR>
+  </TABLE>
+</DIV>
+<SCRIPT language="javascript">
+//只用于测试目的,使页面显示时浏览窗口有垂直滚动条
+	for(i=0;i<100;i++)　document.write("<P>行"+i+"</P>");
+</SCRIPT>
+
+</BODY>
+
+</HTML>

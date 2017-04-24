@@ -1,0 +1,60 @@
+document.getElementById('');  返回dom元素，没有返回null
+document.getElementsByTagName('');  返回数组，没有返回空数组
+document.getElementsByClassName('');  返回数组，没有返回空数组
+document.getElementsByName('');  返回数组，没有返回空数组
+function getClass(clsName,context){
+	var result = [];
+	context = context || document;
+	var arr = context.getElementsByTagName('*');
+	for(var i=0; i<arr.length; i++){
+		//class  保留字 .className
+		//'aa bb' == 'aa'   'aacc'
+		if(arr[i].className.indexOf(clsName) != -1){
+			result.push(arr[i]);
+		}
+	}
+	return result;
+}
+elem.style.width  只能取到内联样式的宽度，内联中没有回返回'';
+elem.offsetWidth  border以内的宽度（包括border）
+elem.currentStyle.width  //ie浏览器
+getComputedStyle(elem,null).width  //标准浏览器
+
+function getStyle(elem,attr){
+	if(elem.currentStyle){  //ie
+		return elem.currentStyle[attr];
+	}else{
+		return getComputedStyle(elem,null)[attr];
+	}
+}
+elem.innerHTML  取到元素内的html内容
+
+事件：事件源 事件处理函数 事件
+
+e.target||e.srcElement
+
+事件冒泡
+由子元素向外冒泡，点击子元素会触发父元素的点击事件
+
+e.stopPropagation();//标准浏览器
+e.cancelBubble = true;//ie浏览器
+
+
+css3    border-radius:5px;
+		transition:width 2s ease 1s;
+		animation:show 2s linear 1s forwards
+		@keyframes show{
+			0%{
+				width:100px;
+			}
+			100%{
+				width:300px;
+			}
+		}
+		box-shadow:5px 5px 3px 5px rgba(0,0,0,0.5);
+
+
+
+
+
+

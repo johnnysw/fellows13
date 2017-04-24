@@ -1,0 +1,33 @@
+<HTML>
+
+<HEAD>
+<META name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<SCRIPT language="javascript">
+<!--
+function GetRandom()
+{//产生0～100之间(含0,100)的随机整数
+	return Math.floor(Math.random()*101);
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<PRE><SCRIPT language="javascript">
+<!--
+	var i;
+	for(i=0;i<100;i++)
+	{
+		if (i%10==0) document.write("<br>");
+		document.write(GetRandom()+"\t");
+	}
+//-->
+</SCRIPT>
+</PRE>
+
+</BODY>
+
+</HTML>
