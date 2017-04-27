@@ -236,9 +236,17 @@
 	background: #fff;
 	position: absolute;
 	left:50%;
-	top:50%;
+	/*top:50%;*/
+	top:-249px;
 	margin-left: -212px;
 	margin-top: -249px;
+	
+}
+
+@keyframes show{
+	100%{
+		top:50%;
+	}
 }
 .dialog-title{
 	height: 30px;
@@ -253,11 +261,15 @@
 }
 .dialog-body{
 	text-align: center;
+	height: 406px;
 }
 .dialog-body img{
 	width: 265px;
 	height: 395px;
 	margin:10px 0;
+	position: absolute;
+	left:80px;
+	top:25px;
 }
 .dialog-prev,.dialog-next{
 	width: 40px;
@@ -310,7 +322,11 @@
 
 
 
-
+@keyframes hide{
+	100%{
+		opacity: 0;
+	}
+}
 
 
 
