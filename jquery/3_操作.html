@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .aa{
+            width: 200px;
+            height: 22px;
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">aaa</div>
+    <div class="aa">ahjjh
+        <div class="aa">vvvv
+            <div class="aa">sss</div>
+        </div>
+    </div>
+
+
+    <div>Click here</div>
+    <div>to iterate through</div>
+    <div>these divs.</div>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    /*$('#div1').on('click',function(){
+        alert(111);
+    });
+    var $div2 = $('#div1').clone(true);
+
+    $('body').append($div2);*/
+
+
+//    $('#div1').wrap('<div class="aa"></div>');
+
+//    $('#div1').wrap('.aa');
+//        $aa = $('.aa');
+      /*  var oAa = document.getElementsByClassName('aa')[0];*/
+      /*$('#div1').wrap(oAa);*/
+
+     //  $('body').append('<div><p>dfdsfd</p></div>');
+
+        /*var oDiv = document.createElement('div');
+        var oP = document.createElement('p');
+        oP.innerHTML = 'dfdsfd';
+
+        oDiv.appendChild(oP);
+
+        document.body.appendChild(oDiv);
+*/
+       /* $('body').prepend($('.div1').clone()).css('background','yellow');*/
+
+       /* $('.div1').clone().appendTo($('body')).css('background','red');*/
+//         console.log($('.div1').text("hahah"));
+//    $('.div1').html('<p>dsufgks</p>');
+   // $('.div1').text('<p>dsufgks</p>');
+
+    //innerHTML  innerText
+
+   /* $(document.body).click(function () {
+        $( "div" ).each(function (i,elem) {
+            console.log(elem);
+//            console.log($(this));
+            if ( this.style.color != "blue" ) {
+                this.style.color = "blue";
+            } else {
+                this.style.color = "";
+            }
+        });
+    });*/
+//    console.log( $('#div1').next());
+    $('.div1').next().css('background','yellow').end().html("hahah");
+    $('body').find('.aa').
+
+</script>
+
+</body>
+</html>

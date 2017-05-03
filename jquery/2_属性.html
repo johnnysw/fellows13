@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            position: absolute;
+            left:50px;
+        }
+        #div1{
+            width: 400px;
+            height: 400px;
+            background: #0000ff;
+            position: relative;
+        }
+        #div3{
+            width: 100px;
+            height: 30px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="div1" class="aa selected">
+    aaa
+</div>-->
+<button id="btn" value="click">click</button>
+<!--<form method="post" action="">
+    你爱好的运动是？
+    <br/>
+    <input type="checkbox" name="items" value="足球"/>足球
+    <input type="checkbox" name="items" value="篮球"/>篮球
+    <input type="checkbox" name="items" value="羽毛球"/>羽毛球
+    <input type="checkbox" name="items" value="乒乓球"/>乒乓球
+    <br/>
+    <input type="button" id="CheckedAll" value="全　选"/>
+    <input type="button" id="CheckedNo" value="全不选"/>
+    <input type="button" id="CheckedRev" value="反　选"/>
+
+    <input type="button" id="send" value="提　交"/>
+</form>-->
+<div id="div1">
+    <div id="div2">
+
+    </div>
+</div>
+<div id="div3">
+    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+</div>
+
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+   // console.log($('#div1').attr('id'));
+//    $('#div1').attr('id','div2');
+    //$('#div1').removeAttr('id');
+   /* $('#CheckedAll').on('click',function(){
+        //$('[type="checkbox"]')
+        $(':checkbox').prop('checked',true);
+    })
+   $('#CheckedNo').on('click',function(){
+       //$('[type="checkbox"]')
+       $(':checkbox').prop('checked',false);
+
+   })
+   $('#CheckedRev').on('click',function(){
+       $(':checkbox').each(function(index,elem){
+           elem.checked = !elem.checked;
+//           $(elem).prop('checked',!$(elem).prop('checked'));
+       });
+
+   })
+*/
+//    console.log($('#CheckedAll').val('haah'));
+
+
+//   console.log( $('#div1').css("background","red"));
+
+//   $('#div1').css("background","red").css("border","2px solid #000");
+ /*  $('#div1').css({
+       background:"red",
+       border:"2px solid #000"
+   }).addClass('selected');*/
+
+
+//   $('#div1').removeClass('selected');
+    /*$('#btn').on('click',function(){
+        $('#div1').toggleClass('selected');
+    });*/
+
+  /* console.log($('#div2').offset().left) ;
+   console.log($('#div2').position().left) ;*/
+
+   $('#div2').offset({
+       left:200
+   })
+
+    $(window).on('scroll',function(){
+        console.log($('body').scrollTop());
+    });
+
+</script>
+</body>
+</html>

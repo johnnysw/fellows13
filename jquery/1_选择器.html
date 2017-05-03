@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.12.4.js"></script>
+
+    <script>
+
+       /* window.onload = function(){
+            var oDiv = document.getElementById('div1');
+            console.log(oDiv.innerHTML+"1111");
+        }
+        window.onload = function(){
+            console.log("99999");
+        }
+*/
+       /* $(document).ready(function(){
+            var oDiv = document.getElementById('div1');
+            console.log(oDiv.innerHTML+"2222");
+        });
+        $(document).ready(function(){
+            console.log("99999");
+        });
+
+        $(function(){
+
+        })*/
+//        jQuery();
+       // $();
+    </script>
+</head>
+<body>
+    <div>fjhdgfjhkgsd</div>
+    <div id="div1">
+        <p>ppppppp</p>
+        <h3>hhhhh</h3>
+        <h3>gggg</h3>
+    </div>
+    <p class="aa">dsfjhsdf</p>
+    <ul>
+        <li id="bb" class="bb">item1</li>
+        <li class="aa">item2</li>
+        <li name="bbcc" class="aa bb cc">item3</li>
+        <li name="cc">item4</li>
+    </ul>
+    <input type="button" value="click" disabled/>
+    <input type="text" value="click"/>
+    <input type="password" value="click" />
+    <input type="file" value="click" />
+    <textarea name="" id="" cols="30" rows="10">
+        
+    </textarea>
+    <select name="" id="">
+        <option value="aaa">111111</option>
+        <option value="aaa" selected>2222</option>
+        <option value="aaa">333</option>
+    </select>
+    <button></button>
+
+
+<script>
+    $('input')
+   /* $('.aa')
+    $('p')
+    $('.aa,.bb')*/
+
+
+
+//    $('.aa', $('ul')).css('background','red');
+
+    var oDiv = document.getElementById('div1');
+
+
+    var $div1 = $('#div1');
+
+    console.log(oDiv.innerHTML);
+    console.log($div1);
+    console.log($(oDiv));
+
+//    console.log($div1[0]);
+    console.log($div1.get(0));
+   // $('ul .aa')
+
+//    $("#bb + li").css('background','yellow');
+//    $("#bb ~ li").css('background','yellow');
+
+//    $("ul li[name!='cc']").css('background','blue');
+//   $("ul li[name*='cc']").css('background','blue');
+
+//    $("ul li[class~='bb']").css('background','blue');
+//   $("ul li[name^='bb']").css('background','blue');
+//   $("ul li[name$='cc']").css('background','blue');
+
+//    $("ul li:first-child").css('background','blue');
+//   $('#div1 h3:first-child').css('background','green');
+//     $('#div1 h3:first-of-type').css('background','green');
+
+//    $('#div1 :first-child').css('background','green');
+
+
+//    $("li:eq(2)").css('background','green');
+//      $("li:even").css('background','green');
+//   $("li:gt(1)").css('background','green');
+   $("li:not('#bb')").css('background','green');
+
+</script>
+</body>
+</html>

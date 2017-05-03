@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .tip{
+            border:1px solid #000;
+            background: #f7f5d1;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<p><a href="#" class="tooltip" title="这是我的超链接提示1.">提示1.</a></p>
+<p><a href="#" class="tooltip" title="这是我的超链接提示2.">提示2.</a></p>
+<p><a href="#" title="这是自带提示1.">自带提示1.</a></p>
+<p><a href="#" title="这是自带提示2.">自带提示2.</a> </p>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    //e.clientX e.clientY
+    $('.tooltip').on("mouseover",function(e){
+        var $tip = $('<span class="tip">'+this.title+'</span>')
+                    .css({
+                        left:e.pageX+20,
+                        top: e.pageY+20
+                    });
+        this.title="";
+        $('body').append($tip);
+    })
+    $('.tooltip').on("mouseout",function(e){
+        this.title = $('.tip').html();
+        $('.tip').remove();
+    });
+    $('.tooltip').on("mousemove",function(e){
+        $('.tip').css({
+            left:e.pageX+20,
+            top: e.pageY+20
+        });
+    });
+
+</script>
+</body>
+</html>
