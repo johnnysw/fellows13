@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			width: 400px;
+			height: 400px;
+			background: #00f;
+		}
+		#div2{
+			width: 200px;
+			height: 200px;
+			background: #f00;
+		}
+		ul{
+			background: red;
+		}
+		li{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div id="div2">
+		<input type="text" id="user">
+	</div>
+	
+	<div id="div1">
+		
+	</div>
+
+	<ul>
+		<li>item01</li>
+		<li>item02</li>
+		<li>item03</li>
+
+	</ul>
+
+	<button id="btn" value="click">click</button> -->
+
+	<div id="div1">
+		<div id="div2"></div>
+	</div>
+	<script src="jquery-1.12.4.js"></script>
+	<script>
+		/*$('#div1').click(function(){
+			alert('haha');
+		});
+
+		$('#div1').on('click',function(){
+			alert('haha');
+		});*/
+		
+		// $('li').on('click',function(){
+		// 	console.log($(this).html());
+		// });
+		//事件委托  后生成元素的事件绑定
+		/*$('ul').on('click',function(e){
+			if(e.target.tagName == 'LI'){
+				console.log($(e.target).html());
+			}
+		});*/
+		/*$('ul').on('click','li',function(){
+			console.log($(this).html());
+		});
+		var fn = function(){
+			$('<li>'+Math.random()+'</li>').appendTo('ul');
+		}
+		$('#btn').one('click',fn);
+		
+		// $('#btn').off('click',fn);
+
+		var a = function(){
+			alert('haha');
+		}
+		var b = function(){
+			alert('haha');
+		}
+
+		$('#user').on('focus',function(){
+			$(this).css('background','red');
+
+		});*/
+
+		/*$('#btn').on('click',function(){
+			// $('#user').trigger('focus');
+			$('#user').triggerHandler('focus');
+
+		});*/
+
+
+		/*$('#user').on('focusin',function(){
+			$(this).css('background','pink');
+
+		});
+		$('#div2').on('focusin',function(){
+			console.log('haha');
+		});*/
+		/*$('#div2').hover(function(){
+			console.log(111);
+		},function(){
+			console.log(222);
+		});*/
+
+		/*$('#div1').on('mouseover',function(){
+			console.log('div1  over');
+		});
+		$('#div1').on('mouseout',function(){
+			console.log('div1  out');
+		});
+		$('#div2').on('mouseover',function(){
+			console.log('div2  over');
+		});
+		$('#div2').on('mouseout',function(){
+			console.log('div2  out');
+		});
+*/
+
+		/*$('#div1').on('mouseenter',function(){
+			console.log('div1  over');
+		});
+		$('#div1').on('mouseleave',function(){
+			console.log('div1  out');
+		});
+		$('#div2').on('mouseenter',function(){
+			console.log('div2  over');
+		});
+		$('#div2').on('mouseleave',function(){
+			console.log('div2  out');
+		});*/
+
+		/*$(window).on('resize',function(e){
+			e.currentTarget
+			e.tatget
+			e.which
+			e.type
+
+			e.stopPropagation();
+
+			e.preventDefault();
+
+			return false;
+
+			e.pageX  e.pageY
+
+		})*/
+
+		$('#div1').on('click',function(e){
+			// console.log(e.target);
+			console.log(e.currentTarget);
+
+		});
+		$('#div2').on('click',function(e){
+			// console.log(e.target);
+			console.log(e.currentTarget);
+
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+	</script>
+</body>
+</html>

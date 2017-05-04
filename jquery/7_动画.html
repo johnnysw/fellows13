@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: #f00;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn1">hide</button>
+	<button id="btn2">show</button>
+	<button id="btn3">stop</button>
+	<div id="div1">
+		
+
+	</div>
+	<ul>
+		<li>item1</li>
+		<li class="aa">item2</li>
+		<li>item3</li>
+	</ul>
+	<ul>
+		<li>item1</li>
+		<li class="bb">item2</li>
+		<li>item3</li>
+	</ul>
+	<script src="jquery-1.12.4.js"></script>
+	<script>
+		/*$('#btn1').on('click',function(){
+			$('#div1').hide('slow');
+		})
+		$('#btn2').on('click',function(){
+			$('#div1').toggle(3000);
+		})*/
+		/*$('#btn1').on('click',function(){
+			$('#div1').fadeIn('slow');
+		})
+		$('#btn2').on('click',function(){
+			$('#div1').fadeOut(3000);
+		})*/
+
+		/*$('#btn1').on('click',function(){
+			$('#div1').slideDown('slow');
+		})
+		$('#btn2').on('click',function(){
+			$('#div1').slideUp(3000);
+		})*/
+
+		/*$('#btn2').on('click',function(){
+			$('#div1').animate({
+				width:'+=100',
+				height:400
+			},1000);
+			$('#div1').animate({
+				opacity:0.2
+			},1000);
+
+			
+		})
+
+		$('#btn3').on('click',function(){
+			$('#div1').stop(true,true);
+		});
+*/
+
+		/*var obj = {
+			name:'lisi',
+			age:13
+		}
+		var obj2 = {
+			name:'zhangsan',
+			school:'weichuang'
+		}
+
+		var obj3 = $.extend(obj,obj2);
+
+		console.log(obj3);
+		var str = '   sfhgd jhgdjhsd ';
+		$.trim(str)
+*/
+//$('#div1').get(0)
+
+
+
+
+	//console.log($('.bb').index());
+
+	console.log($('.bb').index('li'));
+
+	$('.bb').size()
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

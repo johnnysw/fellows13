@@ -7,15 +7,21 @@
         .aa{
             width: 200px;
             height: 22px;
-            background: #ff0000;
+            /*background: #ff0000;*/
         }
     </style>
 </head>
 <body>
     <div class="div1">aaa</div>
-    <div class="aa">ahjjh
-        <div class="aa">vvvv
-            <div class="aa">sss</div>
+    <div class="aa">
+        jhdgfjhsdf
+        <div class="bb">
+            vvvv
+            <!-- <div class="aa">sss</div> -->
+        </div>
+        <div class="ccc">
+            vvvv
+            <!-- <div class="aa">sss</div> -->
         </div>
     </div>
 
@@ -72,8 +78,9 @@
         });
     });*/
 //    console.log( $('#div1').next());
-    $('.div1').next().css('background','yellow').end().html("hahah");
-    $('body').find('.aa').
+    // $('.div1').next().css('background','yellow').end().html("hahah");
+
+    $('.div1').next().children('.bb').css('background','red').end().end().css('border','1px solid #000');
 
 </script>
 

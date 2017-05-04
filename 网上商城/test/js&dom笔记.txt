@@ -58,7 +58,7 @@ dom
 	事件
 
 	div.onclick = function(e){
-		e = e || event;
+		e = e || window.event;
 		e.target || e.srcElement;  //事件源
 
 		e.altKey
@@ -69,8 +69,10 @@ dom
 	}
 	//阻止事件冒泡
 	e.stoppropagation();
-	e.cancelBubble = true
+	e.cancelBubble = true;
 	//阻止默认行为
+	e.preventDefault();
+    e.returnValue = false;
 
 
 
