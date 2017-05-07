@@ -14,7 +14,7 @@
 .carousel-imgs{
 	width: 2880px;
 	left:0;
-	transition:left 2s ease;
+	/*transition:left 2s ease;*/
 }
 .carousel-item{
 	width: 960px;

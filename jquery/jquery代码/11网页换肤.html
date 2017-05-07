@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#skin-btns{
+			width: 220px;
+			height: 20px;
+			border:1px solid #ccc;
+		}
+		#skin-btns span{
+			width: 15px;
+			height: 15px;
+			float: left;
+			margin: 3px 5px 0 0 ;
+			background: url(theme.gif) 0 0 no-repeat;
+		}
+		#skin-btns .skin0{
+			background-position: 0 0;
+		}
+		#skin-btns .skin1{
+			background-position: -20px 0;
+		}
+		#skin-btns .skin2{
+			background-position: -40px 0;
+		}
+		#skin-btns .skin3{
+			background-position: -60px 0;
+		}
+		#skin-btns .skin4{
+			background-position: -80px 0;
+		}
+		#skin-btns .skin5{
+			background-position: -100px 0;
+		}
+
+		#skin-btns .skin0.selected{
+			background-position: 0 -15px;
+		}
+		#skin-btns .skin1.selected{
+			background-position: -20px -15px;
+		}
+		#skin-btns .skin2.selected{
+			background-position: -40px -15px;
+		}
+		#skin-btns .skin3.selected{
+			background-position: -60px -15px;
+		}
+		#skin-btns .skin4.selected{
+			background-position: -80px -15px;
+		}
+		#skin-btns .skin5.selected{
+			background-position: -100px -15px;
+		}
+		.cont-skin{
+			width: 100px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			float: left;
+			background: #999999;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="skin-btns">
+		<span class="skin0 selected" skin-color="#999999"></span>
+		<span class="skin1" skin-color="#b0d40f"></span>
+		<span class="skin2" skin-color="#f8b33a"></span>
+		<span class="skin3" skin-color="#0abdce"></span>
+		<span class="skin4" skin-color="#e11355"></span>
+		<span class="skin5" skin-color="#c151da"></span>
+	</div>
+	<div id="content">
+		<div class="cont-skin">时事新闻</div>
+		<div class="cont-skin">娱乐新闻</div>
+	</div>
+
+<script src="../jquery-1.12.4.js"></script>
+<script>
+	$('#skin-btns span').on('click',function(){
+		$(this).addClass('selected').siblings().removeClass('selected');
+		$('.cont-skin').css('background',$(this).attr('skin-color'));
+	});
+	
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
