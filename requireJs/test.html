@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+    </style>
+    <script src="a.js" async></script>
+    <script src="b.js" async></script>
+    <script src="test.js" async></script>
+    <!--原理：异步的 动态的创建script标签 加载js文件-->
+    <!--async  defer-->
+    <!--defer ie浏览器语法  defer 等到dom结构加载完了再执行（保证文件的执行顺序）
+    async 标准浏览器语法  只要js文件加载完了 就会执行-->
+
+    <!--利用正则表达式 匹配要加载的文件-->
+
+
+</head>
+<body>
+    <div id="div1">
+        d
+    </div>
+
+<!--<script>
+    var script = document.createElement('script');
+    script.src="js/xx.js";
+
+    document.body.appendChild(script);
+
+</script>-->
+</body>
+</html>
