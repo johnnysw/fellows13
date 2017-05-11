@@ -7,7 +7,7 @@ requirejs.config({
         jquery: 'jquery-1.12.4'
     }
 });
-require(['jquery'],function($){
+define(['jquery'],function($){
     return {
         open:function(){
 
