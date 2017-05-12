@@ -228,18 +228,18 @@
 	right: 0;
 	bottom: 0;
 	z-index:999;
-	display: none;
+	/*display: none;*/
 }
 .content{
-	width: 423px;
-	height: 498px;
+	/*width: 423px;*/
+	/*height: 498px;*/
 	background: #fff;
 	position: absolute;
 	left:50%;
-	/*top:50%;*/
-	top:-249px;
-	margin-left: -212px;
-	margin-top: -249px;
+	top:50%;
+	/*top:-249px;*/
+	/*margin-left: -212px;*/
+	/*margin-top: -249px;*/
 	
 }
 
@@ -252,12 +252,17 @@
 	height: 30px;
 	background: #f4f4ff;
 	border-bottom: 1px solid #efefef;
-	text-align: right;
+	/*text-align: right;*/
 	line-height: 30px;
+
+}
+.dialog-title .title{
+	margin-left: 20px;
 }
 .dialog-close{
 	margin-right:8px;
 	cursor: pointer;
+	float: right;
 }
 .dialog-body{
 	text-align: center;

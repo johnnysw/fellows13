@@ -9,7 +9,13 @@ requirejs.config({
 });
 require(['jquery','dialog'],function($,dialog){
     $('.small-img li').on('click',function(){
-        dialog.open();
+        dialog.open({
+            width:500,
+            height:400,
+            opacity:0.9,
+            title:'haha',
+            content:'.div1'
+        });
     });
-    dialog.close();
+   // dialog.close();
 });
