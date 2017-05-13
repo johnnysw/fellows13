@@ -10,7 +10,6 @@ requirejs.config({
 define(['jquery'],function($){
 
     function Dialog(option){
-
         var _this = this;
         var defaultVal = {
             width:400,
@@ -20,7 +19,6 @@ define(['jquery'],function($){
             content:''
         };
         option = $.extend(defaultVal,option);
-
         this.$dialogBox = $('<div class="dialog-box"></div>').css('background','rgba(0,0,0,'+option.opacity+')');
         this.$content = $('<div class="content"></div>')
             .css({
@@ -35,12 +33,9 @@ define(['jquery'],function($){
             _this.close();
         });
         this.$dialogBody = $('<div class="dialog-body"></div>').html($(option.content).clone().show());
-
     }
     Dialog.prototype.open = function(){
         //this.close();
-
-
         this.$dialogBox.append(this.$content);
         this.$content.append(this.$dialogTitle).append(this.$dialogBody);
         this.$dialogTitle.append(this.$dialogTxt).append(this.$dialogClose);
