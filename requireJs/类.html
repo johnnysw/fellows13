@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+   /* var fn =  function(){
+        console.log(this.name+'is eating');
+    }*/
+//    类：具有相同属性 和方法的对象的集合
+   //创建一个类  属性写在类中，方法写在原型
+    function Person(name,age){  //类 = 构造函数
+        this.name = name;
+        this.age = age;
+//        this.eat = fn;
+    }
+
+    Person.prototype.eat = function(){
+        console.log(this.name+'is eating');
+    }
+
+
+    var person1 = new Person('lisi',10);
+
+
+    var person2 = new Person('zhangs',30);
+
+    person1.name = 'haha';
+
+    person1.eat();
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

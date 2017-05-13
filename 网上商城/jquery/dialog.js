@@ -42,6 +42,7 @@ define(['jquery'],function($){
             $('.dialog-close').on('click',function(){
                 $this.close();
             });
+
         },
         close:function(){
             $('.dialog-box').remove();
