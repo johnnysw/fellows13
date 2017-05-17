@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+padding
+margin
+border
+
+
+ie6下 正常是标准的盒模型  没写doctype  才是怪异的
+
+display:box 父元素
+子元素 flex：2  占的分数
+
+
+样式
+内联的最高
+内联大于外部引用的
+
+#a{}
+#a .b{}
+
+数组去重
+
+我写的这种  存在一个对象里  只进行一次循环
+Array.prototype.unique3 = function(){
+    var res = [];
+    var json = {};
+    for(var i = 0; i < this.length; i++){
+        if(!json[this[i]]){ 如果对象中没有这个属性 就添加到数组中  给对象添加方法
+            res.push(this[i]);
+            json[this[i]] = 1;
+        }
+    }
+return res;
+}
+var arr = [112,112,34,'你好',112,112,34,'你好','str','str1'];
+alert(arr.unique3());
+
+push  pop sort
+
+es是指定的一些标准
+typeof
+instanceof  判断是否是构造函数的一个实例
+constructoe 返回构造函数
+
+
+
+
+//
+
+<script>
+
+
+</script>
+
+</body>
+</html>

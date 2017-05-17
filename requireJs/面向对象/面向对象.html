@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*对象：
+	内置对象
+	自定义对象
+	dom对象*/
+
+	var obj = new Object();
+	obj.name = 'zhangsan';
+
+	var obj = {  
+		name:'zhangsan',
+		age:10
+	}
+	//具有相同属性和方法的对象的集合
+	function Person(name){ // 类 == 构造函数
+		this.name = name;
+		/*this.eat = function(){
+			console.log('aaaa eating...');
+		}*/
+	}
+	Person.prototype.eat = function(){
+		console.log('eating....');
+	}
+	var p1 = new Person('lisi');  //一个实例
+	console.log(p1.name);
+	var p2 = new Person('zhangsan');
+	console.log(p2.name);
+	/*p1.eat = function(){
+		console.log('bbbb ia eating...');
+	}*/
+	p1.eat();
+
+	//原型链
+
+
+
+
+
+
+
+
+	</script>
+	
+
+
+
+	
+	
+</body>
+</html>
