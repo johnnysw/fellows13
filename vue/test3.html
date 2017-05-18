@@ -19,7 +19,9 @@
 <body>
 <div id="app">
     <ul>
-        <li v-for="(val,aa) in arr" v-text="val+','+aa"></li>
+        <!--<li v-for="(val,aa) in arr" v-text="val+','+aa"></li>-->
+        <!--<li v-for="(val,key,bb) in obj">{{val}},{{key}},{{bb}}</li>-->
+        <li v-for="n in 10">{{n}}</li>
     </ul>
 </div>
 <script src="vue.js"></script>
@@ -27,7 +29,12 @@
     var vm = new Vue({
         el:"#app",
         data:{
-            arr:[1,2,3,4,5,6]
+            arr:[1,2,3,4,5,6],
+            obj:{
+                name:'zs',
+                age:100,
+                sex:'男女'
+            }
         },
         methods:{
 

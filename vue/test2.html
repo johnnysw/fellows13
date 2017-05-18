@@ -27,8 +27,10 @@
     <!--<div :class="{red:isRed,font:isFont}">fdafdafdsafdsfd</div>-->
     <!--<div :class="classObj">fdafdafdsafdsfd</div>-->
     <!--<div class='cccc' :class="[classA,classB]">fdafdafdsafdsfd</div>-->
-    <button @click="isRed = !isRed">click</button>
-    <div :class="{red:isRed}"></div>
+    <!--<div :style="styleObj">ssssss</div>-->
+    <div :style="[styleA,styleB]">ssssss</div>
+    <!--<button @click="isRed = !isRed">click</button>-->
+    <!--<div :class="{red:isRed}"></div>-->
 </div>
 <script src="vue.js"></script>
 <script>
@@ -36,6 +38,18 @@
     var vm = new Vue({
         el:"#app",
         data:{
+            styleA:{
+                color:'red',
+                background:'#ccc'
+            },
+            styleB:{
+                'font-size':"40px"
+            },
+            styleObj:{
+                color:'red',
+                'font-size':"40px"
+            },
+            colorStye:'red',
             msg:0,
             aa:'div1',
             bb:'red',
