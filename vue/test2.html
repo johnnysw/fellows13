@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .font-size{
+            width: 200px;
+            height: 200px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--<button v-on:click="add">click</button>-->
+    <!--<button @click="msg++">click</button>-->
+    <!--当前点击次数：{{msg}}-->
+    <!--<div v-bind:id="aa"></div>-->
+    <!--<div :id="aa"></div>-->
+    <!--class   style-->
+    <!--<div :class="{red:isRed,font:isFont}">fdafdafdsafdsfd</div>-->
+    <!--<div :class="classObj">fdafdafdsafdsfd</div>-->
+    <!--<div class='cccc' :class="[classA,classB]">fdafdafdsafdsfd</div>-->
+    <button @click="isRed = !isRed">click</button>
+    <div :class="{red:isRed}"></div>
+</div>
+<script src="vue.js"></script>
+<script>
+    //    var oDiv = document.getElementById('app');
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            msg:0,
+            aa:'div1',
+            bb:'red',
+            isRed:true,
+            isFont:false,
+            classObj:{
+                red:true,
+                'font-size':true
+            },
+            classA:'red',
+            classB:'font-size'
+        },
+        methods:{
+//            add:function(){
+//                this.msg++;
+//            }
+//            show:function(){
+//                this.isRed = !this.isRed;
+//            }
+        }
+    });
+
+    //    vm.add()
+
+
+</script>
+</body>
+</html>

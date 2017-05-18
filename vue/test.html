@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <!--<input type="text" v-model="aaa"/>-->
+        <!--<span>{{aaa}}</span>-->
+        <input type="text" id="txt"/>
+        <span id="sp"></span>
+
+    </div>
+    <script src="vue.js"></script>
+    <script>
+
+        //访问器属性 obj.aa = 123;
+        var obj = {};
+        Object.defineProperty(obj,'aaa',{
+            set:function(val){
+                console.log(val);
+                document.getElementById('sp').innerHTML = val;
+            },
+            get:function(){
+                alert(1111);
+            }
+        })
+
+        document.getElementById('txt').onkeyup = function(){
+            obj.aaa = this.value;
+        }
+
+//        obj.aaa = 123;
+
+//        var vm = new Vue({
+//            el:'#app',
+//            data:{
+//                msg:'123',
+//                aaa:'5555'
+//            }
+//        });
+
+
+    </script>
+</body>
+</html>

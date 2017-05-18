@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .font-size{
+            width: 200px;
+            height: 200px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(val,aa) in arr" v-text="val+','+aa"></li>
+    </ul>
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            arr:[1,2,3,4,5,6]
+        },
+        methods:{
+
+        }
+    });
+
+
+
+</script>
+</body>
+</html>
