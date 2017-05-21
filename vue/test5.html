@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" v-model="msg"/>
+<ul>
+    <li v-for="(item,key,index) in obj" v-bind:class="{}" @click="" v-html="" v-text="">
+
+        {{item}}
+
+    </li>
+</ul>
+    <script src="vue.js"></script>
+    <script>
+
+        new Vue({
+            el:'#app',
+            data:{
+                msg:'',
+                first:'zhang',
+                last:'san'
+            },
+            computed:{
+//                fullName:function(){
+//                    return this.first;
+//                }
+
+                fullName:{
+                    set:function(){
+
+                    },
+                    get:function(){
+
+                    }
+                }
+            },
+            methods:{
+                add:function(){
+                    return this.first;
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

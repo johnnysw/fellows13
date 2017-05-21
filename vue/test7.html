@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+        <!--<div>-->
+            <!--<template v-if="show">-->
+                <!--<h1>hhhhh</h1>-->
+                <!--<p>ppppp</p>-->
+            <!--</template>-->
+            <!--<h2>h2h2h2h2</h2>-->
+        <!--</div>-->
+        <!--<template v-for="n in 3">-->
+            <!--<p>pppp</p>-->
+            <!--<h1>hhhhh</h1>-->
+        <!--</template>-->
+
+        <!--<div v-else>-->
+            <!--<p>p2p2p2p2p2p</p>-->
+        <!--</div>-->
+        <!--<div v-show="show">-->
+            <!--<p>p3p3p3p3</p>-->
+        <!--</div>-->
+
+    <input type="text" v-model="msg" @keyup.enter.ctrl="add">
+
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+//            show:true
+            msg:''
+        },
+        methods:{
+            add:function(){
+                console.log(this.msg);
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
