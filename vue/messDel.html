@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    name:<input type="text" v-model="name"/>
+    school:<input type="text" v-model="school"/>
+    <button @click="add">add</button>
+    <ul>
+        <li v-for="(obj,index) in arr" v-html="obj.name+','+obj.school+'<button @click=del('+index+')>del</button>'">
+            <!--{{obj.name+","+obj.school}}-->
+            <!--<button @click="del(index)">del</button>-->
+        </li>
+
+    </ul>
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            name:'',
+            school:'',
+            arr:[]
+        },
+        methods:{
+            add:function(){
+                this.arr.push({name:this.name,school:this.school});
+                this.school = '';
+                this.name = '';
+            },
+            del:function(index){
+                this.arr.splice(index,1);
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
