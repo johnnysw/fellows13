@@ -27,7 +27,7 @@
         </thead>
         <tbody id="product-list">
         <tr v-for="product in productlist">
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" v-model="cart" :value="product"></td>
             <td><img :src="product.productImg" alt="" width="100"></td>
             <td>{{product.productName}}</td>
             <td>
@@ -51,7 +51,7 @@
         <tr><td colspan="6">
         </td>
             <td>
-                总计：<span id="total">0</span>
+                总计：<span id="total">{{totalPrice}}</span>
             </td>
             <td>
                 <button>结账</button>
@@ -66,13 +66,24 @@
         el:'#cart',
         data:{
             msg:'123',
-            productlist:[]
+            productlist:[],
+            cart:[]
         },
         mounted:function(){
             var _this = this;
             axios.get('cart.json').then(function(res){
                 _this.productlist = res.data.result.productList;
             });
+        },
+        computed:{
+            totalPrice:function(){
+                var total = 0;
+                this.cart.forEach(function(val){
+                    total += val.productPrice * val.productQuentity;
+                })
+
+                return total;
+            }
         }
     });
 </script>

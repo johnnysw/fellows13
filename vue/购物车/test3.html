@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="msg">{{msg}}
+    <input type="checkbox" v-model="ho" value="a">足球
+    <input type="checkbox" v-model="ho" value="b">篮球
+    <input type="checkbox" v-model="ho" value="c">乒乓球
+    <!--{{msg}}-->
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'123',
+            ho:[]
+        },
+//        beforeCreate:function(){
+//            console.log('beforeCreate',this.msg);
+//        },
+//        created:function(){
+//            console.log('created',this.msg);
+//        },
+//        mounted:function(){
+//            console.log('mounted',this.msg);
+//        },
+//        updated:function(){
+//            console.log('updated',this.msg);
+//        }
+
+    });
+</script>
+</body>
+</html>
