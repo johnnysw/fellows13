@@ -29,9 +29,17 @@
 <body>
 <div id="app">
     <button @click="dialogShow = true">登录</button>
-    <button>注册</button>
-    <mydialog v-show="dialogShow">
+    <button @click="regShow = true">注册</button>
+    <mydialog v-show="dialogShow" @close="dialogShow = false">
         <span slot="title" class="title-left">登录</span>
+        <div slot="content">
+            用户名：<input type="text"/><br>
+            密码：<input type="password"/>
+        </div>
+    </mydialog>
+
+    <mydialog v-show="regShow" @close="regShow = false">
+        <span slot="title" class="title-left">注册</span>
         <div slot="content">
             用户名：<input type="text"/><br>
             密码：<input type="password"/>
@@ -42,7 +50,7 @@
     <div class="dialog-box">
         <div class="title">
             <slot name="title"></slot>
-            <span @click="closeDialog">[X]</span>
+            <span @click="$emit('close')">[X]</span>
         </div>
         <div class="content">
             <slot name="content"></slot>
@@ -55,7 +63,8 @@
         new Vue({
             el:'#app',
             data:{
-                dialogShow:false
+                dialogShow:false,
+                regShow:false
             },
             components:{
                 mydialog:{
