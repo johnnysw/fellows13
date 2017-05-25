@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{firstName}},{{lastName}} = {{fullName}}
+    <!--{{computer}}-->
+</div>
+<script src="vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el:'#app',
+        data:{
+//            msg:123
+            firstName:'zhang',
+            lastName:'san'
+//            fullName:'zhang san'
+        },
+        computed:{
+            fullName:{
+                get:function(){
+                    return this.firstName + ' '+ this.lastName;
+                },
+                set:function(val){
+                    this.firstName = val;
+                    this.lastName = val;
+                }
+            },
+//            computer:{
+//                get:function(){
+//                    return '123';
+//                },
+//                set:function(val){
+//                    console.log(val);
+//                }
+//            }
+        },
+//        watch:{
+//            firstName:function(a,b){
+////                console.log(a);
+////                console.log(b);
+////                this.fullName = newVal +' '+this.lastName;
+//            },
+//            lastName:function(newVal,oldVal){
+////                this.fullName = this.firstName+' '+newVal;
+//            }
+//        },
+        methods:{
+            msg:function(){
+                return 789;
+            }
+        }
+    });
+
+//    vm.$watch('firstName',function(a,b){
+//        console.log(a);
+//        console.log(b);
+//    });
+//    console.log(vm.$el);
+
+
+
+</script>
+</body>
+</html>
