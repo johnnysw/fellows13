@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            /* 子代选择器有兼容性问题  */
+            div > h1{
+                background: #ff0000;
+            }
+            #div1{
+                width: 200px;
+                height: 200px;
+                background: #00ff00;
+
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>hhh</h1>
+        </div>
+    </body>
+</html>

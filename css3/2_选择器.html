@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /**{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            background: #ff0000;
+        }
+        div.aa.bb{
+            background: #00ff00;
+        }*/
+        /*#div1~div{
+            background: #ff0000;
+        }*/
+        /*div[id^="d"]{*/
+            /*background: #ff0000;*/
+        /*}*/
+        /*#ul1 li:first-child{
+            background: #ff0000;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        #div3::first-line{
+            background: #ff0000;
+        }
+        #ipt1:focus{
+            background: #ff0000;
+        }*/
+        /*#ul1 li:not(:first-child){
+            background: #ff0000;
+        }*/
+        /*#ul1 li:last-child{
+            background: #ff0000;
+        }*/
+        /*#ul1 li:nth-child(2n+1){
+            background: #ff0000;
+        }
+        .test p:first-of-type {
+            color: #f00;
+        }*/
+        body{
+            height: 3000px;
+        }
+        /*#div3{
+            margin-top: 1000px;
+        }
+        #div3:target{
+            background: #ff0000;
+        }*/
+        /*#div3::first-letter{
+            background: #ff0000;
+            font-size: 30px;
+        }*/
+        #div3::selection{
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <a href="#div3">跳转</a>
+    <div class="aa bb">div2</div>
+    <div id="div1">div1</div>
+    <div id="div2">001</div>
+    <div id="aaaa">002</div>
+    <div>003</div>
+    <div>004</div>
+
+    <ul id="ul1">
+        <li>001</li>
+        <li>002</li>
+        <li class="aa">003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+
+    <div id="div3">
+        阿斯顿发斯蒂芬阿斯顿发顺丰的按时发顺丰暗室逢灯安防阿斯顿发
+    </div>
+
+    <input type="text" id="ipt1" placeholder="请输入">
+
+    <div class="test">
+        <div>我是一个div元素</div>
+        <p>我是一个p元素</p>
+        <p>我是一个p元素</p>
+    </div>
+
+    <script>
+        var oDiv = document.getElementById("div1");
+        console.log(oDiv);
+    </script>
+
+
+<!--
+多类选择器
+
+-->
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1::before{
+            content: "<div>123</div>";
+            /*width: 200px;
+            height: 200px;
+            background: #ff0000;
+            display: block;*/
+        }
+        #ul1{
+            /*overflow: hidden;*/
+            /*clear: both;*/
+            /*height: 200px;*/
+            /*float: left;*/
+            /*position: absolute;*/
+        }
+        /*#ul1 li{
+            float: left;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }*/
+    </style>
+</head>
+<body>
+    <div id="div1">div</div>
+    <ul id="ul1" class="clearfix">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+    </ul>
+</body>
+</html>
