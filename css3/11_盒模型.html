@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #content{
+            height: 700px;
+            border:2px solid #000;
+            display: -webkit-box;
+
+            /*-webkit-box-orient:vertical;*/
+            /*-webkit-box-pack: center;*/
+            /*-webkit-box-align: center;*/
+            /*-webkit-box-direction: reverse;*/
+        }
+        #content div{
+            width: 100px;
+            height: 100px;
+        }
+        #div1{
+            background: #ff0000;
+            -webkit-box-ordinal-group:2;
+        }
+        #div2{
+            background: #00ff00;
+            -webkit-box-ordinal-group:2;
+        }
+        #div3{
+            background: #0000ff;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+
+    <div id="div1">
+        1
+    </div>
+    <div id="div2">
+        2
+    </div>
+    <div id="div3">
+        3
+
+    </div>
+</div>
+</body>
+</html>

@@ -20,12 +20,15 @@
         }
         /*#ul1 li{
             float: left;
-        }
+        }*/
         .clearfix::after{
             content: "";
             display: block;
             clear: both;
-        }*/
+        }
+        .clear{
+            clear: both;
+        }
     </style>
 </head>
 <body>
@@ -36,5 +39,14 @@
         <li>003</li>
         <li>004</li>
     </ul>
+
+    <div id="container" class="clearfix">
+        <div id="div2">
+
+        </div>
+        <div id="div3">
+
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            border:5px dotted #000;
+            margin: 100px;
+            -webkit-perspective: 800px;
+
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            /*-webkit-transform: translateZ(100px) ;*/
+
+            -webkit-transform: translateX(100px) rotateY(90deg) ;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div2">
+    <div id="div1">
+
+
+    </div>
+</div>
+</body>
+</html>
