@@ -25,6 +25,7 @@
             margin: 80px auto;
             position: relative;
             -webkit-transform-style: preserve-3d;
+            -webkit-transition: transform 2s ease;
         }
         #container img{
             width: 128px;
@@ -32,8 +33,11 @@
             position: absolute;
             left:0;
             top:0;
+            -webkit-transition:transform 2s ease;
         }
     </style>
+
+
 </head>
 <body>
     <div id="stage">
@@ -46,10 +50,56 @@
         var oContainer = document.getElementById('container');
         var html = '';
         var x = 64/Math.tan(20*Math.PI/180) +20;
+
+
+/*
+         for(var i=0; i<9;i++){
+         html+='<img src="img/'+(i+1)+'.jpg" style="-webkit-transform:rotateY(0deg) translateZ(0px)"/>';
+         }
+         oContainer.innerHTML = html;*/
+        var count = 0;
         for(var i=0; i<9;i++){
-            html+='<img src="img/'+(i+1)+'.jpg" style="-webkit-transform:rotateY('+(-i*40)+'deg) translateZ('+x+'px)"/>';
+            var oImg = new Image();
+            oImg.onload = function(){
+                count++;
+                if(count == 9){
+                    //9张图片都加载完了
+                    var aImg = document.getElementsByTagName('img');
+                    var time = 900;
+                    for(var i=0; i<9;i++){
+                        time-=100;
+//                        time = (8-i)*100;
+                        aImg[i].style.WebkitTransition= 'transform 2s ease '+time+'ms';
+                        aImg[i].style.WebkitTransform = 'rotateY('+(-i*40)+'deg) translateZ('+x+'px)';
+                    }
+                }
+            }
+            oImg.src = 'img/'+(i+1)+'.jpg';
+            oContainer.appendChild(oImg);
         }
-        oContainer.innerHTML = html;
+
+        var num = 0
+        oContainer.onclick = function(){
+            num++;
+            this.style.WebkitTransform = 'rotateY('+num*40+'deg)';
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
