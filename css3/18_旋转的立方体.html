@@ -13,18 +13,14 @@
             -webkit-perspective: 800px;
         }
         #container{
+            margin:100px auto;
             width: 200px;
             height: 200px;
-            margin:100px auto;
-            position: relative;
-            /*-webkit-perspective: 800px;*/
+            position:relative;
             -webkit-transform-style: preserve-3d;
-            /*animation: run 2s linear infinite;*/
+            -webkit-animation: run 2s linear infinite;
         }
         @-webkit-keyframes run {
-            0%{
-
-            }
             100%{
                 -webkit-transform: rotateY(360deg);
             }
@@ -32,28 +28,26 @@
         #container div{
             width: 200px;
             height: 200px;
-            position: absolute;
-            left:0;
-            top:0;
-            background: rgba(255,255,255,0.6);
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
             font-size: 50px;
             text-align: center;
             line-height: 200px;
-            border-radius: 10px;
+            position: absolute;
+            left:0;
+            top:0;
         }
         #one{
             -webkit-transform: rotateX(90deg) translateZ(100px);
         }
         #two{
             -webkit-transform: translateZ(100px);
-            /*z-index:1;*/
         }
         #three{
             -webkit-transform: rotateY(90deg) translateZ(100px);
         }
         #four{
-            -webkit-transform:rotateY(180deg) translateZ(100px);
-
+            -webkit-transform: rotateY(180deg) translateZ(100px);
         }
         #five{
             -webkit-transform: rotateY(-90deg) translateZ(100px);

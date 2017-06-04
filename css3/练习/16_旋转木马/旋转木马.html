@@ -34,9 +34,8 @@
             position: absolute;
             left:0;
             top:0;
-            -webkit-transition:transform 1s ease ;
+            /*-webkit-transition: all 1s ease-in-out;*/
         }
-
 
     </style>
 </head>
@@ -61,14 +60,9 @@
                 count++;
                 if(count == 9){
                     var aImg = oContainer.getElementsByTagName('img');
-
                     for(var i=0; i<9;i++){
-                        (function(index){
-                            setTimeout(function(){
-                                var j = 8-index;
-                                aImg[j].style.WebkitTransform = 'rotateY('+(-j*40)+'deg) translateZ('+x+'px)';
-                            },100*(i+1));
-                        })(i)
+                        aImg[i].style.WebkitTransition =  'all 1s ease-in-out '+(9 - i) * 100 + 'ms';
+                        aImg[i].style.WebkitTransform = 'rotateY('+(-i*40)+'deg) translateZ('+x+'px)';
                     }
                 }
             }
