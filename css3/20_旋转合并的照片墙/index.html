@@ -32,15 +32,41 @@
             display: block;
             background: #ff0000;
             opacity: 0;
+            -webkit-transition: all 0s ease;
+        }
+        #prev,#next{
+            width: 40px;
+            height: 80px;
+            position: absolute;
+            top:50%;
+            margin-top: -40px;
+            display: none;
+
+
+        }
+        #prev{
+            background: #fff url("img/prev.png") center center no-repeat;
+            left:0;
+            border-radius: 0px 10px 10px 0;
+        }
+        #next{
+            background: #fff url("img/next.png") center center no-repeat;
+            right:0;
+            border-radius: 10px 0 0 10px;
         }
     </style>
 </head>
 <body>
     <div id="container">
     </div>
+    <span id="prev"></span>
+    <span id="next"></span>
     <script>
         var oContainer = document.getElementById('container');
+        var oPrev = document.getElementById('prev');
+        var oNext = document.getElementById('next');
         var num = 0;
+        var iNow = 0;
         for(var i=0; i<24; i++){
             var oImg = new Image();
             oImg.onload = function(){
@@ -114,6 +140,12 @@
                         var y = -oDiv.rowCol.row *125;
                         oSpan.style.background = 'url(img/'+(this.idx+1)+'.jpg) '+x+'px '+y+'px no-repeat';
                     }
+                    iNow = this.idx;//记录当前点击div的索引
+
+                    oPrev.style.display = 'block';
+                    oNext.style.display = 'block';
+
+
                 }else{//散开
                     for(var i=0; i<aDiv.length; i++){
                         var oDiv = aDiv[i];
@@ -125,9 +157,62 @@
                         var oSpan = oDiv.getElementsByTagName('span')[0];
                         oSpan.style.opacity = 0;
                     }
+                    oPrev.style.display = 'none';
+                    oNext.style.display = 'none';
                 }
                 flag = !flag;
             }
+
+            oPrev.onclick = oNext.onclick = function(){
+                if(this == oPrev){
+                    //上一个按钮
+                    iNow--;
+                    if(iNow == -1){
+                        iNow = aDiv.length-1;
+                    }
+                }else{
+                    iNow++;
+                    if(iNow == aDiv.length){
+                        iNow = 0;
+                    }
+                }
+                var arr = [];
+                for(var i=0; i<aDiv.length; i++){
+                    arr.push(i);
+                }
+
+                arr.sort(function(){
+                    return Math.random()-0.5;
+                });
+
+                console.log(arr);
+
+                /*for(var i=0; i<aDiv.length; i++){
+                    var oSpan =  aDiv[i].getElementsByTagName('span')[0];
+                    var random =  arr[i];
+                    oSpan.style.transitionDelay = random*10+"ms";
+                    oSpan.style.backgroundImage = 'url(img/'+(iNow+1)+'.jpg)';
+                }*/
+
+                var timer = setInterval(function(){
+                    var random = arr.pop();
+                    var oSpan =  aDiv[random].getElementsByTagName('span')[0];
+                    oSpan.style.backgroundImage = 'url(img/'+(iNow+1)+'.jpg)';
+                    if(arr.length == 0){
+                        clearInterval(timer);
+                    }
+                },30);
+
+
+
+
+
+
+
+
+            }
+
+
 
         }
 
