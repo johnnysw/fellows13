@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        #container{
+            width: 100%;
+            height: 100%;
+            background: url("img/bg.jpg") 0 0 repeat;
+            position: relative;
+        }
+        #container .img{
+            width: 125px;
+            height: 125px;
+            border:5px solid #fff;
+            position: absolute;
+            left:-150px;
+            top:-150px;
+            -webkit-transition: all 1.5s ease;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <script>
+        var oContainer = document.getElementById('container');
+        var num = 0;
+        for(var i=0; i<24; i++){
+            var oImg = new Image();
+            oImg.onload = function(){
+                num++;
+                if(num == 48){
+                    loadSuccess();
+                }
+            }
+            oImg.src="img/"+(i+1)+".jpg";
+        }
+        for(var i=0; i<24; i++){
+            var oImg = new Image();
+            oImg.onload = function(){
+                num++;
+                if(num == 48){
+                    loadSuccess();
+                }
+            }
+            oImg.src="img/thumbs/"+(i+1)+".jpg";
+        }
+
+        var index = 0;
+        function loadSuccess(){
+            for(var i=0;i<4;i++){ //行数
+                for(var j=0; j<6;j++){//列
+                    var oDiv = document.createElement('div');
+                    oDiv.className = 'img';
+                    oDiv.rowCol = {
+                        row:i,
+                        col:j
+                    }
+                    oDiv.style.background = 'url(img/thumbs/'+(index+1)+'.jpg) 0 0 no-repeat';
+                    oContainer.appendChild(oDiv);
+                    index++;
+                }
+            }
+            //图片之间空隙
+            var spaceX = (oContainer.offsetWidth - 135*6)/7;
+            var spaceY = (oContainer.offsetHeight - 135*4)/5;
+
+            var aDiv = oContainer.getElementsByTagName('div');
+            //循环24个div 设置left  top
+            for(i=0; i<aDiv.length; i++){
+                aDiv[i].style.transitionDelay = (23-i)*100+"ms";
+                aDiv[i].style.left = aDiv[i].rowCol.col*(spaceX+135) + spaceX +"px";
+                aDiv[i].style.top = aDiv[i].rowCol.row*(spaceY+135) + spaceY +"px";
+                // -20   20随机数
+                aDiv[i].style.WebkitTransform = 'rotate('+(Math.random()-0.5)*40+'deg)';
+            }
+
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
