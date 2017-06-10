@@ -132,7 +132,42 @@ a{
     color: #a98e67;
     font-size: 14px;
 }
-
+#app{
+    background: url("img/app_bg.gif") 0 center repeat;
+}
+.app1{
+    overflow: hidden;
+}
+.app-device{
+    float: left;
+    width: 35%;
+    height: 215px;
+    background: url("img/app_device.png") center center no-repeat;
+    background-size: contain;
+}
+.app-download{
+    float: left;
+    width: 20%;
+    margin-top:15px;
+    text-align: center;
+}
+.app-download img{
+    width: 130px;
+    height: 130px;
+}
+.app-content{
+    float: left;
+    width: 45%;
+    margin-top:45px;
+}
+.app-content p{
+    font-size: 25px;
+    color: #3d3d3d;
+}
+.app-content a{
+    color: #b89f7a;
+    font-size: 14px;
+}
 
 @media screen and (max-width:991px){
     #banner .banner1{
