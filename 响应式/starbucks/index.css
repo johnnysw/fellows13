@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    height: 2000px;
+}
 a{
     text-decoration: none;
 }
@@ -76,21 +79,59 @@ a{
     width: 970px;
     margin: 0 auto;
     overflow: hidden;
+    padding: 40px 0 50px 0;
 }
 #rewards-mark{
     width: 350px;
     padding-left: 90px;
-    background: #ff0000;
     float: left;
 
 }
+#rewards-mark p{
+    font-size: 18px;
+    color:#fff;
+    margin-top: 30px;
+}
+
 #rewards-content{
     width: 430px;
-    background: #0000ff;
     float: left;
+}
+.con-title{
+    font-size: 25px;
+    color: #fff;
+}
+.con-txt{
+    font-size: 16px;
+    color: #fff;
+}
+.con-btns{
+    margin-top:15px;
+}
+.con-btns .login-btn,.con-btns .register-btn{
+    width: 106px;
+    height: 46px;
+    border:2px solid #a98e67;
+    color:#a98e67;
+    line-height: 46px;
+    text-align: center;
+    display: inline-block;
+
+}
+.con-btns .login-btn:hover,.con-btns .register-btn:hover{
+    color: #fff;
+    background: #a98e67;
 }
 
 
+.con-btns .login-btn{
+    margin-right: 10px;
+}
+.con-btns .more-btn{
+    margin-left:30px;
+    color: #a98e67;
+    font-size: 14px;
+}
 
 
 @media screen and (max-width:991px){
@@ -105,7 +146,6 @@ a{
         right: 15px;
     }
 }
-
 @media screen and (max-width: 767px){
     #menu{
         padding-left: 15px;
@@ -114,8 +154,42 @@ a{
         font-size: 12px;
         padding-right: 10px;
     }
+    #rewards{
+        width: 100%;
+    }
+    #rewards-mark,#rewards-content{
+        float: none;
+        width: 100%;
+    }
+    #rewards-mark{
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    #rewards-mark img{
+        width: 160px;
+    }
+    #rewards-content{
+        text-align: center;
+    }
+    .con-btns .login-btn, .con-btns .register-btn,.con-btns .more-btn{
+        display: block;
+    }
+    .con-btns .login-btn, .con-btns .register-btn{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .con-btns .register-btn{
+        margin:8px auto 20px ;
+    }
+    .con-btns .more-btn{
+        text-align: right;
+        margin-right: 35px;
+    }
+    .con-txt{
+        margin: 10px 0 30px 0 ;
+    }
 }
-
 @media screen and (max-width: 425px) {
     #logo{
         width: 0;
