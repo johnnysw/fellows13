@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var str = '宝宝心里苦';
+//    console.log(str.includes('宝宝',2));
+//    console.log(str.startsWith('宝宝',2));
+//    console.log(str.endsWith('宝宝',2));
+//    console.log(str.repeat(3));
+
+
+    // 模板字符串
+var p = "pppppppp";
+var a = 1;
+    var str = '<div>' +
+                    '<p>'+p+'</p>' +
+                    '<h1>hhhhhh</h1>' +
+              '</div>';
+//    console.log(str);
+
+
+    var str1 = `<div>
+                    <p>${p+1222222}</p>
+                    <h1>${a == 1?"111111":"2222222"}</h1>
+            </div>`;
+
+    console.log(str1);
+
+</script>
+</body>
+</html>

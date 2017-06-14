@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+    </ul>
+<script>
+
+    var aLi = document.getElementsByTagName('li');
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].onclick = function(){
+            setTimeout(()=>{
+                console.log(this.innerHTML);
+            },1000);
+        }
+    }
+    // arrow 定义时指向
+    // 匿名函数 运行时指向
+
+    var obj = {
+        aa:'zs',
+        say:function(){
+            console.log(this.aa);
+        }
+    }
+
+    obj.say();
+//    如果你想在一个新的函数内部用到当前的this，那就用箭头函数来做。
+//    而如果新的函数里要用自己的this，那就不要用箭头函数
+    //
+
+
+
+
+</script>
+</body>
+</html>

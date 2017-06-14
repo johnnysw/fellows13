@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //对象的新方法
+//    var aa = 'my';
+//    var bb = 'age';
+//    var myage = 'aaaaaaaaa';
+//    // 对象的属性简写形式
+//    var obj = {
+//        [aa+bb],
+//        age:23,
+//        ls:'1111'
+//    }
+//
+//    console.log(obj.myage);
+
+
+//    console.log(-0 == +0);
+//    console.log(NaN == NaN);
+//
+//    console.log(Object.is(-0,+0));
+//    console.log(Object.is(NaN,NaN));
+
+//    var arr = [4,1,2,3,NaN,43];
+    //
+    //    console.log(+0 === -0);
+
+    var obj = {
+        a:1,
+        b:2
+    }
+
+    var o = {
+        a:3,
+        c:{
+            d:4
+        }
+    }
+//    $.extend();//合并对象
+    Object.assign(obj,o);
+//    o.c.d = 8;
+//    console.log(obj);
+
+    console.log(Object.values(obj));
+
+</script>
+</body>
+</html>
