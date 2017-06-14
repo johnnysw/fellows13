@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+            width: 960px;
+            height: 100px;
+            background: #cccccc;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 100px;
+        }
+        #banner{
+            width: 960px;
+            margin: 0 auto;
+        }
+        #banner img{
+            width: 960px;
+        }
+        #content{
+            width: 960px;
+            margin: 0 auto;
+        }
+        #left, #right{
+            height: 300px;
+            display: table;
+        }
+        #left p, #right p{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        #left{
+            width: 630px;
+            background: #00ff00;
+            float: left;
+            /*margin-right: 30px;*/
+        }
+        #right{
+            width: 300px;
+            background: #ffff00;
+            float: right;
+        }
+        #footer{
+            clear: both;
+        }
+        @media (max-width: 959px){
+            h3{
+                width: 100%;
+            }
+            #content{
+                width: 100%;
+            }
+            #left{
+                width: 67%;
+            }
+            #right{
+                width: 30%;
+            }
+            #banner{
+                width: 100%;
+            }
+            #banner img{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            #content{
+                width: 100%;
+            }
+            #left, #right{
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3 id="header">页头</h3>
+    <h3 id="title">标题</h3>
+    <div id="banner">
+        <img src="img/01.jpg" alt="">
+    </div>
+    <div id="content">
+        <div id="left">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.
+            </p>
+        </div>
+        <div id="right">
+            <p>Donec dolor arcu, interdum sed turpis faucibus, placerat ultricies felis. Donec pulvinar gravida rhoncus. Suspendisse vestibulum est eget dolor lobortis.</p>
+        </div>
+    </div>
+    <h3 id="footer">页脚</h3>
+</body>
+</html>

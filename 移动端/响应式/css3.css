@@ -1,0 +1,18 @@
+body{
+    background: #ff0000;
+}
+@media screen and (max-width: 768px){
+    body{
+        background: #0f0;
+    }
+}
+@media screen and (min-width: 1200px){
+    body{
+        background: #00f;
+    }
+}
+@media screen and (orientation:landscape){
+    body{
+        background: pink;
+    }
+}

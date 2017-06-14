@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .col-box{
+            width: 300px;
+            display: -webkit-flex;
+        }
+        .col-box .item{
+            /*width: 240px;*/
+            height: 280px;
+            box-shadow: 0 0px 2px #ccc;
+            /*margin: 15px;*/
+        }
+        .col-box .item:nth-child(1){
+            background: pink;
+            -webkit-flex: 1 1 100px;
+        }
+        .col-box .item:nth-child(2){
+            background: paleturquoise;
+            -webkit-flex: 2 2 300px;
+        }
+        .col-box .item:nth-child(3){
+            background:plum;
+            -webkit-flex: 1 1 200px;
+        }
+
+        /*  100 + 300 +200 = 600   800   800-600 = 200
+
+            1 2 1      200*0.25 = 50px;    100+50  150px
+            200*0.5 = 100    300+100 400px
+            200 *0.25 = 50    50+200  = 250px
+
+
+            缩小
+            600 - 300   300
+
+            300*1/4= 75
+            300*1/4 = 150
+            300*1/4 = 75
+
+            100-75 = 25
+        */
+    </style>
+</head>
+<body>
+<div class="col-box">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <!--<div class="item"></div>-->
+</div>
+
+</body>
+</html>

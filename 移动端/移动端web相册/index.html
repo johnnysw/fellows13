@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #container img{
+            display: block;
+            float: left;
+            width: 25%;
+            box-sizing: border-box;
+            border-right: 4px solid #000;
+            border-bottom: 4px solid #000;
+        }
+        /*#container{
+            display: -webkit-flex;
+        }
+        #container img{
+            -webkit-flex:1 ;
+        }*/
+        #big-img{
+            background: #000;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left:0;
+            top:0;
+            display: none;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <div id="big-img">
+
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        var html = '';
+        var $container = $('#container');
+        var $bigImg = $('#big-img');
+        var iNow = 0;
+        for(var i=0; i<24; i++){
+            html += '<img src="img/thumbs/'+(i+1)+'.jpg" />';
+        }
+        $container.html(html);
+
+        $('#container img').on('tap',function(e){
+            $container.hide();
+            $bigImg.show().css('background-image','url(img/'+($(this).index()+1)+'.jpg)');
+            iNow = $(this).index();
+            e.preventDefault();
+        });
+        $bigImg.on('tap',function(e){
+            $container.show();
+            $bigImg.hide();
+            e.preventDefault();
+        }).on('swipeleft',function(){
+            iNow++;
+            if(iNow == $('#container img').length){
+                iNow = 0;
+            }
+            $bigImg.show().css('background-image','url(img/'+(iNow+1)+'.jpg)');
+        })
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

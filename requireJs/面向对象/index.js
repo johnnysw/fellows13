@@ -20,6 +20,8 @@ Leaf.prototype.init = function(){
 Leaf.prototype.fall = function(){
 	var _this = this;
 	setTimeout(function(){
+
+		clearInterval(_this.timer);
 		_this.timer = setInterval(function(){
 			//_this.width == height
 			if(_this.img.offsetTop > screenHeight - _this.width){
