@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // map （key,value)
+
+    var m = new Map();
+    var arr = [1,2];
+    var obj = {
+        a:'1'
+    };
+
+    m.set('1','a');
+    m.set('2','b');
+    m.set('2','c');
+
+//    m.set(1,'d');
+//    m.set(arr,'e');
+//    m.set(obj,'f');
+//    m.set(undefined,'g');
+//    m.clear();
+//    m.delete('1');
+//    m.size
+//    console.log(m.get(arr));
+
+//    var keys = m.keys();
+//    for(key of keys){
+//        console.log(key);
+//    }
+
+    m.forEach(function(val,key){
+        console.log(key);
+    });
+
+
+
+</script>
+</body>
+</html>

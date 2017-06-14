@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//    function Cat(){
+//        this.name = 'xiaomao';
+//    }
+//    Cat.prototype.say = function(){
+//        console.log('miaomiao');
+//    }
+//
+//    function BsCat(){
+//
+//    }
+//
+//    BsCat.prototype = new Cat();
+//
+//    var bsc = new BsCat();
+//    bsc.say();
+
+//    var c = new Cat();
+//    c.say();
+
+//    var c1 = new Cat();
+//    c1.say();
+
+    class Cat{
+        constructor(name){
+            this.name = name;
+        }
+        say(){
+            console.log(this.name);
+        }
+    }
+    var c = new Cat('mimi');
+    c.say();
+
+    class BsCat extends Cat{
+        constructor(name,age){
+            super(name);
+            this.age = age;
+        }
+        static eat(){
+            console.log('eating');
+        }
+    }
+//    var str = BsCat.eat('string');
+//    var bsc = new BsCat('bsmimi',5);
+//    bsc.eat();
+//    bsc.say();
+
+   // static
+
+
+
+</script>
+</body>
+</html>
