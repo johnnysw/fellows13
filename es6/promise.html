@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //promise对象
+
+//    $.get('url',{},function(){},'json');
+
+
+//    alert(1111);
+//    $.get('url',{},function(){
+//        $.get();
+//    },'json');
+//    console.log(22222); axios
+//    axios.get();
+
+
+
+    //promise 解决js回调嵌套
+    //等待   成功   失败
+//    var promise = new Promise(function(resolve,reject){
+//        reject(1);
+//    });
+//
+//    promise.then(function(res){
+//        console.log(res);
+//    }).catch(function(data){
+//        console.log("报错");
+//    });
+
+
+    var promise1 = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            console.log(4);
+            reject(1);
+        },300);
+    });
+
+    var promise2 = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            reject(2);
+        },200);
+    });
+
+    var promise3 = new Promise(function(resolve,reject){
+
+        setTimeout(function(){
+            reject(3);
+        },500);
+    });
+
+
+//    Promise.all([promise1,promise2,promise3])
+//        .then(function(res){
+//                console.log(res);
+//    },function(res){
+//            console.log("........");
+//            console.log(res);
+//        });
+
+
+//    Promise.race([promise1,promise2,promise3])
+//        .then(function(res){
+//            console.log(res);
+//        },function(res){
+//            console.log("........");
+//            console.log(res);
+//        });
+
+
+
+
+</script>
+</body>
+</html>
