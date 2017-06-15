@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+</ul>
+<script>
+
+    // Array.from();
+    //var s = new Set();
+
+//    var aLi = document.getElementsByTagName('li');
+//    aLi.push(1);
+
+//    var obj = {
+    //        0:'00',
+    //        2:'bb',
+    //        1:'aa',
+    //        2:'cc',
+    //        length:4
+    //    }
+    //
+    //    console.log(Array.from(obj));
+
+
+//    var arr = new Array(1,2,3);//[1,2,3]
+//    var arr1 = new Array(3);//[3]
+//    var arr1 = Array.of(3);
+//    console.log(arr1);
+
+//    0, 1, 4, 3, 4, 5, 6, 7, 8, 9
+    // 第一个参数 要改变的初始位置  第二个参数 复制的初始位置
+    // 第三个参数 复制的结束位置
+
+//    var arr1 = arr.copyWithin(2,4,7);
+//    var arr1 = arr.fill(10,3,7);
+//    console.log(arr1);
+    var arr = [1,2,3,4,5,6,7,8,9];
+    var val = arr.findIndex(function(value,index){
+            value++;
+            return value > 5;
+    });
+
+    console.log(val);
+
+
+
+
+
+</script>
+</body>
+</html>
