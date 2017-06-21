@@ -2,6 +2,8 @@
   <div class="movie">
     <common-header></common-header>
     <movie-nav></movie-nav>
+    <movie-top250></movie-top250>
+    <common-footer></common-footer>
   </div>
 </template>
 
@@ -9,6 +11,8 @@
 
   import CommonHeader from '../common/CommonHeader'
   import MovieNav from './MovieNav'
+  import CommonFooter from '../common/CommonFooter'
+  import MovieTop250 from './MovieTop250'
 
 export default {
   data() {
@@ -17,7 +21,9 @@ export default {
   },
   components:{
     CommonHeader,
-    MovieNav
+    MovieNav,
+    CommonFooter,
+    MovieTop250
   }
 }
 

@@ -1,7 +1,11 @@
 <template>
-  <div class="header">
-    <button @click="aa">首页</button>
-    <h2>movie</h2>
+  <div class="footer">
+    <ul>
+      <li>电影</li>
+      <li>音乐</li>
+      <li>书籍</li>
+      <li>图片</li>
+    </ul>
   </div>
 </template>
 
@@ -10,14 +14,8 @@
 export default {
   data() {
     return {
-      title:'22222222222222'
 
     }
-  },
-  methods:{
-      aa:function(){
-          console.log(11111);
-      }
   }
 }
 
@@ -27,26 +25,23 @@ export default {
 <style scoped>
 
   @import "../../assets/css/reset.css";
-  .header{
-    display: flex;
+  .footer{
     height: 1rem;
     color: #fff;
     background: rgb(33, 150, 243);
   }
-  .header button{
-    width: 1rem;
-    height: 1rem;
-    color: #fff;
+  .footer ul{
+    display: flex;
   }
-  .header h2{
+  .footer ul li{
     flex: 1;
+    height: 1rem;
     text-align: center;
-    text-indent: -1rem;
     line-height: 1rem;
   }
-  .header{
+  .footer{
     position: fixed;
-    top: 0;
+    bottom: 0;
     width: 100%;
   }
 

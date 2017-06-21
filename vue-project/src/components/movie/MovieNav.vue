@@ -27,7 +27,7 @@ export default {
   @import "../../assets/css/reset.css";
   .nav{
     height: 1rem;
-    color: #fff;
+    color: #ccc;
     background: rgb(33, 150, 243);
   }
   .nav ul{
@@ -38,6 +38,11 @@ export default {
     height: 1rem;
     text-align: center;
     line-height: 1rem;
+  }
+  .nav{
+    position: fixed;
+    top: 1rem;
+    width: 100%;
   }
 
 </style>
