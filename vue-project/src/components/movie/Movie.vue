@@ -2,7 +2,8 @@
   <div class="movie">
     <common-header></common-header>
     <movie-nav></movie-nav>
-    <movie-top250></movie-top250>
+    <!--<movie-top250></movie-top250>-->
+    <router-view></router-view>
     <common-footer></common-footer>
   </div>
 </template>
