@@ -10,7 +10,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Movie
+      component: Movie,
+    },
+    {
+      path:'/movie',
+      component: CommonHeader
     }
   ]
 })

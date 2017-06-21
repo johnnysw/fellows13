@@ -1,12 +1,14 @@
 <template>
   <div class="top-250">
-      <div class="movie-list">
+      <div class="movie-list" v-for="movie in movieList">
         <div class="movie-img">
-          <img src="" alt="">
+          <img :src="movie.images.small" alt="">
         </div>
         <div class="movie-title">
-          <span>aaaa</span>
-          <p>aaaa</p>
+          <span>{{movie.title}}</span>
+          <p><span v-for="genre in movie.genres">
+            {{genre}}
+          </span>({{movie.year}})(平均{{movie.rating.average}}分)</p>
         </div>
       </div>
   </div>
@@ -14,10 +16,20 @@
 
 <script>
 
+  import Axios from 'axios'
+
 export default {
   data() {
     return {
+      movieList:[]
     }
+  },
+  mounted:function() {
+      Axios.get(API_PROXY+'https://api.douban.com/v2/movie/top250?count=10&start=0')
+        .then((res)=>{
+          this.movieList = res.data.subjects;
+          console.log(this.movieList);
+      });
   }
 
 }
@@ -32,7 +44,8 @@ export default {
     margin-top: 2rem;
   }
   .movie-list{
-    padding: 0.4rem
+    padding: 0.4rem;
+    margin: 0.4rem 0;
   }
   .movie-list .movie-img{
     width: 0.8rem;
