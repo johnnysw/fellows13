@@ -44,5 +44,12 @@ export default {
     top: 1rem;
     width: 100%;
   }
+  .nav a{
+    color: #ccc;
+    outline: none;
+  }
+  .nav a.router-link-active{
+    color: #fff;
+  }
 
 </style>
