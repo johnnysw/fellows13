@@ -1,6 +1,6 @@
 <template>
-  <div class="photo">
-    <common-header>photo</common-header>
+  <div class="book">
+    <common-header>book</common-header>
 
     <common-footer></common-footer>
   </div>
