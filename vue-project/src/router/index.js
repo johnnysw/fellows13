@@ -7,11 +7,16 @@ import MovieComing from '@/components/movie/MovieComing'
 import Music from '@/components/music/Music'
 import Book from '@/components/book/Book'
 import Photo from '@/components/photo/Photo'
+import CompA from '@/components/CompA'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/movie',
+      redirect:'/movie/top250'
+    },
     {
       path: '/movie',
       component: Movie,
@@ -25,6 +30,7 @@ export default new Router({
       path: '/',
       redirect:'/movie/top250'
     },
+
     {
       path: '/music',
       component: Music,
@@ -32,11 +38,14 @@ export default new Router({
     {
       path: '/book',
       component: Book,
-    }
-    ,
+    },
     {
       path: '/photo',
       component: Photo,
+    },
+    {
+      path: '/compa',
+      component: CompA,
     }
   ]
 })

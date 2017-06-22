@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <button @click="aa">首页</button>
-    <h2>movie</h2>
+    <h2>{{$store.state.title}}</h2>
   </div>
 </template>
 
