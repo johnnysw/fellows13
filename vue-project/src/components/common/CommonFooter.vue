@@ -1,10 +1,10 @@
 <template>
   <div class="footer">
     <ul>
-      <li>电影</li>
-      <li>音乐</li>
-      <li>书籍</li>
-      <li>图片</li>
+      <li><router-link to="/movie/top250">电影</router-link></li>
+      <li><router-link to="/music">音乐</router-link></li>
+      <li><router-link to="/book">书籍</router-link></li>
+      <li><router-link to="/photo">图片</router-link></li>
     </ul>
   </div>
 </template>
@@ -44,5 +44,11 @@ export default {
     bottom: 0;
     width: 100%;
   }
-
+  .footer a{
+    color: #ccc;
+    outline: none;
+  }
+  .footer a.router-link-active{
+    color: #fff;
+  }
 </style>

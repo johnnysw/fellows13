@@ -28,7 +28,6 @@ export default {
       Axios.get(API_PROXY+'https://api.douban.com/v2/movie/top250?count=10&start=0')
         .then((res)=>{
           this.movieList = res.data.subjects;
-          console.log(this.movieList);
       });
   }
 
