@@ -11,24 +11,45 @@
           </span>({{movie.year}})(平均{{movie.rating.average}}分)</p>
         </div>
       </div>
+    <div class="loading" v-show="show">
+        <span><img src="../../assets/img/loading.gif"></span>
+    </div>
   </div>
 </template>
 
 <script>
 
   import Axios from 'axios'
+  import $ from 'jquery'
 
 export default {
   data() {
     return {
-      movieList:[]
+      movieList:[],
+      show:false
     }
   },
   mounted:function() {
-      Axios.get(API_PROXY+'https://api.douban.com/v2/movie/top250?count=10&start=0')
-        .then((res)=>{
-          this.movieList = res.data.subjects;
+      this.loadData(0);
+      var _this = this;
+      $(window).scroll(function(){
+          var windowHeight = $(this).height();
+          var scrollTop = $(this).scrollTop();
+          var height = $(document).height();
+          if(windowHeight + scrollTop >= height){
+            _this.show = true;
+            _this.loadData(_this.movieList.length);
+          };
       });
+  },
+  methods:{
+      loadData(start){
+        Axios.get(API_PROXY+'https://api.douban.com/v2/movie/top250?count=10&start='+start)
+          .then((res)=>{
+          this.movieList = this.movieList.concat(res.data.subjects);
+          this.show = false;
+      });
+      }
   }
 
 }
@@ -60,7 +81,9 @@ export default {
     width: 4.0rem;
     margin-left: 0.6rem;
     border-bottom: 1px #ccc solid;
-
+  }
+  .loading{
+    text-align: center;
   }
 
 

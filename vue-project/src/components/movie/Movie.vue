@@ -1,6 +1,8 @@
 <template>
   <div class="movie">
-    <common-header></common-header>
+    <common-header>
+      movie
+    </common-header>
     <movie-nav></movie-nav>
     <!--<movie-top250></movie-top250>-->
     <router-view></router-view>
