@@ -1,8 +1,10 @@
 <template>
-  <div class="music">
-    <common-header></common-header>
-    <router-view></router-view>
-    <common-footer></common-footer>
+  <div class="music-albums">
+      <ul class="music-box">
+        <li v-for="album in albums" @click="changeTitle(album.name)">
+          <router-link :to="'/music/music_list/'+album.id"><img :src="album.bg" alt=""></router-link>
+        </li>
+      </ul>
   </div>
 </template>
 
@@ -31,6 +33,7 @@ export default {
   methods:{
     changeTitle(name){
         this.$store.dispatch('changeTitle',[name,'rgb(0, 150, 136)','<']);
+//      this.$store.state.title = name;
     }
   }
 }
@@ -42,14 +45,19 @@ export default {
 
   @import "../../assets/css/reset.css";
   .music-box{
-    margin: 1rem 0;
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    width: 100%;
   }
   .music-box li{
       width: 50%;
+      height: 33.33333%;
       float: left;
   }
   .music-box li img{
     width: 100%;
+    height: 100%;
   }
 
 </style>
