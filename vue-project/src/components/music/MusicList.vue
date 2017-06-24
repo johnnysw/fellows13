@@ -1,11 +1,6 @@
 <template>
-  <div class="music">
+  <div class="music-list">
     <common-header></common-header>
-      <ul class="music-box">
-        <li v-for="album in albums">
-          <router-link :to="'/music/music_list/'+album.id"><img :src="album.bg" alt=""></router-link>
-        </li>
-      </ul>
     <common-footer></common-footer>
   </div>
 </template>
@@ -19,7 +14,7 @@
 export default {
   data() {
     return {
-      albums:[]
+
     }
   },
   components:{
@@ -27,10 +22,11 @@ export default {
     CommonFooter,
   },
   mounted(){
+//      console.log(this.$route.params.id);
       this.$store.dispatch('changeTitle',['music','rgb(0, 150, 136)','<']);
     Axios.get('../../../static/musiclist.json').then((res)=>{
-        this.albums = res.data.albums;
-    });
+      this.albums = res.data.albums;
+  });
   }
 }
 
