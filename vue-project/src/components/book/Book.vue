@@ -1,6 +1,6 @@
 <template>
   <div class="book">
-    <common-header>book</common-header>
+    <common-header></common-header>
 
     <common-footer></common-footer>
   </div>
@@ -22,7 +22,7 @@ export default {
     CommonFooter,
   },
   mounted(){
-    this.$store.dispatch('changeTitle',['book','rgb(121, 85, 72)']);
+    this.$store.dispatch('changeTitle',['book','rgb(121, 85, 72)','<']);
   }
 }
 

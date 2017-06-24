@@ -22,7 +22,7 @@ export default {
     CommonFooter,
   },
   mounted(){
-      this.$store.dispatch('changeTitle',['music','rgb(0, 150, 136)']);
+      this.$store.dispatch('changeTitle',['music','rgb(0, 150, 136)','<']);
   }
 }
 

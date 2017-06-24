@@ -1,6 +1,8 @@
 <template>
   <div class="header" :style="{background:$store.state.bgColor}">
-    <button @click="aa">首页</button>
+    <slot>
+      <button @click="aa">{{$store.state.nav}}</button>
+    </slot>
     <h2>{{$store.state.title}}</h2>
   </div>
 </template>
@@ -15,7 +17,7 @@ export default {
   },
   methods:{
       aa:function(){
-          console.log(11111);
+          history.go(-1);
       }
   }
 }

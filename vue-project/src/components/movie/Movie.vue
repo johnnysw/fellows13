@@ -1,7 +1,7 @@
 <template>
   <div class="movie">
     <common-header>
-      movie
+      <button>{{$store.state.nav}}</button>
     </common-header>
     <movie-nav></movie-nav>
     <!--<movie-top250></movie-top250>-->
@@ -28,6 +28,9 @@ export default {
     MovieNav,
     CommonFooter,
     MovieTop250
+  },
+  mounted(){
+    this.$store.dispatch('changeTitle',['movie','rgb(33, 150, 243)','首页']);
   }
 }
 
