@@ -21,7 +21,6 @@
 
   import Axios from 'axios'
   import $ from 'jquery'
-
 export default {
   data() {
     return {

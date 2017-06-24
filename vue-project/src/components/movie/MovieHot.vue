@@ -30,7 +30,6 @@ export default {
           this.movieList = res.data.subjects;
       });
   }
-
 }
 
 </script>

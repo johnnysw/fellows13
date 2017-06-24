@@ -7,7 +7,7 @@
 </template>
 
 <script>
-
+  // npm install vuex --save
   import CompB from './CompB'
   import CompC from './CompC'
 

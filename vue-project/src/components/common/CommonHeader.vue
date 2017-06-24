@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :style="{background:$store.state.bgColor}">
     <button @click="aa">首页</button>
     <h2>{{$store.state.title}}</h2>
   </div>
@@ -11,7 +11,6 @@ export default {
   data() {
     return {
       title:'22222222222222'
-
     }
   },
   methods:{
@@ -31,7 +30,6 @@ export default {
     display: flex;
     height: 1rem;
     color: #fff;
-    background: rgb(33, 150, 243);
   }
   .header button{
     width: 1rem;
