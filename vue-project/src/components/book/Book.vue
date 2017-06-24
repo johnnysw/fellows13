@@ -20,6 +20,9 @@ export default {
   components:{
     CommonHeader,
     CommonFooter,
+  },
+  mounted(){
+    this.$store.dispatch('changeTitle',['book','rgb(121, 85, 72)']);
   }
 }
 

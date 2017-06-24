@@ -20,6 +20,9 @@ export default {
   components:{
     CommonHeader,
     CommonFooter,
+  },
+  mounted(){
+    this.$store.dispatch('changeTitle',['photo','rgb(63, 81, 181)']);
   }
 }
 

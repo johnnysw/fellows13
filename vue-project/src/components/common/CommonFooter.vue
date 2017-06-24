@@ -1,10 +1,10 @@
 <template>
   <div class="footer" :style="{background:$store.state.bgColor}">
     <ul>
-      <li @click="changeTitle('movie','rgb(33, 150, 243)')"><router-link to="/movie">电影</router-link></li>
-      <li @click="changeTitle('music','rgb(0, 150, 136)')"><router-link to="/music">音乐</router-link></li>
-      <li @click="changeTitle('book','rgb(121, 85, 72)')"><router-link to="/book">书籍</router-link></li>
-      <li @click="changeTitle('photo','rgb(63, 81, 181)')"><router-link to="/photo">图片</router-link></li>
+      <li><router-link to="/movie">电影</router-link></li>
+      <li><router-link to="/music">音乐</router-link></li>
+      <li><router-link to="/book">书籍</router-link></li>
+      <li><router-link to="/photo">图片</router-link></li>
     </ul>
   </div>
 </template>
@@ -15,12 +15,6 @@ export default {
   data() {
     return {
 
-    }
-  },
-  methods:{
-    changeTitle(title,color){
-      this.$store.dispatch('changeTitle',title);
-      this.$store.dispatch('changeBgColor',color)
     }
   }
 }

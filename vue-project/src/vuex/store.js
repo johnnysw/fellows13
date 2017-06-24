@@ -17,18 +17,19 @@ const state = {
 //定义动作 事件处理方法
 const mutations = {
   changeTitle(state,status){
-    state.title = status;
-  },
-  changeBgColor(state,status){
-    state.bgColor = status;
+    state.title = status[0];
+    state.bgColor = status[1];
   }
+  // ,
+  // changeBgColor(state,status){
+  //   state.bgColor = status;
+  // }
 }
 
 //对外的事件方法
 const actions = {
-  changeTitle:({commit},status)=>commit('changeTitle',status),
-  changeBgColor:({commit},status)=>commit('changeBgColor',status)
-
+  changeTitle:({commit},status)=>commit('changeTitle',status)
+  // changeBgColor:({commit},status)=>commit('changeBgColor',status)
 }
 
 const getters = {
