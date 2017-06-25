@@ -1,6 +1,6 @@
 <template>
   <div class="music-list">
-    <a-player narrow="false" autoplay="true" showlrc="3" theme="#e6d0b2"
+    <a-player :music="musicList" :narrow="false" :autoplay="true" v-if="isShow" :showlrc="3" theme="#e6d0b2"
               listmaxheight="513px" mode="random">
 
     </a-player>
@@ -10,13 +10,14 @@
 <script>
   //https://www.npmjs.com/package/aplayer
   import Axios from 'axios'
-  import APlayer from 'aplayer'
+  import APlayer from 'vue-aplayer'
 
 export default {
   data() {
     return {
       musicData:[],
-      musicList:[]
+      musicList:[],
+      isShow:false
     }
   },
   components:{
@@ -34,10 +35,10 @@ export default {
         obj.author = this.musicData[i].author;
         obj.url = this.musicData[i].src;
         obj.pic = this.musicData[i].musicImgSrc;
-        obj.lrc = this.musicData[i].lrc;
+        obj.lrc = "/static/"+this.musicData[i].lrc;
         this.musicList.push(obj);
       }
-
+      this.isShow = true;
 
   });
   }
@@ -49,15 +50,8 @@ export default {
 <style scoped>
 
   @import "../../assets/css/reset.css";
-  .music-box{
-    margin: 1rem 0;
-  }
-  .music-box li{
-      width: 50%;
-      float: left;
-  }
-  .music-box li img{
-    width: 100%;
-  }
+ .aplayer{
+   margin-top: 1rem;
+ }
 
 </style>
