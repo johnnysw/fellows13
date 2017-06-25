@@ -2,7 +2,7 @@
   <div class="photo">
     <common-header></common-header>
     <ul class="photo-box">
-      <li v-for="(photo,index) in photoList">
+      <li v-for="(photo,index) in $store.state.photoList">
         <router-link :to="'/photo/photo_detail/'+index"><img :src="photo.src" alt=""></router-link>
       </li>
     </ul>
@@ -19,7 +19,6 @@
 export default {
   data() {
     return {
-      photoList:[]
     }
   },
   components:{
@@ -30,7 +29,7 @@ export default {
     this.$store.dispatch('changeTitle',['photo','rgb(63, 81, 181)','<']);
 
     Axios.get('static/photo-data.json').then((res)=>{
-        this.photoList = res.data.photoData;
+        this.$store.dispatch('photoList',res.data.photoData);
     });
   }
 }

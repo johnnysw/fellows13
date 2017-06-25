@@ -1,9 +1,14 @@
 <template>
   <div class="photo">
     <common-header></common-header>
-    <div class="photo-box">
-      {{$route.params.index}}
-    </div>
+    <!--<div class="photo-box">-->
+      <!--{{$route.params.index}}-->
+
+      <!--<img :src="$store.state.photoList[index].src" alt="">-->
+    <!--</div>-->
+    <v-touch @swipeleft="next" @swiperight="prev" class="photo-box" :style="bgStyle">
+      <!--<img :src="$store.state.photoList[index].src" alt="">-->
+    </v-touch>
 
   </div>
 </template>
@@ -15,13 +20,26 @@
 export default {
   data() {
     return {
-      photoList:[]
+      index:this.$route.params.index,
     }
   },
   components:{
     CommonHeader,
   },
-  mounted(){
+  computed:{
+    bgStyle(){
+      return {
+        background: "url('" + this.$store.state.photoList[this.index].src + "') no-repeat center / contain #000"
+      }
+    }
+  },
+  methods:{
+    next(){
+        this.index++;
+    },
+    prev(){
+        this.index--;
+    }
   }
 }
 
@@ -32,7 +50,10 @@ export default {
 
   @import "../../assets/css/reset.css";
   .photo-box{
-    margin:1rem 0;
+    position: absolute;
+    top:1rem;
+    bottom: 0;
+    width: 100%;
   }
 
 
