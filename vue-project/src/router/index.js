@@ -10,6 +10,7 @@ import Photo from '@/components/photo/Photo'
 import CompA from '@/components/CompA'
 import MusicList from '@/components/music/MusicList'
 import MusicAlbums from '@/components/music/MusicAlbums'
+import PhotoDetail from '@/components/photo/PhotoDetail'
 
 Vue.use(Router)
 
@@ -55,6 +56,10 @@ export default new Router({
     {
       path: '/compa',
       component: CompA,
+    },
+    {
+      path:'/photo/photo_detail/:index',
+      component: PhotoDetail
     }
   ]
 })
