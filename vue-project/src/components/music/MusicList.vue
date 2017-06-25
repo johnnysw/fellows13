@@ -1,30 +1,45 @@
 <template>
   <div class="music-list">
+    <a-player narrow="false" autoplay="true" showlrc="3" theme="#e6d0b2"
+              listmaxheight="513px" mode="random">
 
+    </a-player>
   </div>
 </template>
 
 <script>
-
-  import CommonHeader from '../common/CommonHeader'
-  import CommonFooter from '../common/CommonFooter'
+  //https://www.npmjs.com/package/aplayer
   import Axios from 'axios'
+  import APlayer from 'aplayer'
 
 export default {
   data() {
     return {
-
+      musicData:[],
+      musicList:[]
     }
   },
   components:{
-
+    APlayer
   },
   mounted(){
 //      console.log(this.$route.params.id);
-      this.$store.dispatch('changeTitle',['music','rgb(0, 150, 136)','<']);
-//    Axios.get('../../../static/musiclist.json').then((res)=>{
-//      this.albums = res.data.albums;
-//  });
+    this.$store.dispatch('changeTitle',['music','rgb(0, 150, 136)','<']);
+    Axios.get('static/music-data.json').then((res)=>{
+      this.musicData = res.data.musicData;
+
+      for(var i=0;i<this.musicData.length;i++){
+        var obj = {};
+        obj.title = this.musicData[i].title;
+        obj.author = this.musicData[i].author;
+        obj.url = this.musicData[i].src;
+        obj.pic = this.musicData[i].musicImgSrc;
+        obj.lrc = this.musicData[i].lrc;
+        this.musicList.push(obj);
+      }
+
+
+  });
   }
 }
 
