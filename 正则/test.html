@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li class="aa">111</li>
+        <li>222</li>
+        <li class="aa bb">333</li>
+    </ul>
+    <span class="aa">ssssss</span>
+<script>
+
+//    var aLi = document.getElementsByClassName('aa');
+//    var oUl = document.getElementById('ul1');
+//    var aLi = getClass('aa',oUl);
+//    for(var i=0;i<aLi.length;i++){
+//        aLi[i].style.background = 'red';
+//    }
+//
+//    function getClass(clsName,context){
+////        if(document.getElementsByClassName){
+////            return document.getElementsByClassName(clsName);
+////        }
+//        context = context || document;
+//        var aTag = context.getElementsByTagName('*');
+//        var res = [];
+////        var reg = /\bclsName\b/;
+//        var reg = new RegExp('\\b'+clsName+'\\b');
+//        for(var i=0;i<aTag.length;i++){
+//            if(reg.test(aTag[i].className)){
+//                res.push(aTag[i]);
+//            }
+//        }
+//        return res;
+//    }
+//
+
+//    var reg = /(\w)(\w)\2\1/;
+//    var str = "abbacd";
+//
+//
+//    console.log(reg.exec(str));
+
+//    var reg = /\d/g;
+//    var str = 'a1cbab3aa5cb';
+//    console.log(str.match(reg));
+//
+
+    //正则表达式   匹配字符串
+
+//    var str = 'hello world hi'; // hi world hello
+//    var arr = str.split(" ");
+//    arr.reverse();
+//    console.log(arr.join(" "));
+//    var str = '1abc';
+//    var re = 'ab';
+
+//    var reg = /re/;//
+//    var reg = new RegExp(re);//
+
+//    var http = "http://www.qq.com:8080";
+//
+//    ["http://www.qq.com:8080", "http://", "www.qq.com", "8080"]
+//    var reg = /(http:\/\/)(.+):(\d+)/g;
+//
+//    console.log(reg.exec(http));
+
+//    console.log(reg.test(str));
+//    var reg = /\ba+\b/;
+//    var str = "dd aaaa bb cc";
+//
+//    console.log(reg.exec(str));
+
+
+    //3SFASDF92 取出92
+
+//    var str = '3SFASDF92';
+//    console.log(/\d*$/.exec(str));
+
+    //例如:蓝  色   理     想
+
+//    var str = '蓝  色   理     想';
+//
+//    console.log(str.replace(/\s+/g," "));
+
+
+    var str = '15004653965';
+
+//    console.log(/^\d+$/.test(str));
+//    console.log(/\D+/.test(str));
+
+//    var reg = /^1[35]\d{9}/;
+
+    var reg = /(13)|(15)\d{9}/;
+    console.log(reg.test(str));
+
+
+</script>
+</body>
+</html>
