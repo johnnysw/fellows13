@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!--<div>-->
+        <!--1111111111</div>-->
+    <!--<h1>hhhhhhhh</h1>-->
+
+    <!--<img src="" alt=""/>-->
+    <!--<DIV>2222</DIV>-->
+
+    <!--<form action="">-->
+
+        <!--<select name="" id="">-->
+            <!--<option value="">黑大</option>-->
+            <!--<option value="" selected="selected">理工</option>-->
+            <!--<option value="">工程</option>-->
+        <!--</select>-->
+        <!--&nbsp;&lt;&gt;&#60;-->
+    <!--</form>-->
+    <div id="header">
+        <div id="header-content"></div>
+    </div>
+    <div id="div1" data-num="1" data-aa="aa">
+
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+
+//        var oDiv = document.getElementById("div1");
+//        oDiv.num2 = 2;
+//        oDiv.setAttribute("num2",2);
+//        console.log(oDiv.dataset.aa);
+        var $div = $("#div1");
+        var num = $div.data("num");
+        $div.css();
+        console.log(num);
+
+    </script>
+</body>
+</html>
