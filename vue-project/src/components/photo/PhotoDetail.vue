@@ -6,7 +6,7 @@
 
       <!--<img :src="$store.state.photoList[index].src" alt="">-->
     <!--</div>-->
-    <v-touch @swipeleft="next" @swiperight="prev" class="photo-box" :style="bgStyle">
+    <v-touch @tap="back" @swipeleft="next" @swiperight="prev" class="photo-box" :style="bgStyle">
       <!--<img :src="$store.state.photoList[index].src" alt="">-->
     </v-touch>
 
@@ -39,9 +39,13 @@ export default {
     },
     prev(){
         this.index--;
+    },
+    back(){
+        this.$router.push('/photo');
     }
   }
 }
+
 
 </script>
 

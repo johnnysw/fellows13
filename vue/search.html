@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="msg" v-on:keyup="search"><button v-on:click="add(msg)">add</button>
+        <ul>
+            <li v-for="item in showitems" v-bind:class="{red:item.active}" v-on:click="item.active = !item.active">
+                {{item.value}}
+            </li>
+        </ul>
+    </div>
+<script src="vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'',
+            items:[],
+            showitems:[]
+        },
+        methods:{
+            add:function(msg){
+                this.items.push({value:msg,active:false});
+                this.msg = '';
+                this.items.sort(function(a,b){
+                    return a.value > b.value;
+                });
+                this.showitems = this.items;
+            },
+            search:function(){
+                vm.showitems = vm.items.filter(function(obj){
+                        return obj.value.includes(vm.msg);
+                    });
+            }
+        }
+    });
+
+
+
+</script>
+</body>
+</html>

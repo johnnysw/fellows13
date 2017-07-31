@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <style>
+        table{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<table id="cart">
+    <tr>
+        <td></td>
+        <td>商品图片</td>
+        <td>商品信息</td>
+        <td>赠送</td>
+        <td>商品金额</td>
+        <td>商品数量</td>
+        <td>总金额</td>
+        <td>编辑</td>
+    </tr>
+    <tr v-for="product in productList">
+        <td><input type="checkbox" @click="addCart(product)"></td>
+        <td><img width="100" height="100" :src="product.productImg" alt="">
+        </td>
+        <td>{{product.productName}}</td>
+        <td>
+            <ul>
+                <li v-for="part in product.parts">
+                    {{part.partsName}}
+                </li>
+            </ul>
+        </td>
+        <td>{{product.productPrice}}</td>
+        <td><button @click="minus(product)">-</button><input type="text" :value="product.productQuentity"><button @click="add(product)">+</button></td>
+        <td>{{product.productPrice*product.productQuentity}}</td>
+        <td><a href="JavaScript:;" @click="deleteProduct(product)">删除</a></td>
+    </tr>
+
+    <tr>
+        <td colspan="6"><input type="checkbox">全选</td>
+        <td>总计：{{totalMoney}}</td>
+        <td>
+            <button>结账</button>
+        </td>
+    </tr>
+</table>
+<script src="vue.js"></script>
+<script src="axios.min.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#cart",
+        data: {
+            totalMoney: 0,
+            productList: [],
+            cartList:[]
+        },
+        filters: {},
+        mounted: function () {
+            this.cartView();
+        },
+        methods: {
+            cartView: function () {
+                var _this = this;
+                axios.get("cart.json").then(function (res) {
+                    _this.productList = res.data.result.productList;
+
+                });
+            },
+            add: function (product) {
+               product.productQuentity++;
+                this.countTotalMoney();
+            },
+            minus: function (product) {
+                if(product.productQuentity<=1){
+                    product.productQuentity = 1
+                }else{
+
+                    product.productQuentity--;
+                }
+                this.countTotalMoney();
+
+            },
+            addCart: function (product) {
+                var index = this.cartList.indexOf(product);
+                if( index == -1){
+                    this.cartList.push(product);
+                }else{
+                    this.cartList.splice(index,1);
+
+                }
+                this.countTotalMoney();
+            },
+            deleteProduct:function (product) {
+                this.productList.splice(this.productList.indexOf(product),1);
+
+
+            },
+            countTotalMoney: function(){
+                var _this = this;
+                _this.totalMoney = 0;
+                this.cartList.forEach(function (product) {
+                    _this.totalMoney += product.productPrice*product.productQuentity;
+                });
+            }
+
+        }
+    })
+</script>
+</body>
+</html>

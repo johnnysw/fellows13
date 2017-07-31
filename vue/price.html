@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            width: 300px;
+            margin: 50px auto;
+        }
+        h1{
+            text-align: center;
+        }
+        li{
+            list-style: none;
+            height: 30px;
+            margin: 10px;
+            line-height: 30px;
+            padding: 10px;
+        }
+        span{
+            float: right;
+        }
+
+        .green{
+            background: green;
+        }
+        .red{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+
+    <h1>services</h1>
+    <ul>
+        <!--<li v-for="item in items" :class="{red:item.active,green:!item.active}" v-on:click="change(item)">-->
+        <li v-for="item in items" :class="{red:item.active,green:!item.active}" @click="item.active = !item.active">
+            {{item.name}}<span>{{item.price}}</span>
+        </li>
+    </ul>
+    <hr>
+    total:<span>{{total()}}</span>
+
+</div>
+
+
+<script src="vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el:'#main',
+        data:{
+            items:[
+                {name:"aaaa",price:432,active:false},
+                {name:"bbbb",price:462,active:false},
+                {name:"cccc",price:534,active:false},
+                {name:"dddd",price:632,active:false},
+                {name:"eeee",price:732,active:false}
+            ]
+        },
+        methods:{
+            change:function(item){
+                item.active = !item.active;
+            },
+            total:function(){
+                var totalprice = 0;
+                this.items.forEach(function(item){
+                    if(item.active){
+                        totalprice += item.price;
+                    }
+                });
+                return totalprice;
+
+            }
+
+        }
+
+    });
+
+
+
+</script>
+</body>
+</html>
