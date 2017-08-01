@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<div class="div2">11111</div>-->
+    <!--<div class="div2">2222</div>-->
+    <!--<div id="div2">2222</div>-->
+    <!---->
+    <div id="div1" class="aa bb cc">33333</div>
+    <script>
+//        var div = document.querySelectorAll("#div2");
+//        console.log(div);
+        var div = document.querySelector("#div1");
+//        div.classList.add('dd');
+        div.classList.toggle('dd');
+        console.log(div.classList.length);
+    </script>
+</body>
+</html>
