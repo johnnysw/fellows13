@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            height: 50px;
+        }
+        li{
+            float: left;
+            width: 50px;
+        }
+        #div1{
+            height: 400px;
+            background: red;
+
+        }
+        #div2{
+            height: 500px;
+            background: blue;
+        }
+        #div3{
+            height: 500px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#div1">div1</a></li>
+        <li><a href="#div2">div2</a></li>
+        <li><a href="#div3">div3</a></li>
+    </ul>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script src ='jquery-1.12.4.js'></script>
+    <script>
+        $(function(){
+            $('a').on('click',function(){
+//                document.body.scrollTop = $('#div2').offset().top();
+              var href = $(this).attr('href');//#div1
+                $(document.body).animate({
+                    scrollTop:$(href).offset().top
+                },1000);
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
