@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*var person = {age: 23};
+     Object.defineProperty(person, "name", {
+     writable: false,
+     enumerable: true,
+     value: "Nicholas"
+     });*/
+    //alert(person.name); //"Nicholas"
+    //person.name = "Greg";
+    //alert(person.name); //"Nicholas"
+
+    /*for(var p in person){
+     console.log(p);
+     }*/
+
+    var book = {
+        _year: 2004
+    };
+    Object.defineProperty(book, "year", {
+        get: function () {
+            return this._year + '年';
+        },
+        set: function (newValue) {
+            this._year = newValue;
+        }
+    });
+
+    book.year = 2005;
+    console.log(book.year);
+</script>
+</body>
+</html>

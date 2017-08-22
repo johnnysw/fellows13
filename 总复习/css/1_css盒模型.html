@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            padding: 20px;
+            margin: 10px;
+            border: 5px solid #000;
+            overflow: scroll;
+            /*box-sizing: border-box;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </div>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+//        alert(oDiv1.clientWidth);
+//        alert(oDiv1.scrollHeight);
+        //alert(oDiv1.currentStyle.width);//ie
+//        alert(   window.getComputedStyle(oDiv1, false).width  );//标准
+
+        alert(  getStyle(oDiv1, 'width')  );
+
+        /**
+         * 返回elem元素的prop属性的css样式值
+         * @param elem 元素
+         * @param prop css属性
+         * @return {*}
+         */
+        function getStyle(elem, prop) {
+            if(elem.currentStyle){
+                return elem.currentStyle[prop];
+            }else if(window.getComputedStyle){
+                return window.getComputedStyle(elem, false)[prop];
+            }else{
+                return elem.style[prop];
+            }
+        }
+    </script>
+</body>
+</html>
