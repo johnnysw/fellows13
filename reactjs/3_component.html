@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="react-15.3.1/build/react.js"></script>
+    <script src="react-15.3.1/build/react-dom.js"></script>
+    <script src="react-15.3.1/browser.js"></script>
+
+    <script type="text/babel">
+        // 首字母必须大写
+        var Messagebox = React.createClass({
+            render : function(){
+                return (
+                    <div>
+                        <h1>h1h1h1</h1>
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+            <div>
+                <Messagebox/>
+                <Messagebox/>
+            </div>,
+            document.getElementById("app")
+        );
+
+
+    </script>
+
+</body>
+</html>
