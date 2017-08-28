@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="react-15.3.1/build/react.js"></script>
+<script src="react-15.3.1/build/react-dom.js"></script>
+<script src="react-15.3.1/browser.js"></script>
+<script src="PubSub.js"></script>
+
+<script type="text/babel">
+    var Component1 = React.createClass({
+        changeHandler: function(e){
+            //消息发布
+            PubSub.publish("select", {
+                school: e.target.value
+            });
+        },
+        render: function(){
+            return (
+                <select name="" id="" onChange={this.changeHandler}>
+                    <option value="黑大">黑大</option>
+                    <option value="理工">理工</option>
+                    <option value="林大">林大</option>
+                </select>
+            );
+        }
+    });
+
+    var Component2 = React.createClass({
+        getInitialState: function(){
+            return {
+                school : ""
+            };
+        },
+        componentDidMount : function(){
+            //消息订阅
+            PubSub.subscribe("select", function(msg, data){
+                this.setState({
+                    school: data.school
+                });
+            }.bind(this));
+        },
+        render: function(){
+            return (
+                <h1>{this.state.school}</h1>
+            );
+        }
+    });
+    ReactDOM.render(
+        <div>
+            <Component1/>
+            <Component2/>
+        </div>,
+        document.getElementById("app")
+    );
+
+//redux
+</script>
+</body>
+</html>

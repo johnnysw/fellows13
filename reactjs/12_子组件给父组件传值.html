@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="react-15.3.1/build/react.js"></script>
+<script src="react-15.3.1/build/react-dom.js"></script>
+<script src="react-15.3.1/browser.js"></script>
+<script type="text/babel">
+    //子组件
+    var CheckBox = React.createClass({
+        changeHandler: function(e){
+            //子组件调用父组件传过来的方法，通过参数把值传到父组件
+            this.props.change(e.target.checked);
+        },
+        render: function(){
+            var checkboxArr = [];
+            this.props.arr.forEach(function(elem, index){
+                checkboxArr.push(
+                    <label key={index}>
+                        {elem}<input type="checkbox" onChange={this.changeHandler}/>
+                    </label>
+                );
+            }.bind(this));
+            return (
+                <div>{checkboxArr}</div>
+            );
+        }
+    });
+    //父组件
+    var Company = React.createClass({
+        getInitialState: function(){
+            return {
+                num : 0
+            };
+        },
+        change: function(checked){
+            this.setState({
+                num: checked? this.state.num + 1 : this.state.num - 1
+            });
+        },
+        render: function(){
+            var companyArr = ["百度", "阿里", "腾讯"];
+            return (
+                <div>
+                    <h1>你一共选择的公司的个数为: {this.state.num}</h1>
+                    <CheckBox arr={companyArr} change={this.change}/>
+                </div>
+            )
+        }
+    });
+
+    ReactDOM.render(
+        <Company/>,
+        document.getElementById("app")
+    );
+
+
+</script>
+</body>
+</html>

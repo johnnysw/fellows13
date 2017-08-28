@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script src="react-15.3.1/build/react.js"></script>
+    <script src="react-15.3.1/build/react-dom.js"></script>
+    <script src="react-15.3.1/browser.js"></script>
+
+    <script type="text/babel">
+        var FormComponent = React.createClass({
+            getInitialState: function(){
+                return {
+                    username: "张三",
+                    password: "",
+                    school: "黑大"
+                };
+            },
+            submitHandler : function(e){
+                console.log({
+                    username : this.state.username,
+                    password: this.state.password,
+                    school: this.state.school
+                });
+                e.preventDefault();
+            },
+            /*usernameHandler: function(e){
+                this.setState({
+                    username : e.target.value
+                });
+            },
+            passwordHandler: function(e){
+                this.setState({
+                    password : e.target.value
+                });
+            },
+            schoolHandler: function(e){
+                this.setState({
+                    school: e.target.value
+                });
+            },*/
+            inputHandler: function(e){
+                if(e.target.name == "username"){
+                    this.setState({
+                        username : e.target.value
+                    });
+                }else if(e.target.name == "pwd"){
+                    this.setState({
+                        password : e.target.value
+                    });
+                }else if(e.target.name == "school"){
+                    this.setState({
+                        school : e.target.value
+                    });
+                }
+            },
+            render : function(){
+                return (
+                        <form action="" onSubmit={this.submitHandler}>
+                            <label>用户名: <input name="username" type="text" value={this.state.username} onChange={this.inputHandler}/></label><br/>
+                            <label>密码: <input name="pwd" type="password" value={this.state.password} onChange={this.inputHandler}/></label><br/>
+                            学校：
+                            <select name="school" id="" value={this.state.school} onChange={this.inputHandler}>
+                                <option value="黑大">黑大</option>
+                                <option value="理工">理工</option>
+                                <option value="林大">林大</option>
+                            </select>
+                            <br/>
+                            <input type="submit" />
+                        </form>
+                );
+            }
+        });
+        ReactDOM.render(
+            <FormComponent/>,
+            document.getElementById("app")
+        );
+
+
+    </script>
+
+</body>
+</html>

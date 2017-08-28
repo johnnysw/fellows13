@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="react-15.3.1/build/react.js"></script>
+<script src="react-15.3.1/build/react-dom.js"></script>
+<script src="react-15.3.1/browser.js"></script>
+
+<script type="text/babel">
+    var Msg = React.createClass({
+        getDefaultProps: function(){
+            console.log("getDefaultProps");
+            return {};
+        },
+        getInitialState: function(){
+            console.log("getInitialState");
+            return {
+                msg : 0
+            };
+        },
+        componentWillMount: function(){
+            console.log("componentWillMount");
+        },
+        componentDidMount: function(){
+            console.log("componentDidMount");
+            this.timer = setInterval(function(){
+                this.setState({
+                    msg: this.state.msg + 1
+                });
+            }.bind(this), 1000);//bind改变this的指向
+        },
+        componentWillReceiveProps: function(){
+            console.log("componentWillReceiveProps??");
+        },
+        shouldComponentUpdate: function(){
+            console.log("shouldComponentUpdate");
+           /* if(this.state.msg > 5){
+                return false;
+            }*/
+            return true;
+        },
+        componentWillUnmount: function(){
+            clearInterval(this.timer);
+        },
+        clickHandler: function(){
+            ReactDOM.unmountComponentAtNode(document.getElementById('app'));
+        },
+        render : function(){
+            console.log("render");
+            return (
+                <div>
+                    <button onClick={this.clickHandler}>销毁组件</button>
+                    <div>{this.state.msg}</div>
+                </div>
+            );
+        }
+    });
+    ReactDOM.render(
+        <Msg/>,
+        document.getElementById("app"));
+
+</script>
+</body>
+</html>
