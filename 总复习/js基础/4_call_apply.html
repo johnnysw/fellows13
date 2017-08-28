@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function test(name, age) {
+        console.log(this);
+        console.log(name + ', ' + age);
+    }
+
+//    test();
+    var o = {name: 'lisi'};
+//    test.call(o, 'lisi', 23);
+    test.apply(o, ['lisi', 23]);
+
+</script>
+</body>
+</html>

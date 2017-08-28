@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*class Point {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        toString() {
+            return '(' + this.x + ', ' + this.y + ')';
+        }
+    }
+
+    var p = new Point(3, 4);
+
+    alert(p);*/
+    function object(o) {
+        function F() {}
+        F.prototype = o;
+        return new F();
+    }
+    function inheritPrototype(subType, superType){
+        var proto = object(superType.prototype);
+        proto.constructor = subType;
+        subType.prototype = proto;
+    }
+
+    function Animal(name) {
+        this.name = name;  //cat1.name = 'mimi';
+    }
+    Animal.prototype.shout = function () {
+      return this.name + ' wawa';  
+    };
+    
+    function Cat(name) {
+        Animal.call(this, name);//对象冒充继承
+    }
+
+    /*Cat.prototype = new Animal();//原型继承
+    Cat.prototype.constructor = Cat;*/
+
+    inheritPrototype(Cat, Animal);
+
+    var cat1 = new Cat('mimi');
+
+
+    console.log(cat1.shout());
+</script>
+</body>
+</html>

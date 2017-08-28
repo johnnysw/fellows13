@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #outer{
+            width: 800px;
+            height: 200px;
+            background: #cccccc;
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            /*display: -webkit-flex;
+            -webkit-justify-content: center;
+            -webkit-align-items: center;*/
+        }
+        #a{
+            width: 200px;
+            height: 100px;
+            background: #ff0000;
+        }
+        #b{
+            height: 100px;
+            background: #00ff00;
+            flex: 1;
+        }
+        #c{
+            height: 100px;
+            background: #0000ff;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="a"></div>
+<!--
+        <div id="b"></div>
+        <div id="c"></div>
+-->
+    </div>
+</body>
+</html>

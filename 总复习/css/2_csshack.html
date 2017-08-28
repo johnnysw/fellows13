@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .test {
+            color: #00A5FF;
+            color: #090\9; /* For IE8+ */
+            *color: #f00;  /* For IE7 and earlier */
+            _color: #ff0;  /* For IE6 and earlier */
+        }
+    </style>
+    <!--[if IE]>
+    <link rel="stylesheet" href="i6sb.css">
+    <style>
+        .test{
+            color: #e5412d;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body>
+<!--[if IE]>
+<p>你在非IE中将看不到我的身影</p>
+<![endif]-->
+
+    <div class="test">
+        haha
+    </div>
+</body>
+</html>

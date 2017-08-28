@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*function Person(name, age, job){
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        //return this;
+    }*/
+    /*Person.prototype.sex = 'male';
+    Person.prototype.sayName = function () {
+      return this.name;
+    };
+
+    var p1 = new Person('lisi', 23, 'it');
+    //console.log(p1.__proto__); //Person.prototype
+    var p2 = new Person();
+    p2.__proto__.sex = "female"
+    console.log(p1.sex);*/
+
+    /*Person.prototype.name = 'wangwu';
+    Person.prototype.brother = {
+        name: 'wangxx'
+    };
+    Person.prototype.sayName = function () {
+      return this.name;
+    };
+
+    var p1 = new Person('lisi');
+    var p2 = new Person('zhaoliu');
+
+    p2.brother.name = 'tianqi';
+
+    console.log(p1.name);
+    console.log(p1.brother.name);*/
+
+//    var p1 = new Person();
+
+    /*Person.prototype.name1 = 'lisi';
+    Person.prototype.age = 20;*/
+
+    /*Person.prototype = {
+        constructor: Person,
+        name1: 'lisi',
+        age: 20
+    };
+
+    console.log(p1.name1);*/
+
+    function Person(name, age, job){
+        var o = new Object();
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayName = function(){
+            alert(this.name);
+        };
+        return o;
+    }
+    var friend = Person("Nicholas", 29, "Software Engineer");
+    friend.sayName();  //"Nicholas"
+
+
+    console.log(friend.constructor);
+
+
+
+</script>
+</body>
+</html>
