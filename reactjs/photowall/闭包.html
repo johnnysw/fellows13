@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <ul id="ul1">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+
+    <script>
+/*        var oUl = document.getElementById("ul1");
+        var aLi = oUl.getElementsByTagName("li");
+        for(var i=0; i<aLi.length; i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+                console.log(aLi[this.index].innerHTML);
+            };
+        }*/
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = fn;
+        oBtn.onclick = function(){
+            fn();
+        };
+
+
+        function fn(){
+            alert(123);
+        }
+    </script>
+</body>
+</html>

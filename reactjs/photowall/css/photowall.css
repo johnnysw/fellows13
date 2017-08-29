@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body, #photowall{
+    width: 100%;
+    height: 100%;
+}
+.stage{
+    width: 100%;
+    height: 100%;
+    background: #cccccc;
+    overflow: hidden;
+    position: relative;
+}
+.img-figure{
+    width: 320px;
+    height: 360px;
+    background: #ffffff;
+    text-align: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+    cursor: pointer;
+}
