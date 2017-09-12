@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    姓名：<input type="text" v-model="name">
+    年级：<input type="text" v-model="grade">
+    <button @click="add">add</button>
+    <ul>
+        <li v-for="(obj,index) in list">
+            {{obj.name}},{{obj.grade}}
+            <button @click="del(index)">del</button>
+        </li>
+    </ul>
+</div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            name:'',
+            grade:'',
+            list:[]
+        },
+        methods:{
+            add(){
+                this.list.push({name:this.name,grade:this.grade});
+                this.name = '';
+                this.grade ='';
+            },
+            del(index){
+                this.list.splice(index,1);
+            }
+        }
+    })
+</script>
+</body>
+</html>

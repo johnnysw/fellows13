@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        {{a}}+{{b}}={{c}}
+    </div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            a:0,
+            b:0,
+            c:0
+        },
+//        methods:{
+//            c:function(){
+//                return this.a + this.b;
+//            }
+//        },
+        //计算属性
+//        computed:{
+//            c:{
+//                set:function(val){
+//                    this.a = val - 1;
+//                    this.b = 2;
+//                },
+//                get:function () {
+//                    return this.a + this.b;
+//                }
+//            }
+//        }
+
+        watch:{
+            a:function(val,old){
+                console.log(11111);
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

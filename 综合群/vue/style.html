@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .font{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--<div :id="myId" :class="{red:isRed,font:isFont}">11111111111111</div>-->
+    <!--<div :id="myId" :class="classObj">11111111111111</div>-->
+    <!--<div :id="myId" :class="[classA,classB]" class="bb">11111111111111</div>-->
+    <!--<div :id="myId" :style="{background:styleA}">11111111111111</div>-->
+    <!--<div :id="myId" :style="styleObj">11111111111111</div>-->
+    <!--<div :id="myId" :style="[styleB,styleC]">11111111111111</div>-->
+</div>
+<script src="vue.js"></script>
+<script>
+        // v-bind  class  style={}
+
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                myId:'div1',
+                isRed:true,
+                isFont:true,
+                classObj:{
+                    red:true,
+                    font:false
+                },
+                classA:'red',
+                classB:'font',
+                styleA:'blue',
+                styleObj:{
+                    background:'blue',
+                    'font-size':'40px'
+                },
+                styleB:{
+                    background:'blue',
+                },
+                styleC:{
+                    'font-size':'40px'
+                }
+            }
+
+        });
+</script>
+</body>
+</html>

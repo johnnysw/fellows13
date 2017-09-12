@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="show">click</button>
+        <div :class="{red:isRed}"></div>
+    </div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            isRed:false
+        },
+        methods:{
+            show:function(){
+                this.isRed = !this.isRed;
+            }
+        }
+    });
+</script>
+</body>
+</html>

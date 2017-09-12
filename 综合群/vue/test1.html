@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="ipt" v-model="msg">
+        <!--{{msg}}-->
+        <span v-html="msg"></span>
+        <span v-text="msg"></span>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                msg:'123'
+            }
+        });
+
+
+//        var o = {a:1};
+//        var obj = {name:o};
+//        Object.defineProperty(obj,'name',{
+//            set:function(val){
+//                console.log(val);
+//            }
+//        })
+
+
+        // 访问器属性
+//        var obj = {};
+//        var span = document.getElementById('s');
+//        var ipt = document.getElementById('ipt');
+//        Object.defineProperty(obj,'name',{
+//            set:function(val){
+//                span.innerHTML = val;
+//            },
+//            get:function(){
+//                console.log(1111);
+//            }
+//        })
+//
+//
+//        ipt.onkeyup = function(){
+//            obj.name = this.value;
+//        }
+//
+
+
+
+
+
+
+
+
+
+//        function Vv(obj) {
+//            for(p in obj){
+//                if(p == 'el'){
+//                    this['$'+p] = document.querySelector(obj[p]);
+//                }else{
+//                    this['$'+p] = obj[p];
+//                }
+//                if(p == 'data'){
+//                    for(q in obj[p]){
+//                        this[q] = obj[p][q];
+//                    }
+//                }
+//            }
+//        }
+//
+//        var vv = new Vv({
+//            el:'#app',
+//            data:{
+//                mm:123
+//            }
+//        });
+
+    </script>
+</body>
+</html>

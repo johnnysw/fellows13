@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <!--<li v-for="n in 4">-->
+            <!--{{n}}-->
+        <!--</li>-->
+        <li v-for="(val,index) in arr">
+            {{val}}
+        </li>
+        <!--<li v-for="(val,key,index) in obj">-->
+            <!--{{val}},{{key}},{{index}}-->
+        <!--</li>-->
+    </ul>
+
+    <!--<template v-for="n in 3">-->
+        <!--<div >-->
+            <!--aaaaaa-->
+        <!--</div>-->
+        <!--<div >-->
+            <!--bbbbbb-->
+        <!--</div>-->
+    <!--</template>-->
+
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            arr:['a','b','c','d'],
+            obj:{
+                a:1,
+                b:2,
+                c:3,
+                d:4
+            }
+        }
+    });
+</script>
+</body>
+</html>

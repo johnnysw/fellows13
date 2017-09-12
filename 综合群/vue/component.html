@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <demo :msg-a="name"></demo>
+        <demo :msg-a="age"></demo>
+    </div>
+    <!--<div id="app1">-->
+        <!--<demo></demo>-->
+    <!--</div>-->
+<script src="vue.js"></script>
+<script type="text/x-template" id="temp">
+    <div>
+        <div>
+            {{msgA}}
+        </div>
+        <div>
+            {{msgA}}
+        </div>
+    </div>
+</script>
+<script>
+    //定义全局组件
+//    Vue.component('demo',{
+//        template:'<div>ddddddddddddd</div>'
+//    });
+    var vm = new Vue({
+        el:'#app',
+        data:{
+          name:'zs',
+          age:34
+        },
+        methods:{
+            fn:function(){
+            }
+        },
+        components:{
+            demo:{
+                template:'#temp',
+                props:['msgA']
+            }
+        }
+    });
+
+//    new Vue({
+//        el:'#app1'
+//    });
+
+</script>
+</body>
+</html>
