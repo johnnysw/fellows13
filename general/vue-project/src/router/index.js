@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CommonHeader from '@/components/common/Header'
+import Movie from '@/components/movie/Movie'
 
 Vue.use(Router)
 
@@ -12,8 +12,8 @@ export default new Router({
     },
     {
       path: '/movie',
-      name: 'CommonHeader',
-      component: CommonHeader
+      name: 'Movie',
+      component: Movie
     }
   ]
 })
