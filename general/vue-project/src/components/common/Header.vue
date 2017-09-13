@@ -25,6 +25,9 @@ export default {
     height: 1rem;
     display: flex;
     background: rgb(33, 150, 243);
+    position: fixed;
+    top:0;
+    width: 100%;
   }
   #header button{
     width: 1rem;

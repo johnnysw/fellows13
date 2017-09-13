@@ -24,6 +24,9 @@ export default {
     height: 1rem;
     display: flex;
     background: rgb(33, 150, 243);
+    position: fixed;
+    top:1rem;
+    width: 100%;
   }
   #nav li{
     flex: 1;
