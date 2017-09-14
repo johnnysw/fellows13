@@ -11,6 +11,9 @@
         </span>({{m.year}})(平均{{m.rating.average}}分)</p>
       </div>
     </div>
+    <div class="loading" v-show="isShow">
+      <span><img src="/static/img/loading.gif" alt=""></span>
+    </div>
   </div>
 </template>
 
@@ -21,7 +24,8 @@ export default {
   name: 'header',
   data () {
     return {
-      list:[]
+      list:[],
+      isShow:false
     }
   },
   mounted(){
@@ -37,6 +41,7 @@ export default {
         if(windowHeight + scrollTop >= dHeight){
             // 加载下一次的列表
           // axios
+          _this.isShow = true;
           _this.loadData();
         }
       });
@@ -47,6 +52,7 @@ export default {
         Axios.get(API_PROXY+'https://api.douban.com/v2/movie/top250?count=10&start='+this.list.length)
           .then((res)=>{
           this.list = this.list.concat(res.data.subjects);
+          this.isShow = false;
       });
       }
   }
@@ -79,5 +85,8 @@ export default {
     width: 4.0rem;
     margin-left: 0.6rem;
     border-bottom: 1px #ccc solid;
+  }
+  .loading{
+    text-align: center;
   }
 </style>
