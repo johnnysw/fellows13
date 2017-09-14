@@ -16,6 +16,7 @@
 
 <script>
   import Axios from 'axios'
+  import $ from 'jquery'
 export default {
   name: 'header',
   data () {
@@ -24,12 +25,30 @@ export default {
     }
   },
   mounted(){
-    // axios
-    Axios.get(API_PROXY+'https://api.douban.com/v2/movie/top250?count=10&start=0')
-      .then((res)=>{
-        this.list = res.data.subjects;
-        console.log(this.list);
-    });
+      this.loadData();
+      var _this = this;
+      $(window).scroll(function(){
+
+          var windowHeight = $(this).height();
+          var scrollTop = $(this).scrollTop();
+          var dHeight = $(document).height();
+
+//        console.log(windowHeight,scrollTop,dHeight);
+        if(windowHeight + scrollTop >= dHeight){
+            // 加载下一次的列表
+          // axios
+          _this.loadData();
+        }
+      });
+  },
+  methods:{
+      loadData(){
+        // axios
+        Axios.get(API_PROXY+'https://api.douban.com/v2/movie/top250?count=10&start='+this.list.length)
+          .then((res)=>{
+          this.list = this.list.concat(res.data.subjects);
+      });
+      }
   }
 }
 </script>
