@@ -1,8 +1,6 @@
 <template>
   <div id="photo">
-    <common-header bgColor="rgb(63, 81, 181)">
-      photo
-    </common-header>
+    <common-header></common-header>
     <common-footer></common-footer>
   </div>
 </template>
@@ -17,6 +15,9 @@ export default {
     return {
 
     }
+  },
+  mounted(){
+    this.$store.dispatch('changeTitle',['phtot','rgb(63, 81, 181)']);
   },
   components:{
     CommonHeader,

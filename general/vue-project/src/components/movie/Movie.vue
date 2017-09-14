@@ -1,6 +1,6 @@
 <template>
   <div id="movie">
-    <common-header bgColor="rgb(33, 150, 243)"></common-header>
+    <common-header></common-header>
     <movie-nav></movie-nav>
     <!--<movie-top250></movie-top250>-->
     <router-view></router-view>

@@ -1,8 +1,6 @@
 <template>
   <div id="music">
-    <common-header bgColor="rgb(0, 150, 136)">
-      music
-    </common-header>
+    <common-header></common-header>
     <common-footer></common-footer>
   </div>
 </template>
@@ -16,6 +14,9 @@ export default {
     return {
 
     }
+  },
+  mounted(){
+    this.$store.dispatch('changeTitle',['music','rgb(0, 150, 136)']);
   },
   components:{
     CommonHeader,

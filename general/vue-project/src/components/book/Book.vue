@@ -1,8 +1,6 @@
 <template>
   <div id="book">
-    <common-header bgColor="rgb(121, 85, 72)">
-      book
-    </common-header>
+    <common-header></common-header>
     <common-footer></common-footer>
   </div>
 </template>
@@ -17,6 +15,9 @@ export default {
     return {
 
     }
+  },
+  mounted(){
+    this.$store.dispatch('changeTitle',['book','rgb(121, 85, 72)']);
   },
   components:{
     CommonHeader,

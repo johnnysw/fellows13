@@ -1,18 +1,13 @@
 <template>
-  <div id="header" :style="{background:bgColor}">
+  <div id="header" :style="{background:$store.state.bgColor}">
     <button>首页</button>
-    <h2>
-      <slot>
-        movie
-      </slot>
-    </h2>
+    <h2>{{$store.state.title}}</h2>
   </div>
 </template>
 
 <script>
 export default {
   name: 'header',
-  props:['bgColor'],
   data () {
     return {
 
