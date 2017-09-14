@@ -1,7 +1,7 @@
 <template>
       <ul id="music_albums">
           <li v-for="alb in list">
-            <img :src="alb.bg">
+            <router-link :to="'/music/music_list/'+alb.id"><img :src="alb.bg"></router-link>
           </li>
       </ul>
 </template>
