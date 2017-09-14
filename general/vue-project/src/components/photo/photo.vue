@@ -1,9 +1,8 @@
 <template>
-  <div id="movie">
-    <common-header bgColor="rgb(33, 150, 243)"></common-header>
-    <movie-nav></movie-nav>
-    <!--<movie-top250></movie-top250>-->
-    <router-view></router-view>
+  <div id="photo">
+    <common-header bgColor="rgb(63, 81, 181)">
+      photo
+    </common-header>
     <common-footer></common-footer>
   </div>
 </template>
@@ -11,8 +10,7 @@
 <script>
   import CommonHeader from '@/components/common/Header'
   import CommonFooter from '@/components/common/Footer'
-  import MovieNav from '@/components/movie/MovieNav'
-  import MovieTop250 from '@/components/movie/MovieTop250'
+
 export default {
   name: 'header',
   data () {
@@ -23,8 +21,7 @@ export default {
   components:{
     CommonHeader,
     CommonFooter,
-    MovieNav,
-    MovieTop250
+
   }
 }
 </script>

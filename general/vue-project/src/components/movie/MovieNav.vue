@@ -1,8 +1,8 @@
 <template>
   <ul id="nav">
-    <li>top250</li>
-    <li>正在热映</li>
-    <li>即将上映</li>
+    <li><router-link to="/movie/top250">top250</router-link></li>
+    <li><router-link to="/movie/hot">正在热映</router-link></li>
+    <li><router-link to="/movie/coming">即将上映</router-link></li>
   </ul>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import '../../assets/css/reset.css';
+  /*@import '../../assets/css/reset.css';*/
   #nav{
     height: 1rem;
     display: flex;
@@ -30,8 +30,14 @@ export default {
   }
   #nav li{
     flex: 1;
-    color: #ccc;
     text-align: center;
     line-height: 1rem;
+  }
+  #nav li a{
+    color: #ccc;
+    outline: none;
+  }
+  #nav li a.router-link-active{
+    color: #fff;
   }
 </style>

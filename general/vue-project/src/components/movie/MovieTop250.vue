@@ -61,7 +61,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import '../../assets/css/reset.css';
+  /*@import '../../assets/css/reset.css';*/
   .top250{
     margin-top: 2rem;
     margin-bottom: 1rem;

@@ -1,8 +1,10 @@
 <template>
-  <div id="header">
+  <div id="header" :style="{background:bgColor}">
     <button>首页</button>
     <h2>
-      movie
+      <slot>
+        movie
+      </slot>
     </h2>
   </div>
 </template>
@@ -10,6 +12,7 @@
 <script>
 export default {
   name: 'header',
+  props:['bgColor'],
   data () {
     return {
 
@@ -20,11 +23,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import '../../assets/css/reset.css';
+  /*@import '../../assets/css/reset.css';*/
   #header{
     height: 1rem;
     display: flex;
-    background: rgb(33, 150, 243);
     position: fixed;
     top:0;
     width: 100%;
