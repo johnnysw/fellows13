@@ -28,7 +28,7 @@ export default {
         obj.author = this.list[i].author;
         obj.url = this.list[i].src;
         obj.pic = this.list[i].musicImgSrc;
-        obj.lrc = this.list[i].lrc;
+        obj.lrc = "/static/"+this.list[i].lrc;
         this.songList.push(obj);
       }
       this.flag = true;
