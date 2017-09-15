@@ -15,6 +15,7 @@ Vue.use(Vuex)
 const state = {
   title:'movie',
   bgColor:'rgb(33, 150, 243)',
+  btn:'首页',
   photoData:[]
 }
 
@@ -23,6 +24,7 @@ const mutations = {
   changeTitle(state,status){
     state.title = status[0];
     state.bgColor = status[1];
+    state.btn = status[2];
   },
   changeData(state,status){
     state.photoData = status;

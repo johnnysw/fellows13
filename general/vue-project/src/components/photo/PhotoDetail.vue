@@ -32,8 +32,7 @@ export default {
     }
   },
   mounted(){
-    this.$store.dispatch('changeTitle',['phtot','rgb(63, 81, 181)']);
-//    console.log(this.$store.state.photoData);
+    this.$store.dispatch('changeTitle',['phtot','rgb(63, 81, 181)','<']);
   },
   components:{
     CommonHeader,

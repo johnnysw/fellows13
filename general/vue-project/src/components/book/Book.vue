@@ -23,7 +23,7 @@
     }
   },
   mounted(){
-    this.$store.dispatch('changeTitle',['book','rgb(121, 85, 72)']);
+    this.$store.dispatch('changeTitle',['book','rgb(121, 85, 72)','<']);
   },
   components:{
     CommonHeader,

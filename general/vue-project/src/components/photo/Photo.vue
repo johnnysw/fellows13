@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted(){
-    this.$store.dispatch('changeTitle',['phtot','rgb(63, 81, 181)']);
+    this.$store.dispatch('changeTitle',['phtot','rgb(63, 81, 181)','<']);
     Axios.get('/static/photo-data.json').then((res)=>{
         this.list = res.data.photoData;
         this.$store.dispatch('changeData',res.data.photoData);
