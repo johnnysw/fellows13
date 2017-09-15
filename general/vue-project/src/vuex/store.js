@@ -15,6 +15,7 @@ Vue.use(Vuex)
 const state = {
   title:'movie',
   bgColor:'rgb(33, 150, 243)',
+  photoData:[]
 }
 
 //定义动作 事件处理方法
@@ -22,12 +23,16 @@ const mutations = {
   changeTitle(state,status){
     state.title = status[0];
     state.bgColor = status[1];
+  },
+  changeData(state,status){
+    state.photoData = status;
   }
 }
 
 //对外的事件方法
 const actions = {
-      changeTitle:({commit},status)=>commit('changeTitle',status)
+      changeTitle:({commit},status)=>commit('changeTitle',status),
+  changeData:({commit},status)=>commit('changeData',status)
 }
 
 const getters = {

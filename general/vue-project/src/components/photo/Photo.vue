@@ -2,8 +2,8 @@
   <div id="photo">
     <common-header></common-header>
       <ul class="photo-list">
-        <li v-for="photo in list">
-            <img :src="photo.src"/>
+        <li v-for="(photo,index) in list">
+            <router-link :to="'/photo/detail/'+index"><img :src="photo.src"/></router-link>
         </li>
       </ul>
     <common-footer></common-footer>
@@ -25,6 +25,7 @@ export default {
     this.$store.dispatch('changeTitle',['phtot','rgb(63, 81, 181)']);
     Axios.get('/static/photo-data.json').then((res)=>{
         this.list = res.data.photoData;
+        this.$store.dispatch('changeData',res.data.photoData);
     });
   },
   components:{
