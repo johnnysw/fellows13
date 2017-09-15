@@ -2,7 +2,7 @@
   <div class="photo">
     <common-header></common-header>
     <!--<div :style="obj"></div>-->
-      <v-touch class="detail" :style="obj"></v-touch>
+      <v-touch class="detail" :style="obj" @swipeleft="left" @swiperight="right"></v-touch>
   </div>
 </template>
 
@@ -13,9 +13,22 @@ export default {
   name: 'header',
   data () {
     return {
-        obj:{
-            background:'url('+ this.$store.state.photoData[this.$route.params.index].src +') no-repeat center / contain #000',
+        index:this.$route.params.index
+    }
+  },
+  computed:{
+    obj(){
+        return {
+            background:'url('+ this.$store.state.photoData[this.index].src +') no-repeat center / contain #000'
         }
+    }
+  },
+  methods:{
+    left(){
+        this.index++;
+    },
+    right(){
+      this.index--;
     }
   },
   mounted(){
